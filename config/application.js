@@ -17,11 +17,11 @@ module.exports = function(lineman) {
     // grunt-angular-templates assumes your module is named "app", but
     // you can override it like so:
     //
-    // ngtemplates: {
-    //   options: {
-    //     module: "myModuleName"
-    //   }
-    // }
+    ngtemplates: {
+      options: {
+        module: "beachornah"
+      }
+    },
     
     enableSass: true,
 

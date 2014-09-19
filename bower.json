@@ -1,16 +1,15 @@
 {
-  "name": "greatgreensources",
+  "name": "beach or nah",
   "version": "0.0.0",
-  "homepage": "https://github.com/timsvoice/greatgreensources",
+  "homepage": "https://github.com/timsvoice/beachornah",
   "authors": [
     "timsvoice <timsethvoice@gmail.com>"
   ],
-  "description": "Wep App for Great Green Sources",
+  "description": "Wep App for beach day decisions",
   "keywords": [
-    "web",
-    "app",
-    "horticulture",
-    "vendors"
+    "webapp",
+    "API",
+    "weather"
   ],
   "license": "MIT",
   "ignore": [
