@@ -2,25 +2,31 @@
   <div class="coverpage" id="splash">  
     <div class="horizon">
       <div class="issue-intro">
-        <h2 class="issue-intro-title"><%= site.author %></h2>
-        <p class="issue-intro-text">Issue Intro</p>
+        <h2 class="issue-intro-title">Octave Budding</h2>
+        <p class="issue-intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo cupiditate natus, quisquam eaque alias aliquid! Sequi excepturi accusantium autem earum, praesentium officiis quibusdam distinctio iste quisquam ipsum omnis ea minima quae, exercitationem error fugit natus unde est facere neque. Deleniti voluptas architecto porro libero expedita rerum dolore suscipit officia ullam.</p>
         <a href="#" class="small button secondary">download</a>
       </div>
     </div>
-    <div class="readon">            
-      <h3>read</h3>
-      <i class="fa fa-caret-down"></i>
-    </div>  
+    <a href="#index">
+      <div class="readon">            
+        <h3>read</h3>
+        <i class="fa fa-caret-down"></i>
+      </div> 
+    </a> 
   </div>
-  <div class="row issue-index">
-    <div class="small-12 columns small-centered">
+  <div class="issue-index" id="index">
+    <div class="">
+    <div class="issue-index-intro">
+    </div>
       <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
         <% _(site.posts).each(function(post){ %>
-        <li class="issue-index-article">
+        <li class="issue-index-article <%= post.get('color') %>">
         <a href="/<%= post.htmlPath() %>">
-          <img src="https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/retina.png" alt="" class="issue-index-article-thumbnail">
-          <h3 class="issue-index-article-title"><%= post.title() %></h3>
-          <p class="issue-index-article-teaser"><%= post.get('teaser') %></p>
+          <img src="<%= post.get('images').feature.url %>" alt="" class="issue-index-article-thumbnail">
+          <div class="issue-index-article-body">
+            <h3 class="issue-index-article-title"><%= post.title() %></h3>
+            <p class="issue-index-article-teaser"><%= post.get('teaser') %></p>
+          </div>
         </a>
         </li>
         <% }) %>

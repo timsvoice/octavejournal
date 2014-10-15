@@ -5,9 +5,11 @@
 .navigation {
   .top-bar {
     height: 4rem;
+    @include breakpoint(medium) {
+      padding-left: 1rem;
+    }
     @include breakpoint(small) {
       padding-left: 1rem;
-      padding-right: 1rem;
     }
     .name {
       padding-top: 0.75rem;
@@ -33,6 +35,15 @@
           height: 4rem;          
         }
       }
+      // dropdown list
+      .dropdown li a {  
+        background: $white-trans !important;
+      }
+      // drop arrow
+      .has-dropdown > a:after {
+        border-color: $black transparent transparent transparent;
+        margin-top: 7px;
+      }
     }
   }
 }
@@ -41,9 +52,10 @@
 
 footer {
   height: 3rem;
-  padding: 3rem 0rem 3rem 0rem;
+  padding: 3rem 1rem 3rem 1rem;
   bottom: 0;
   width: 100%;
+  background: $goose-light;
   @include breakpoint(small) {
     padding-left: 1rem;
     padding-right: 1rem;

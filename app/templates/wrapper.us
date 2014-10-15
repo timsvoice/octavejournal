@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
   </head>
   <body>
-    <div class="contain-to-grid">
+    <div class="">
       <div class="fixed navigation">
         <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
@@ -37,7 +37,7 @@
       </div>      
     </div>
     <footer>
-    <div class="row">
+    <div class="">
       <div class="small-6 medium-6 columns left alpha">
         <a href="#"><h2>about octave journal</h2></a>        
       </div>

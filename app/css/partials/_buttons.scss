@@ -1,0 +1,12 @@
+.button {
+  &.secondary {
+    background: none;
+    font-size: 1rem;
+    color: $white;
+    border: 1px $white solid;
+    &:hover {
+      background: $white-trans;
+      color: $branding-color;
+    }
+  }
+}

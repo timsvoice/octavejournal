@@ -1,7 +1,5 @@
 .issue-index {
-  margin-top: 2rem;
-  &-list {
-  }
+  margin-top: 0rem;
 }
 
 .post-header {
@@ -11,3 +9,54 @@
 .post-body {
   margin-top: 2rem;
 }
+
+.post {
+  &-meta {
+    margin-bottom: 1rem;
+  }
+  &-image {
+    width: 100%;
+  }
+  &-intro {
+    &.spice {background: lighten($spice, 10%);}
+    &.goose {background: lighten($goose, 10%);}
+    &.monsoon {background: lighten($monsoon, 10%);}
+    &.gold {background: lighten($gold, 10%);}
+    @include breakpoint(small) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: 0rem -1rem;
+    }
+    @include breakpoint(medium) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: 0rem -1rem;
+    }
+  }
+}
+
+// issue index
+
+.issue-index {
+  &-article {
+    padding-right: 0 !important;
+    padding-left: 0 !important;    
+    &.spice {background: lighten($spice, 10%);}
+    &.goose {background: lighten($goose, 10%);}
+    &.monsoon {background: lighten($monsoon, 10%);}
+    &.gold {background: lighten($gold, 10%);}
+    &:hover {
+      opacity: 0.9;
+    }
+    &-thumbnail {
+    }
+    &-body {
+      padding: 1rem;
+    }
+    &-title {
+    }
+    &-teaser {
+    }
+  }
+}
+
