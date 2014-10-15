@@ -1,0 +1,30 @@
+<div id="view">
+  <div class="coverpage" id="splash">  
+    <div class="horizon">
+      <div class="issue-intro">
+        <h2 class="issue-intro-title"><%= site.author %></h2>
+        <p class="issue-intro-text">Issue Intro</p>
+        <a href="#" class="small button secondary">download</a>
+      </div>
+    </div>
+    <div class="readon">            
+      <h3>read</h3>
+      <i class="fa fa-caret-down"></i>
+    </div>  
+  </div>
+  <div class="row issue-index">
+    <div class="small-12 columns small-centered">
+      <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
+        <% _(site.posts).each(function(post){ %>
+        <li class="issue-index-article">
+        <a href="/<%= post.htmlPath() %>">
+          <img src="https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/retina.png" alt="" class="issue-index-article-thumbnail">
+          <h3 class="issue-index-article-title"><%= post.title() %></h3>
+          <p class="issue-index-article-teaser"><%= post.get('teaser') %></p>
+        </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -2,9 +2,12 @@
 	Colors
 ============================ */
 
+$branding-color: hsla(235,41%,44%,1.0);
 $gray: hsla(0,0,91%,1);
 $white: hsla(0,0,100%,1);
 $black: hsla(0,0,0%,1);
+$white-trans: hsla(0,0,100%,0.85);
+$gray-dark: hsla(0,0,75%,1);
 
 /* ============================ 
 	Typography
@@ -12,6 +15,7 @@ $black: hsla(0,0,0%,1);
 
 $body-font: "pragmatica-web", Helvetica, Arial, sans-serif;
 $text-font: "minion-pro", Times, serif;
+$icon-font: "FontAwesome", Times, serif;
 
 $heavy-text:900;
 $medium-text:400;

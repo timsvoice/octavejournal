@@ -10,8 +10,12 @@ module.exports = function(lineman) {
   return {
     js: {
       vendor: [
+        "vendor/bower/jquery/dist/jquery.min.js",
         "vendor/js/angular.js",
+        "vendor/bower/foundation/js/foundation.js",
+        "vendor/bower/foundation/js/foundation/foundation.topbar.js",
         "vendor/js/**/*.js"
+        
       ],
       app: [
         "app/js/app.js",
@@ -20,7 +24,10 @@ module.exports = function(lineman) {
     },
 
     sass: {
-      main:"app/css/app.{sass,scss}"
+      main: [
+      "app/css/app.{sass,scss}",
+      "vendor/bower/foundation/scss/**/*"
+      ]
     }
   };
 };

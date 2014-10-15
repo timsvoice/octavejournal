@@ -1,0 +1,51 @@
+.fixed {
+  background: $white-trans !important;
+}
+
+.navigation {
+  .top-bar {
+    height: 4rem;
+    @include breakpoint(small) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .name {
+      padding-top: 0.75rem;
+      width: 20rem;
+      img {
+        display: inline-block;
+        float: left;
+        height: 40px;
+        width: 40px;
+      }
+      h1 {
+        display: inline-block;
+        float: left;
+      }
+    }
+    &-section {      
+      * {
+        background: none !important;
+      }
+      .right {
+        * { 
+          height: 50px;
+          height: 4rem;          
+        }
+      }
+    }
+  }
+}
+
+//footer
+
+footer {
+  height: 3rem;
+  padding: 3rem 0rem 3rem 0rem;
+  bottom: 0;
+  width: 100%;
+  @include breakpoint(small) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

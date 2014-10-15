@@ -24,3 +24,29 @@
     @media only screen and (max-width: 40em) { @content; } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
   }
 }
+
+//centering anything (known dimensions)
+
+@mixin dead-center($content-width, $content-height) {
+  margin-left: (-1 * $content-width/2);
+  position: absolute;
+  top: (-1 * $content-height/2);
+  left: 50%;
+  width: $content-width;
+  visibility: visible;
+}
+
+@mixin off-center-top($content-width, $content-height) {
+  margin-left: (-1 * $content-width/2);
+  position: absolute;
+  top: (-1 * $content-height/2);
+  left: 50%;
+  width: $content-width;
+  visibility: visible;
+}
+
+@mixin circle($circle-width, $circle-height) {
+  border-radius: 50%;
+  width: $circle-width;
+  height: $circle-height;
+}

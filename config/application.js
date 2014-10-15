@@ -19,7 +19,7 @@ module.exports = function(lineman) {
     //
     ngtemplates: {
       options: {
-        module: "beachornah"
+        module: "octavejournal"
       }
     },
     

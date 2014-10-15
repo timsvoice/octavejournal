@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row post">
+    <div class="post-header clearfix">
+      <h1 class="post-title"><%= post.get('title') %></h1>  
+      <div class="post-meta small-12 columns alpha beta">
+        <p class="post-author"><%= post.get('author').name %></p>
+        <p class="post-date"><%= post.get('date') %></p>
+      </div>
+    </div>
+    <div class="post-content">
+      <img src="<%= post.get('images').feature.url %>" alt="feature image">
+      <p class="post-image-caption">
+        <%= post.get('images').feature.caption %>
+      </p>
+      <div class="post-body small-12 medium-6 columns alpha beta">
+        <%= post.content() %>
+      </div>
+    </div>
+  </div> 
+</div> 

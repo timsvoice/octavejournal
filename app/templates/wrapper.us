@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Octave Journal</title>
+    <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
+  </head>
+  <body>
+    <div class="contain-to-grid">
+      <div class="fixed navigation">
+        <nav class="top-bar" data-topbar role="navigation">
+          <ul class="title-area">
+            <li class="name">
+              <img src="http://www.octavejournal.com/wp-content/themes/octavejournal/css/assets/branding.png" alt="branding">
+              <h1 class="branding-title"><a href="/">octave journal</a></h1>
+            </li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="has-dropdown">
+                <a href="#">Issues</a>
+                <ul class="dropdown">
+                  <li><a href="#">First link in dropdown</a></li>
+                  <li><a href="#">Active link in dropdown</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- Left Nav Section -->
+          </section>
+        </nav>
+      </div>
+    </div>
+    <div class="clearfix">       
+      <div class="large-12 columns alpha beta">        
+        <%= yield %>
+      </div>      
+    </div>
+    <footer>
+    <div class="row">
+      <div class="small-6 medium-6 columns left alpha">
+        <a href="#"><h2>about octave journal</h2></a>        
+      </div>
+      <div class="small-6 medium-6 columns right beta">
+        <a href="#">
+          <h2>contact us</h2>
+        </a>
+      </div>
+    </div>
+    </footer>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script>$(document).foundation();</script>
+  </body>
+</html>

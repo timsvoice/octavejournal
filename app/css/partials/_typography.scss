@@ -1,0 +1,108 @@
+i {
+  font-family: $icon-font;
+}
+
+// navigation
+
+.navigation {
+  .top-bar {
+    background: none !important;
+  }
+  h1.branding-title {
+    a {
+      color: $black;
+      font-size: 1.5rem;
+      font-weight: $light-text;
+    }
+  }
+}
+
+.top-bar-section ul li, .top-bar-section ul li>a {
+  &:hover {
+    color: $black;
+  }
+  color: $black !important;
+  font-size: 1rem;
+}
+
+.top-bar-section .dropdown li a {  
+  &:hover {
+    color: $branding-color;
+  }
+  color: $black;
+  background: $white-trans !important;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  line-height: 3rem; 
+  padding-top: 0.4375rem;
+  &:hover {
+    color: $branding-color !important;
+  }
+}
+
+.top-bar-section .has-dropdown > a:after {
+  border-color: $black transparent transparent transparent;
+  margin-top: 7px;
+}
+
+//footer 
+
+footer {
+  a>h2 {
+    font-size: 0.75rem;
+    color: $gray-dark;
+    text-transform: uppercase;
+    font-weight: $heavy-text;
+    text-align: left;
+    &:hover {
+      color: $branding-color;
+    }
+  }
+  .right a>h2 {
+    text-align: right;
+  }
+}
+
+//post
+
+.post {
+  &-title {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: $heavy-text;    
+    text-transform: capitalize;
+    border-bottom: dotted 1px  $gray-dark;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  &-meta {
+    p {
+      display: inline-block;
+      float: left;
+      padding-right: 1rem;
+      font-size: 1rem;
+      color: $gray-dark;
+      line-height: 1rem;
+      margin-bottom: 0;
+    }
+    margin-bottom: 0.5rem;
+  }
+  &-biline {
+    font-style: italic;
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+  }
+  &-image-caption {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: $gray-dark;
+    margin-bottom: 0;
+  }
+  &-body {
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem; 
+    }   
+  }
+}
