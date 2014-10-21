@@ -29,6 +29,10 @@ hr {
   }
 }
 
+[class*="block-grid-"] {
+  margin: 0;
+}
+
 //splash
 
 .horizon {
@@ -53,6 +57,9 @@ hr {
 .issue-intro {
   text-align: center;
   @include dead-center(414px, 414px);
+  @include breakpoint(small) {
+    @include dead-center(100%, 414px);
+  }
 }
 
 .coverpage {
@@ -75,10 +82,11 @@ hr {
     font-weight: $light-text;
   }
   i {
-    font-size: 6rem;
+    font-size: 2rem;
     line-height: 3rem;
     margin-top: 0;
     color: $white;
     height: 3rem;
+    font-weight: $light-text;
   }
 }

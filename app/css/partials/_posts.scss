@@ -18,33 +18,54 @@
     width: 100%;
   }
   &-intro {
-    &.spice {background: lighten($spice, 10%);}
-    &.goose {background: lighten($goose, 10%);}
-    &.monsoon {background: lighten($monsoon, 10%);}
-    &.gold {background: lighten($gold, 10%);}
+    // &.spice {background: lighten($spice, 10%);}
+    // &.goose {background: lighten($goose, 10%);}
+    // &.monsoon {background: lighten($monsoon, 10%);}
+    // &.gold {background: lighten($gold, 10%);}
+    // &.gray {background: $gray-warm;}
+    &.olive {background: $olive;}
     @include breakpoint(small) {
-      padding-left: 1rem;
-      padding-right: 1rem;
       margin: 0rem -1rem;
     }
     @include breakpoint(medium) {
-      padding-left: 1rem;
-      padding-right: 1rem;
       margin: 0rem -1rem;
     }
   }
 }
 
+// related list
+
+.post-related {
+  &-list {
+    list-style: none;
+  }
+}
 // issue index
 
-.issue-index {
+li.issue-index {
   &-article {
-    padding-right: 0 !important;
-    padding-left: 0 !important;    
-    &.spice {background: lighten($spice, 10%);}
-    &.goose {background: lighten($goose, 10%);}
-    &.monsoon {background: lighten($monsoon, 10%);}
-    &.gold {background: lighten($gold, 10%);}
+    padding-top: 1rem;
+    background: lighten($goose, 10%)
+  }
+}
+
+.issue-index {
+  &-list {
+  }
+  &-article {
+    // height: 490px !important;
+    padding-top: 1rem;
+    background: lighten($goose, 10%);
+    // padding-right: 0 !important;
+    // padding-left: 0 !important;    
+    // &.spice {background: lighten($spice, 10%);}
+    // &.goose {background: lighten($goose, 10%);}
+    // &.monsoon {background: lighten($monsoon, 10%);}
+    // &.gold {background: lighten($gold, 10%);}
+    &.olive {background: $olive;}   
+    &-body {
+      min-height: 113px;
+    } 
     &:hover {
       opacity: 0.9;
     }

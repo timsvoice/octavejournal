@@ -1,4 +1,11 @@
 .button {
+  color: $white;
+  background: $goose;
+  border: none;
+  font-size: 1rem;
+  &:hover {
+    background: lighten($branding-color, 10%);
+  }
   &.secondary {
     background: none;
     font-size: 1rem;

@@ -9,7 +9,7 @@ images:
     url: "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-kids"
     caption: "Lorem ipsum dolor sit amet"
 #choose: spice goose monsoon gold
-color: "spice"
+color: "monsoon"
 
 ---
 

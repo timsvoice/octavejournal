@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "FounderYouXian";
+  src: url('/fonts/FZYXJW.TTF') format ('truetype');
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-weight: 200;
+  src: url('/fonts/Graphik-Light.otf') format ('opentype');
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-weight: 400;
+  src: url('/fonts/Graphik-Regular.otf') format ('opentype');
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-weight: 900;
+  src: url('/fonts/Graphik-Bold.otf') format ('opentype');
+}
+
+// base typography
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, a {
+  font-family: $body-font;
+}
+
 i {
   font-family: $icon-font;
 }
@@ -9,19 +37,29 @@ i {
     color: $white;
     font-size: 3rem;
     font-weight: $heavy-text;
+    @include breakpoint(small) {
+      font-size: 2rem;
+    }
   }
   &-text {
     font-size: 1rem;
     color: $white;
+    @include breakpoint(small) {
+      font-size: 0.9rem;
+    }
   }
 }
 
 .issue-index-intro {
-  h2 {
+  h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
     text-align: center;
-    font-weight: $heavy-text;
+    font-weight: $light-text;
     vertical-align: middle;
     text-transform: capitalize;
+    font-style: italic;
+    color: $goose;
   }
 }
 
@@ -33,9 +71,16 @@ i {
   }
   h1.branding-title {
     a {
+      .bold {
+        font-weight: $medium-text;
+      }
       color: $black;
       font-size: 1.5rem;
       font-weight: $light-text;
+      text-transform: capitalize;
+      @include breakpoint(small) {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -81,13 +126,21 @@ footer {
 .issue-index {
   &-article {
     text-align: center;
+    &.cn {
+      * {
+        font-family: $cn-font;
+      }
+    }
     &-title {
       font-size: 1.5rem;
-      font-weight: $heavy-text;      
+      font-weight: $heavy-text;
+      font-family: $body-font;
     }
     &-teaser {
       color: $black;
       font-size: 1rem;
+      line-height: 1.5rem;
+      font-family: $body-font;
       @include breakpoint(small) {
         font-size: 0.9rem;
       }
@@ -97,27 +150,70 @@ footer {
 
 //post
 
+//post related 
+
+.post-related {
+  margin-top: 2rem;
+  h4 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    margin-top: 0;
+    color: $goose;
+    font-weight: $heavy-text;
+    text-transform: capitalize;
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+    }   
+  }
+  &-list {
+    list-style: none;
+    margin-left: 0;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+  &-article {
+    &-title {
+      font-size: 1rem;
+      font-weight: $light-text;
+    }
+  }
+}
+
+
+.container.cn {
+  * {
+    font-family: $cn-font;
+  }
+}
+
 .post {
   &-title {
     font-size: 3rem;
     line-height: 3.5rem;
     font-weight: $heavy-text;    
     text-transform: capitalize;
-    border-bottom: dotted 1px $black;
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
+    margin-top: 0;
+    color: $branding-color;
   }
   &-meta {
     p {
-      display: inline-block;
-      float: left;
-      padding-right: 1rem;
       font-size: 1rem;
-      color: $black;
-      line-height: 1rem;
-      margin-bottom: 0;
+      color: $goose;
+      line-height: 1.5rem;
+      margin-bottom: 0rem;
+      font-style: italic;
     }
-    margin-bottom: 0.5rem;
+    .button {
+      margin-top: 1rem;
+    }
+    margin-bottom: 1rem;
   }
   &-biline {
     font-style: italic;
@@ -129,9 +225,21 @@ footer {
     font-size: 0.85rem;
     color: $black;
     margin-bottom: 0;
+    margin-left: 1rem;
   }
   &-body {
+    p:first-child {
+      &::first-letter, &:first-letter {
+        font-size: 3rem;
+        font-weight: $heavy-text;
+        padding-right: 0.5rem;
+        text-transform: uppercase;
+        margin-right: 0.25rem;
+        color: $branding-color;
+      }
+    }
     p {
+      margin-top: 1rem;
       font-size: 1rem;
       line-height: 1.5rem; 
     }   

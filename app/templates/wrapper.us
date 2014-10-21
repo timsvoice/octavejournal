@@ -3,6 +3,7 @@
   <head>
     <title>Octave Journal</title>
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimum-scale=1" />
   </head>
   <body>
     <div class="">
@@ -10,8 +11,10 @@
         <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
             <li class="name">
-              <img src="http://www.octavejournal.com/wp-content/themes/octavejournal/css/assets/branding.png" alt="branding">
-              <h1 class="branding-title"><a href="/">octave journal</a></h1>
+              <a href="/">
+                <img src="http://www.octavejournal.com/wp-content/themes/octavejournal/css/assets/branding.png" alt="branding">
+              </a>
+              <h1 class="branding-title"><a href="/"><span class="bold">Octave</span> journal</a></h1>
             </li>
           </ul>
 
@@ -21,8 +24,8 @@
               <li class="has-dropdown">
                 <a href="#">Issues</a>
                 <ul class="dropdown">
-                  <li><a href="#">First link in dropdown</a></li>
-                  <li><a href="#">Active link in dropdown</a></li>
+                  <li><a href="#">Issue #2 Octave Budding</a></li>
+                  <li><a href="#">Issue #1 Activating Wellbeing</a></li>
                 </ul>
               </li>
             </ul>
@@ -39,7 +42,10 @@
     <footer>
     <div class="">
       <div class="small-6 medium-6 columns left alpha">
-        <a href="#"><h2>about octave journal</h2></a>        
+        <a href="#">
+          <h2 class="show-for-medium-up">about octave journal</h2>
+          <h2 class="show-for-small-only">about</h2>
+        </a>        
       </div>
       <div class="small-6 medium-6 columns right beta">
         <a href="#">

@@ -11,7 +11,7 @@ images:
     url: "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-yoga"
     caption: "諃 螜褣 沀皯竻"
 #choose: spice goose monsoon gold
-color: "gray"
+color: "goose"
 #choose: cn or en
 language: "cn"
 ---

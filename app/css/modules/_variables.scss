@@ -9,6 +9,7 @@ $black: hsla(0,0,0%,1);
 $white-trans: hsla(0,0,100%,0.85);
 $gray-dark: hsla(0,0,75%,1);
 $goose-light: hsla(70, 8%, 95%, 1.0);
+$gray-warm: hsla(54, 21%, 86%, 1.0);
 
 // post colors
 
@@ -16,13 +17,15 @@ $spice: hsla(23, 66%, 55%,1.0);
 $goose: hsla(70, 8%, 75%, 1.0);
 $monsoon: hsla(68, 25%, 41%,1.0);
 $gold: hsla(45, 61%, 39%, 1.0);
+$olive: hsla(60, 13%, 83%, 1.0);
 
 /* ============================ 
 	Typography
 ============================ */
 
-$body-font: "pragmatica-web", Helvetica, Arial, sans-serif;
+$body-font: "Graphik", Helvetica, Arial, sans-serif;
 $text-font: "minion-pro", Times, serif;
+$cn-font: "FounderYouXian", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
 $icon-font: "FontAwesome", Times, serif;
 
 $heavy-text:900;

@@ -1,12 +1,7 @@
-<div class="container">
+<div class="container <%= post.get('language') %>">
   <div class="post-intro <%= post.get('color') %> clearfix"> 
-    <div class="row post">    
-      <div class="post-header small-12 columns alpha beta clearfix">
-        <h1 class="post-title"><%= post.get('title') %></h1>  
-        <div class="post-meta small-12 columns alpha beta">
-          <p class="post-author"><%= post.get('author').name %></p>
-          <p class="post-date"><%= post.get('date') %></p>
-        </div>
+    <div class="post">    
+      <div class="post-header clearfix">
         <img class="post-image" src="<%= post.get('images').feature.url %>" alt="feature image">
         <p class="post-image-caption">
           <%= post.get('images').feature.caption %>
@@ -15,8 +10,18 @@
     </div>
   </div>
   <div class="row post-content">
-    <div class="post-body small-12 medium-7 large-6 medium-offset-1 large-offset-0 columns alpha beta">
+    <div class="post-body small-12 medium-7 large-6 medium-offset-1 large-offset-0 columns alpha beta right">
       <%= post.content() %>
+    </div>
+    <div class="post-related medium-5 columns show-for-medium-up left beta alpha">
+      <h1 class="post-title"><%= post.get('title') %></h1>  
+      <div class="post-meta small-12 columns alpha beta">
+        <p class="post-author"><%= post.get('author').name %></p>
+        <p class="post-date"><%= post.get('date') %></p>
+        <a href="#">
+          <div class="button small">download PDF</div>
+        </a>
+      </div>
     </div>
   </div>
 </div> 
