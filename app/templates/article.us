@@ -1,8 +1,8 @@
 <div class="container <%= post.get('language') %>">
   <div class="post-intro <%= post.get('color') %> clearfix"> 
-    <div class="post">    
-      <div class="post-header clearfix">
-        <img class="post-image" src="<%= post.get('images').feature.url %>" alt="feature image">
+    <div class="post row">    
+      <div class="post-image small-12 columns alpha beta">
+        <img  src="<%= post.get('images').feature.url %>" alt="feature image">
         <p class="post-image-caption">
           <%= post.get('images').feature.caption %>
         </p>

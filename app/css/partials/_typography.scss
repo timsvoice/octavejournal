@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "FontAwesome";
+  src: url('/fonts/fontawesome-webfont.ttf') format ('truetype');
+}
+
+@font-face {
   font-family: "FounderYouXian";
-  src: url('/fonts/FZYXJW.TTF') format ('truetype');
+  src: url('/fonts/FZYXJW.ttf') format ('truetype');
 }
 
 @font-face {
@@ -32,6 +37,15 @@ i {
   font-family: $icon-font;
 }
 
+
+.dropcap {
+  color: $branding-color;
+  margin-right: 0.5rem;
+  font-weight: $heavy-text;
+  &.cn {
+    margin-right: 0.5rem;
+  }
+}
 // issue intro
 
 .issue-intro {
@@ -230,16 +244,16 @@ footer {
     margin-left: 1rem;
   }
   &-body {
-    p:first-child {
-      &::first-letter, &:first-letter {
-        font-size: 3rem;
-        font-weight: $heavy-text;
-        padding-right: 0.5rem;
-        text-transform: uppercase;
-        margin-right: 0.25rem;
-        color: $branding-color;
-      }
-    }
+    // p:first-child {
+    //   &::first-letter, &:first-letter {
+    //     font-size: 3rem;
+    //     font-weight: $heavy-text;
+    //     padding-right: 0.5rem;
+    //     text-transform: uppercase;
+    //     margin-right: 0.25rem;
+    //     color: $branding-color;
+    //   }
+    // }
     p {
       margin-top: 1rem;
       font-size: 1rem;

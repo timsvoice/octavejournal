@@ -11,6 +11,7 @@
 }
 
 .post {
+  
   &-meta {
     margin-bottom: 1rem;
   }
@@ -23,7 +24,8 @@
     // &.monsoon {background: lighten($monsoon, 10%);}
     // &.gold {background: lighten($gold, 10%);}
     // &.gray {background: $gray-warm;}
-    &.olive {background: $olive;}
+    // &.olive {background: $olive;}
+    background: $olive;
     @include breakpoint(small) {
       margin: 0rem -1rem;
     }
@@ -45,7 +47,7 @@
 li.issue-index {
   &-article {
     padding-top: 1rem;
-    background: lighten($goose, 10%)
+    // background: lighten($goose, 10%)
   }
 }
 
@@ -53,16 +55,17 @@ li.issue-index {
   &-list {
   }
   &-article {
-    // height: 490px !important;
+    height: 474px !important;
     padding-top: 1rem;
-    background: lighten($goose, 10%);
+    // background: lighten($goose, 10%);
+    background: $goose-light;
     // padding-right: 0 !important;
     // padding-left: 0 !important;    
     // &.spice {background: lighten($spice, 10%);}
     // &.goose {background: lighten($goose, 10%);}
     // &.monsoon {background: lighten($monsoon, 10%);}
     // &.gold {background: lighten($gold, 10%);}
-    &.olive {background: $olive;}   
+    // &.olive {background: $olive;}   
     &-body {
       min-height: 113px;
     } 

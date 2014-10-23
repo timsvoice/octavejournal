@@ -2,6 +2,9 @@ var app = angular.module('octavejournal',[
   'ngRoute',
   ]);
 
+  var dropcaps = document.querySelectorAll(".dropcap");
+  window.Dropcap.layout(dropcaps, 3);
+
   //splash 
   function resizesplash(divId) {
     var heights = window.innerHeight;
@@ -9,3 +12,4 @@ var app = angular.module('octavejournal',[
     } resizesplash();
     window.onresize = function() {
       resizesplash(); };
+

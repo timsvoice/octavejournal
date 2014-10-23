@@ -20,3 +20,16 @@
   padding: 0;
   width: 100%;
 }
+
+.post-image {
+  img {
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}

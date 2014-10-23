@@ -14,6 +14,7 @@ module.exports = function(lineman) {
         "vendor/js/angular.js",
         "vendor/bower/foundation/js/foundation.js",
         "vendor/bower/foundation/js/foundation/foundation.topbar.js",
+        "vendor/js/dropcap.min.js",
         "vendor/js/**/*.js"
         
       ],
