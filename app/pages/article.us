@@ -1,23 +1,24 @@
-<div class="container <%= post.get('language') %>">
-  <div class="post-intro <%= post.get('color') %> clearfix"> 
+<div class="container">
+  <div class="post-intro  clearfix"> 
     <div class="post row">    
       <div class="post-image small-12 columns alpha beta">
-        <img  src="<%= post.get('images').feature.url %>" alt="feature image">
-        <p class="post-image-caption">
-          <%= post.get('images').feature.caption %>
+        <img  src="{{article.articleimages[0].feature}}" alt="feature image">
+        <p class="post-image-caption">          
         </p>
       </div>
     </div>
   </div>
   <div class="row post-content">
     <div class="post-body small-12 medium-7 large-6 medium-offset-1 large-offset-0 columns alpha beta right">
-      <%= post.content() %>
+    <div btf-markdown ng-include="markdown">
+    </div>
     </div>
     <div class="post-related medium-5 columns show-for-medium-up left beta alpha">
-      <h1 class="post-title"><%= post.get('title') %></h1>  
+      <h1 class="post-title">{{article.articletitle}}</h1>
+
       <div class="post-meta small-12 columns alpha beta">
-        <p class="post-author"><%= post.get('author').name %></p>
-        <p class="post-date"><%= post.get('date') %></p>
+        <p class="post-author"></p>
+        <p class="post-date"></p>
         <a href="#">
           <div class="button small">download PDF</div>
         </a>

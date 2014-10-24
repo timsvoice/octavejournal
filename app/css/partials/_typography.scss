@@ -262,19 +262,21 @@ footer {
   }
 }
 
-p.pull-quote {
-  @include breakpoint(medium) {
-    float: left;
-    margin: 1rem 1.5rem 1rem -2.5rem;
-    width: 10rem;
+.post-content {
+  blockquote > p {
+    @include breakpoint(medium) {
+      float: left;
+      margin: 1rem 1.5rem 1rem -2.5rem;
+      width: 10rem;
+    }
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    border-top: 0.5rem solid $black;
+    padding: 1rem 0;
+    color: $branding-color;
+    font-weight: $heavy-text;
+    margin-bottom: 0;
   }
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  border-top: 0.5rem solid $black;
-  padding: 1rem 0;
-  color: $branding-color;
-  font-weight: $heavy-text;
-  margin-bottom: 0;
 }
 
 .pull-image {

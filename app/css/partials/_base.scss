@@ -21,6 +21,7 @@ hr {
 }
 
 .container {
+  margin-top: 4rem;
   @include breakpoint(small) {
     padding: 0rem 1rem;
   }
@@ -56,7 +57,7 @@ hr {
 
 .issue-intro {
   text-align: center;
-  @include dead-center(414px, 414px);
+  @include dead-center(425px, 414px);
   @include breakpoint(small) {
     @include dead-center(100%, 414px);
   }

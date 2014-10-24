@@ -1,29 +1,8 @@
----
-title: "文章标题"
-author:
-  name: "作者姓名"
-date: "2014-10-14"
-teaser: "毹 惀桷 鶀嚵巆 溙滊煁, 蜸 澂漀潫 磃箹糈 煻獌 筡絼綒 箛箙舕 墥墡嬇 縍蕍 彃, 鬄鵊鵙 蒝蒧蓏 箖緌翢 漻漍 僣, 溾滘 諙 搋朠楟 摨敹暯 嶭嶴憝 鍆錌雔 樏殣氀 諃 螜褣 沀皯竻"
-category: "wellness"
-tags: "yoga, exercise"
-images:
-  feature: 
-    url: "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-yoga"
-    caption: "諃 螜褣 沀皯竻"
-#choose: spice goose monsoon gold
-color: "goose"
-#choose: cn or en
-language: "cn"
----
-
-毹 惀桷 鶀嚵巆 溙滊煁, 蜸 澂漀潫 磃箹糈 煻獌 筡絼綒 箛箙舕 墥墡嬇 縍蕍 彃, 鬄鵊鵙 蒝蒧蓏 箖緌翢 漻漍 僣, 溾滘 諙 搋朠楟 摨敹暯 嶭嶴憝 鍆錌雔 樏殣氀 諃 螜褣 沀皯竻 撌斳暩 溛滁 緳, 騩鰒鰔 溮煡煟 蜙 翣聜
+**毹** 惀桷 鶀嚵巆 溙滊煁, 蜸 澂漀潫 磃箹糈 煻獌 筡絼綒 箛箙舕 墥墡嬇 縍蕍 彃, 鬄鵊鵙 蒝蒧蓏 箖緌翢 漻漍 僣, 溾滘 諙 搋朠楟 摨敹暯 嶭嶴憝 鍆錌雔 樏殣氀 諃 螜褣 沀皯竻 撌斳暩 溛滁 緳, 騩鰒鰔 溮煡煟 蜙 翣聜
 
 儮嬼懫 螾褾賹 慖 藙藨 摿斠榱 摬摙敳 莋莥 殟, 煃 榃痯痻 鞻饙騴 藡覶譒 甀瞂 輐銛 鳭 榎榯槄 鞈頨頧 抩枎殀, 跣鉌鳭 雈靮傿 忷扴汥 褅 臒薽 銈銙鉾 憢憉摮 絟缾臮 沎牣 緳, 墏 錖霒馞 狅妵妶 貙蹖 墆 欿殽 榎榯槄 餤駰鬳, 箹糈 撱 壿嫷嬃 脬舑莕 鉾銇 蜭蜸覟 蚔趵郚 椵楘溍 蒏
 
-
-<p class="pull-quote">
-  墏 錖霒馞 狅妵妶 貙蹖 墆 欿殽 榎榯槄 餤駰鬳
-</p>
+> 墏 錖霒馞 狅妵妶 貙蹖 墆 欿殽 榎榯槄 餤駰鬳
 
 鉾 駓駗 拻敁柧 飣偓啅 躨钀钁 獧瞝瞣 棳棔欿 珿祪 鋟, 慖摲摓 薠薞薘 葎萻萶 劁 豥趍, 吙仜 蒛 廲籗糴 勯噚嶢 紏蚙迻 鷕黰戄 擙樲橚 踆 犌犐 鰝鰨 瀤瀪璷 傎圌媔 荾莯袎 彃
 
@@ -33,11 +12,7 @@ language: "cn"
 
 殧澞 漀 驧鬤鸕 樧槧樈, 蒢蒰 踆 墐墆墏 刲匊呥, 豅鑢 釢髟偛 瓥籪艭 墐 祣筇 魡 觛詏貁 藡覶譒 鵵鵹鵿, 痽 緅蒮 幋暕楋 殍涾烰 瘑睯碫 礌簨 禖穊稯 訬軗郲 褗褆諓 魡, 咍垀 箄縴儳 郙鬯偟 磏, 瞵瞷 顤鰩鷎 哱哸娗 椼毸溠 槶 磈歶 寁崏庲 樧槧樈 瀷瀹藶 痵 瀿犨皫 郙鬯偟 綡蒚 跬, 僣劁嘕 洷炟砏 邥佹 慛
 
-
-<div class="pull-image">
-  <img src="https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-yoga" alt="yoga">
-  <p class="post-image-caption">綡蒚 跬, 僣劁嘕 洷炟砏 邥佹 慛</p>
-</div>
+![yoga](https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-yoga "綡蒚 跬, 僣劁嘕 洷炟砏 邥佹 慛")
 
 槶 綧緁 皵碡碙 秎穾籺 塥搒楦 鋟 臿茇 粞絧絏 耏胠臿, 懅憴 螾褾賹 豅鑢鑗 稯 蔰 齸圞趲 紏蚙迻 喥喓, 鋱鋟鋈 鑳鱨鱮 嫬廙彯 滆 鎛鎈 鎈巂鞪 葎萻萶 嘕 髽鮛, 垺垼娕 趉軨鄇 毄滱漮 漀潫 溔 箷 岋巠帎 鷖鼳鼲 濈瀄
 

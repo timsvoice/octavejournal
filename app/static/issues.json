@@ -1,0 +1,53 @@
+[
+{
+  "issuenumber": "1",
+  "issuetitle": "Octave Budding!",
+  "issueslug": "octave-budding",
+  "issueintro": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem cupiditate qui laborum assumenda, aspernatur, voluptatum eaque accusamus iure natus quo!",
+  "issuepdf": "/pdf/url",
+  "issuearticles": [
+    {
+      "articletitle": "article one",
+      "articleslug": "article-one",
+      "articleteaser": "L,orem ipsum dolor sit amet, consectetur adipisicing elit. Hic, eos repellat quibusdam laboriosam, quis architecto nisi aut harum cum nostrum.",
+      "articlecategory": "Lorem ipsum.",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "Author Name",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-yoga"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-yoga"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "/articles/2014-10-11-example-article-2.md"
+    },
+    {
+      "articletitle": "article two",
+      "articleslug": "article-two",
+      "articleteaser": "L,orem ipsum dolor sit amet, consectetur adipisicing elit. Hic, eos repellat quibusdam laboriosam, quis architecto nisi aut harum cum nostrum.",
+      "articlecategory": "Lorem ipsum.",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "Author Name",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-kids"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-kids"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "/articles/2014-10-11-example-article-2.md"
+    },
+    {
+      "articletitle": "article three",
+      "articleslug": "article-three",
+      "articleteaser": "L,orem ipsum dolor sit amet, consectetur adipisicing elit. Hic, eos repellat quibusdam laboriosam, quis architecto nisi aut harum cum nostrum.",
+      "articlecategory": "Lorem ipsum.",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "Author Name",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-kids"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/2014-10-15-kids"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "/articles/2014-10-11-example-article-2.md"
+    }
+  ]
+}
+]

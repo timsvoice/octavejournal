@@ -1,17 +1,17 @@
 app.config(function($routeProvider, $locationProvider) {
 
-  // $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
 
-  // $routeProvider.when('/', {
-  //   templateUrl: 'index.html',
-  //   controller: 'CoverController'
-  // });
+  $routeProvider.when('/', {
+    templateUrl: 'cover.html',
+    controller: 'MainController'
+  });
 
-  // $routeProvider.when('/posts/:post', {
-  //   templateUrl: 'index.html',
-  //   controller: 'CoverController'
-  // });
+  $routeProvider.when('/:articletitle', {
+    templateUrl: 'article.html',
+    controller: 'ArticleController'
+  });
 
-  // $routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.otherwise({ redirectTo: '/' });
 
 });

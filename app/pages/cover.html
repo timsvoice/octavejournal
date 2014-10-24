@@ -1,27 +1,37 @@
-<div class="coverpage" id="splash">  
-  <div class="horizon">
-    <div class="issue-intro">
-      <h2 class="issue-intro-title">Octave Budding</h2>
-      <p class="issue-intro-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eos dolorum facere quasi earum aliquid veniam? Quos excepturi recusandae corrupti, autem ab, ipsa possimus architecto fugit libero rerum! Numquam dolorem voluptas ratione nostrum repellendus cumque impedit itaque quasi. Facere repellat molestiae officia, harum laudantium veniam rerum expedita quo aliquam totam.</p>
-      <a href="#" class="small button secondary">download</a>
+<div id="view" ng-controller="CoverController">
+  <div class="coverpage" id="splash">
+    <div class="horizon">
+      <div class="issue-intro small-10 columns">
+        <h2 class="issue-intro-title">{{issueList[0].issuetitle}}</h2>
+        <p class="issue-intro-text">{{issueList[0].issueintro}}</p>
+        <div class="hide-for-small">
+          <a href="#" class="small button secondary">download</a>
+        </div>
+      </div>
     </div>
+    <a href="#index">
+      <div class="readon">            
+        <h3>read</h3>
+        <i class="fa fa-chevron-down"></i>
+      </div> 
+    </a> 
   </div>
-  <div class="readon">            
-    <h3>read</h3>
-    <i class="fa fa-caret-down"></i>
-  </div>
-</div>
-<div class="row issue-index">
-  <div class="small-12 columns small-centered">
-    <%= site.htmlFor(_(site.posts).last()) %>
+  <div class="issue-index" id="index">
+    <div class="">
+      <div class="issue-index-intro">
+        <h4>{{test}}</h4>
+      </div>
       <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
-        <li class="issue-index-article" ng-repeat="article in issue[0].articles">
-        <a href="/{{article.title}}">
-          <img src="https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/retina.png" alt="" class="issue-index-article-thumbnail">
-          <h3 class="issue-index-article-title">{{ article.title }}</h3>
-          <p class="issue-index-article-teaser">{{ article.teaser }}</p>
+        <li class="issue-index-article" ng-repeat="article in issueList[0].issuearticles">
+        <a href="/{{article.articleslug}}">
+          <img src="{{article.articleimages[1].thumb}}" alt="" class="issue-index-article-thumbnail">
+          <div class="issue-index-article-body">
+            <h3 class="issue-index-article-title">{{article.articletitle}}</h3>
+            <p class="issue-index-article-teaser">{{article.articleteaser}}</p>
+          </div>
         </a>
         </li>
       </ul>
+    </div>
   </div>
 </div>
