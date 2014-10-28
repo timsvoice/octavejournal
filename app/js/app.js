@@ -1,6 +1,7 @@
 var app = angular.module('octavejournal',[
   'ngRoute',
-  'btford.markdown'
+  'btford.markdown',
+  'ngSanitize'
   ]);
 
   var dropcaps = document.querySelectorAll(".dropcap");
