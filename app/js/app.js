@@ -1,7 +1,7 @@
 var app = angular.module('octavejournal',[
   'ngRoute',
-  'btford.markdown',
-  'ngSanitize'
+  'ngSanitize',
+  'btford.markdown'
   ]);
 
 app.config(function($sceDelegateProvider) {
