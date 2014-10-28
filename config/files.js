@@ -12,12 +12,12 @@ module.exports = function(lineman) {
       vendor: [
         "vendor/bower/jquery/dist/jquery.min.js",
         "vendor/js/angular.js",
-        "vendor/bower/foundation/js/foundation.js",
-        "vendor/bower/foundation/js/foundation/foundation.topbar.js",
-        "vendor/js/dropcap.min.js",        
-        "vendor/bower/showdown/src/showdown.js",
         "vendor/bower/angular-markdown-directive/markdown.js",
         "vendor/bower/angular-sanitize/angular-sanitize.js",
+        "vendor/bower/foundation/js/foundation.js",
+        "vendor/bower/foundation/js/foundation/foundation.topbar.js",
+        "vendor/js/dropcap.min.js",
+        "vendor/bower/showdown/src/showdown.js",
         "vendor/js/**/*.js"
         
       ],
