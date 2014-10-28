@@ -9,6 +9,11 @@ module.exports = function(lineman) {
   //Override file patterns here
   return {
     js: {
+      app: [
+        "app/js/app.js",
+        "app/js/**/*.js"
+      ],
+      
       vendor: [
         "vendor/bower/jquery/dist/jquery.min.js",
         "vendor/js/angular.js",
@@ -20,10 +25,6 @@ module.exports = function(lineman) {
         "vendor/js/dropcap.min.js",
         "vendor/js/**/*.js"
         
-      ],
-      app: [
-        "app/js/app.js",
-        "app/js/**/*.js"
       ]
     },
 
