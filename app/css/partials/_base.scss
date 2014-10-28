@@ -49,17 +49,11 @@ hr {
 
 //issue intro
 
-.issue-index-intro {
-  height: 4rem;
-  padding-top: 0.5rem;
-  background: $goose-light;
-}
-
 .issue-intro {
   text-align: center;
-  @include dead-center(425px, 414px);
+  @include dead-center(425px, 242px);
   @include breakpoint(small) {
-    @include dead-center(100%, 414px);
+    @include dead-center(100%, 200px);
   }
 }
 
@@ -90,4 +84,8 @@ hr {
     height: 3rem;
     font-weight: $light-text;
   }
+}
+
+#login {
+  margin-top: 5rem;
 }

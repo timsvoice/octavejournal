@@ -1,0 +1,31 @@
+<div id="login" class="row">
+  <div class="medium-6 medium-offset-3 large-4 large-offset-4">
+    <form ng-submit="login()">
+      <fieldset class="radius">
+          <div class="row logo">
+            <div class="small-4 columns small-centered">
+              <img src="http://www.octavejournal.com/wp-content/themes/octavejournal/css/assets/branding.png" alt="branding">
+            </div>
+          </div>
+        <div class="row login-form">
+          <div class="medium-12 columns">
+              <label class="password-label" for="password">Check your newsleter for your password</label>
+              <input type="password" name="password" placeholder="password" ng-model="user.password" required/>
+          </div>          
+          <div class="medium-12 columns">            
+              <label for="language">Select Language</label>
+              <select class="small-12 medium-4 columns end" name="language" placeholder="language" ng-model="user.language" required>
+                <option value="chinese" default>CN</option>
+                <option value="english">EN</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <button id="log-in" type="submit" class="button large expand radius">Log In</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

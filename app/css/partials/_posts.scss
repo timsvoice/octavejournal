@@ -11,7 +11,6 @@
 }
 
 .post {
-  
   &-meta {
     margin-bottom: 1rem;
   }
@@ -25,7 +24,6 @@
     // &.gold {background: lighten($gold, 10%);}
     // &.gray {background: $gray-warm;}
     // &.olive {background: $olive;}
-    background: $olive;
     @include breakpoint(small) {
       margin: 0rem -1rem;
     }
@@ -39,35 +37,52 @@
 
 .post-related {
   &-list {
+    margin-top: 2rem;
+  }
+  &-articles {
     list-style: none;
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 1rem;
+    float: left;
+    li {
+      margin-left: 0;
+    }   
   }
 }
 // issue index
 
-li.issue-index {
+li.issue-index {  
   &-article {
-    padding-top: 1rem;
-    // background: lighten($goose, 10%)
+    padding-top: 0.5rem;    
   }
 }
 
 .issue-index {
+  background: lighten($goose, 10%);
+  &-intro {
+    height: 1rem;
+  }
   &-list {
   }
   &-article {
-    height: 474px !important;
     padding-top: 1rem;
     // background: lighten($goose, 10%);
-    background: $goose-light;
+    // background: $goose-light;
     // padding-right: 0 !important;
     // padding-left: 0 !important;    
     // &.spice {background: lighten($spice, 10%);}
     // &.goose {background: lighten($goose, 10%);}
     // &.monsoon {background: lighten($monsoon, 10%);}
     // &.gold {background: lighten($gold, 10%);}
-    // &.olive {background: $olive;}   
+    // &.olive {background: $olive;}
+    @include breakpoint(medium) {
+      // height: 350px !important;
+    }
+    @include breakpoint(large) {
+      // height: 500px !important;
+    }    
     &-body {
-      min-height: 113px;
     } 
     &:hover {
       opacity: 0.9;
@@ -75,7 +90,7 @@ li.issue-index {
     &-thumbnail {
     }
     &-body {
-      padding: 1rem;
+      padding-top: 1rem;
     }
     &-title {
     }

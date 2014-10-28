@@ -37,6 +37,14 @@ i {
   font-family: $icon-font;
 }
 
+label {
+  float: left;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  height: 36px;
+  margin-right: 1rem;
+}
+
 
 .dropcap {
   color: $branding-color;
@@ -68,7 +76,7 @@ i {
 
 .issue-index-intro {
   h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2.5rem;
     text-align: center;
     font-weight: $light-text;
@@ -141,7 +149,7 @@ footer {
 
 .issue-index {
   &-article {
-    text-align: center;
+    text-align: left;
     &.cn {
       * {
         font-family: $cn-font;
@@ -153,7 +161,7 @@ footer {
       font-family: $body-font;
     }
     &-teaser {
-      color: $black;
+      color: $gray-dark;
       font-size: 1rem;
       line-height: 1.5rem;
       font-family: $body-font;
@@ -218,14 +226,14 @@ footer {
     margin-top: 0;
     color: $branding-color;
   }
+  &-teaser {
+    font-size: 1rem;
+    color: $goose;
+    line-height: 1.5rem;
+    margin-bottom: 0rem;
+    font-style: italic;
+  }
   &-meta {
-    p {
-      font-size: 1rem;
-      color: $goose;
-      line-height: 1.5rem;
-      margin-bottom: 0rem;
-      font-style: italic;
-    }
     .button {
       margin-top: 1rem;
     }
@@ -258,6 +266,11 @@ footer {
       margin-top: 1rem;
       font-size: 1rem;
       line-height: 1.5rem; 
+    }
+    h2 {
+      font-weight: $heavy-text;
+      color: $branding-color;
+      font-size: 1.5rem;
     }   
   }
 }

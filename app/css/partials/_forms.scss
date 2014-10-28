@@ -1,0 +1,20 @@
+.row.logo {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  img {
+    width: 126px;
+  }
+}
+.login-form {
+  padding: 2rem 0rem;
+}
+
+.password-label {
+  font-size: 0.875rem;
+  color: $goose;
+  font-style: italic;
+}
+
+fieldset.radius {
+  border: none;
+}

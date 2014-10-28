@@ -2,16 +2,36 @@ app.config(function($routeProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
 
-  $routeProvider.when('/', {
+  $routeProvider.when('/login', {
+    templateUrl: 'login.html',
+    controller: 'LoginController'
+  });
+
+  $routeProvider.when('/:language', {
     templateUrl: 'cover.html',
     controller: 'MainController'
   });
+  
+  // $routeProvider.when('/cn', {
+  //   templateUrl: 'cover.html',
+  //   controller: 'MainController'
+  // });
 
-  $routeProvider.when('/:articletitle', {
+  $routeProvider.when('/:language/articles/:articletitle', {
     templateUrl: 'article.html',
     controller: 'ArticleController'
   });
 
-  $routeProvider.otherwise({ redirectTo: '/' });
+  $routeProvider.when('/:language/issue/:articletitle', {
+    templateUrl: 'issue-intro.html',
+    controller: 'ArticleController'
+  });
+
+  // $routeProvider.when('/cn/:articletitle', {
+  //   templateUrl: 'article.html',
+  //   controller: 'ArticleController'
+  // });
+
+  $routeProvider.otherwise({ redirectTo: '/login' });
 
 });
