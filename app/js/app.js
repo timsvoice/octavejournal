@@ -1,6 +1,5 @@
 var app = angular.module('octavejournal',[
   'ngRoute',
-  'ngSanitize',
   'btford.markdown'
   ]);
 
