@@ -3,7 +3,7 @@
   <head>
     <title>Octave Journal</title>
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
-    <meta name="viewporxt" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimum-scale=1" />
   </head>
   <body>
        
