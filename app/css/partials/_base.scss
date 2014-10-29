@@ -20,6 +20,10 @@ hr {
 	display: none !important;
 }
 
+#view {
+  margin-top: 4rem;
+}
+
 .container {
   margin-top: 4rem;
   @include breakpoint(small) {

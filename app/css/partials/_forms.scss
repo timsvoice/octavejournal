@@ -1,12 +1,19 @@
 .row.logo {
   margin-top: 1rem;
   margin-bottom: 2rem;
+  @include breakpoint(small) {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
   img {
     width: 126px;
   }
 }
 .login-form {
   padding: 2rem 0rem;
+  @include breakpoint(small) {
+    padding: 1rem 0rem;
+  }
 }
 
 .password-label {
