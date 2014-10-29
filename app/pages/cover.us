@@ -63,7 +63,7 @@
         <li class="issue-index-article" ng-repeat="article in issueList[0].issuearticles | filter:{'articlelanguage':lan}">
         <a href="{{article.articlelanguage}}/articles/{{article.articleslug}}">
         <h3 class="issue-index-article-title">{{article.articletitle}}</h3>
-          <img src="{{article.articleimages[0].feature}}" alt="" class="issue-index-article-thumbnail">
+          <img ng-src="/img/blank.gif" data-original="{{article.articleimages[0].feature}}" alt="" class="lazy issue-index-article-thumbnail">
           <div class="issue-index-article-body">
             <p class="issue-index-article-teaser">{{article.articleteaser}}</p>
           </div>

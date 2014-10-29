@@ -1,0 +1,162 @@
+[
+{
+  "issuenumber": "1",
+  "issuetitle": [
+    {"en": "Octave Budding!"},
+    {"cn": "音昱启程！"}
+  ],
+  "issueslug": "octave-budding",
+  "issueteaser":  [
+    {"en": "After years of hard work and dedication by all at Octave, we are excited to introduce Octave’s first product: the pilot project, Octave Living Room."},
+    {"cn": "在全体音昱同仁长达一年的辛苦工作和努力下，令人激动地一刻以及来临，音昱品牌首秀——音昱听堂，已经完备！"}
+    ],
+  "issueintro": [
+    {"en": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/intro-en.md"},
+    {"cn": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/intro-cn.md"}
+    ],
+  "issuepdf": "/pdf/url",
+  "issueimage": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/octave-budding-article-feature.png",
+  "issuearticles": [
+    {
+      "articletitle": "Aitia Opens",
+      "articleslug": "aitia-opens-at-olr-en",
+      "articleteaser": "A commitment to family — renowned Aitia Family Institute opening ceremony and inauguration seminar takes place at Octave Living Room",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-thumb.png"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/aitia-opens-at-olr-en.md"
+    },
+    {
+      "articletitle": "家之源于上海盛大开幕",
+      "articleslug": "aitia-opens-at-olr-cn",
+      "articleteaser": "家之源 (Aitia Family Institute)在上海音昱听堂正式开幕",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-thumb.png"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/aitia-opens-at-olr-cn.md"
+    },
+    {
+      "articletitle": "Octave Family Day",
+      "articleslug": "our-first-octave-family-day-at-octave-living-room",
+      "articleteaser": "Kids laughing, the sun beaming and balloons bouncing — a family weekend hanging out the courtyard at OLR",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-thumb.png"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/first-family-day-en.md"
+    },
+    {
+      "articletitle": "音昱听堂首个员工家庭日！",
+      "articleslug": "our-first-octave-family-day-at-octave-living-room",
+      "articleteaser": "宝贝们又蹦又跳，全家其乐融融，这个完美周末，我们相聚在音昱听堂。",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-thumb.png"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/first-family-day-cn.md"
+    },
+    {
+      "articletitle": "Rooftop Yoga",
+      "articleslug": "rooftop-yoga-teachers-day-en",
+      "articleteaser": "Yoga Teacher’s Day — Octave and co-partner Lulu Lemon, the popular yoga-inspired brand, reach for the sun at Octave Living Room",
+      "articlecategory": "Nurture",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-thumb.png"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/rooftop-yoga-teachers-day-en.md"
+    },
+    {
+      "articletitle": "教师节，上晒台去练瑜伽！",
+      "articleslug": "rooftop-yoga-teachers-day-cn",
+      "articleteaser": "音昱携手深受欢迎的瑜伽品牌Lulu Lemon，与我们一起在音昱听堂晒台沐浴晨光！",
+      "articlecategory": "Nurture",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+     "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-thumb.png"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/rooftop-yoga-teachers-day-cn.md"    
+    },
+    {
+      "articletitle": "The Milestone",
+      "articleslug": "mileston-new-office-en",
+      "articleteaser": "We now have a new office on No. 20 Donghu Road on the floors of 3–6. A wonderful place that inspires deep thoughts and great actions.",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-thumb.png"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/new-office-en.md"
+    },
+    {
+      "articletitle": "里程碑 - 搬家了！",
+      "articleslug": "mileston-new-office-cn",
+      "articleteaser": "历时数月的艰辛付出，我们终于搬家了---东湖路20号3楼-6楼，这里是一个充满爱和创意的家！",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-thumb.png"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/rnew-office-cn.md"    
+    },
+    {
+      "articletitle": "Family Business Succession",
+      "articleslug": "the-secret-behind-family-business-succession-en",
+      "articleteaser": "Successors’ Marriage — Family Business Network hosts a series workshop on ‘Inheritance of Family Relationships’",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-thumb.png"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/fbn-en.md"
+    },
+    {
+      "articletitle": "“传承中的家族关系”-继承者的婚姻",
+      "articleslug": "the-secret-behind-family-business-succession-cn",
+      "articleteaser": "FBN国际家族企业协会“传承中的家族关系”工作坊于9月26日在音昱听堂展开",
+      "articlecategory": "Connect",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-feature.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-thumb.png"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/fbn-cn.md"    
+    }
+  ]
+}
+]

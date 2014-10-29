@@ -16,6 +16,7 @@ module.exports = function(lineman) {
       
       vendor: [
         "vendor/bower/jquery/dist/jquery.min.js",
+        "vendor/bower/jquery.lazyload/jquery.lazyload.min.js",
         "vendor/js/angular.js",
         "vendor/bower/angular-sanitize/angular-sanitize.js",
         "vendor/bower/showdown/src/showdown.js",

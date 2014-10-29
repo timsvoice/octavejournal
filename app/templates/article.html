@@ -30,7 +30,7 @@
     <div class="post-intro  clearfix"> 
       <div class="post row">    
         <div class="post-image small-12 columns alpha beta">
-          <img  src="{{article.articleimages[0].feature}}" alt="feature image">
+          <img src="{{ article.articleimages[0].feature }}" alt="feature image" class="lazy">
           <p class="post-image-caption">          
           </p>
         </div>
@@ -56,7 +56,7 @@
             <ul class="post-related-articles medium-8 columns alpha">
               <li ng-repeat="articles in issueList[0].issuearticles | filter:{'articlelanguage':lan}">
                 <a href="/{{lan}}/articles/{{articles.articleslug}}">
-                  <img src="{{articles.articleimages[0].feature}}" alt="">
+                  <img data-original="{{ articles.articleimages[0].feature }}" ng-src="/img/blank.gif" alt="" class="lazy">
                   <h5>{{articles.articletitle}}</h5>
                 </a>
               </li>
