@@ -21,11 +21,9 @@ hr {
 }
 
 #view {
-  margin-top: 4rem;
 }
 
 .container {
-  margin-top: 4rem;
   @include breakpoint(small) {
     padding: 0rem 1rem;
   }

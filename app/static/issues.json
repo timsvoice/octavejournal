@@ -127,7 +127,7 @@
         {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-thumb.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/rnew-office-cn.md"    
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/new-office-cn.md"    
     },
     {
       "articletitle": "Family Business Succession",
@@ -156,6 +156,34 @@
       ],
       "articlelanguage": "cn",
       "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/fbn-cn.md"    
+    },
+    {
+      "articletitle": "Take Care of Your Eyes",
+      "articleslug": "take-care-of-your-eyes-en",
+      "articleteaser": "Contributed by Colleen Symmes, ND, Naturopathic Doctor & Wellness Innovator",
+      "articlecategory": "Nurture",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"}
+      ],
+      "articlelanguage": "en",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/take-care-of-your-eyes-en.md"
+    },
+    {
+      "articletitle": "保护你的双眼",
+      "articleslug": "take-care-of-your-eyes-cn",
+      "articleteaser": "Contributed by Colleen Symmes, ND, Naturopathic Doctor & Wellness Innovator",
+      "articlecategory": "Nurture",
+      "articletags": ["tag1", "tag2", "tag3"],
+      "articleauthor": "",
+      "articleimages": [
+        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"},
+        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"}
+      ],
+      "articlelanguage": "cn",
+      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/take-care-of-your-eyes-cn.md"    
     }
   ]
 }

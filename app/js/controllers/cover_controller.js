@@ -1,6 +1,9 @@
 app.controller('CoverController', ['$scope', '$http', 'IssuesService',
   function($scope, $http, IssuesService) {
   
+  $scope.navigation = {name: 'navigation', url: 'navigation.html'};
+  $scope.footer = {name: 'footer', url: 'footer.html'};
+  
   IssuesService.getIssues(function(data){
     $scope.issueList = data;
     console.log($scope.issueList);

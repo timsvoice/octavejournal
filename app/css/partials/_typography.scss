@@ -130,18 +130,39 @@ label {
 //footer 
 
 footer {
-  a>h2 {
-    font-size: 0.75rem;
+  h4 {
+    font-size: 1.25rem;
     color: $gray-dark;
     text-transform: uppercase;
     font-weight: $heavy-text;
     text-align: left;
-    &:hover {
-      color: $branding-color;
+    @include breakpoint(medium) {
+      font-size: 1rem;
     }
   }
-  .right a>h2 {
-    text-align: right;
+  h5 {
+    font-size: 1.25rem;
+    font-weight: $heavy-text;
+    color: $gray-dark;
+    @include breakpoint(medium) {
+      font-size: 1rem;
+    }
+  }
+  a > h5 {
+    color: $gray-dark;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: $heavy-text;
+    &:hover {
+      color: $gray-dark;
+    }
+    @include breakpoint(medium) {
+      font-size: 0.85rem;
+    }
+  }
+  p {
+    color: $gray-dark;
+    font-size: .9rem;
   }
 }
 

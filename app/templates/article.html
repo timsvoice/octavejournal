@@ -1,31 +1,6 @@
 <div class="clearfix">       
   <div class="large-12 columns alpha beta"> 
-    <div class="navigation" ng-controller="MainController">
-      <div class="fixed navigation">
-        <nav class="top-bar" data-topbar role="navigation">
-          <ul class="title-area">
-            <li class="name">
-              <a href="/{{lan}}">
-                <img src="http://www.octavejournal.com/wp-content/themes/octavejournal/css/assets/branding.png" alt="branding">
-              </a>
-              <h1 class="branding-title"><a href="/{{lan}}"><span class="bold">Octave</span> journal</a></h1>
-            </li>
-          </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li>
-          <a href="/cn">CN</a>
-        </li>
-        <li class="divider"></li>
-        <li><a href="/en">EN</a></li>
-      </ul>
-      <!-- Left Nav Section -->
-    </section>
-        </nav>
-      </div>
-    </div>
+  <div ng-include="navigation.url"></div> 
   <div class="container">
     <div class="post-intro  clearfix"> 
       <div class="post row">    
@@ -68,3 +43,5 @@
   </div> 
   </div>
 </div>
+
+<div ng-include="footer.url"></div> 

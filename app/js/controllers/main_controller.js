@@ -6,6 +6,6 @@ app.controller('MainController', ['$scope', '$http', '$routeParams',
       
   $scope.navigation = {name: 'navigation', url: 'navigation.html'};
   $scope.footer = {name: 'footer', url: 'footer.html'};
-
+  console.log($scope.navigation);
 }]);
 

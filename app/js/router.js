@@ -11,11 +11,6 @@ app.config(function($routeProvider, $locationProvider) {
     templateUrl: 'cover.html',
     controller: 'MainController'
   });
-  
-  // $routeProvider.when('/cn', {
-  //   templateUrl: 'cover.html',
-  //   controller: 'MainController'
-  // });
 
   $routeProvider.when('/:language/articles/:articletitle', {
     templateUrl: 'article.html',
@@ -26,11 +21,6 @@ app.config(function($routeProvider, $locationProvider) {
     templateUrl: 'issue-intro.html',
     controller: 'ArticleController'
   });
-
-  // $routeProvider.when('/cn/:articletitle', {
-  //   templateUrl: 'article.html',
-  //   controller: 'ArticleController'
-  // });
 
   $routeProvider.otherwise({ redirectTo: '/login' });
 
