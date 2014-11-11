@@ -12,14 +12,3 @@
  *
  */
 
-module.exports = {
-  drawRoutes: function(app) {
-    app.post('/login', function(req, res) {
-      res.json({ message: 'logging in!' });
-    });
-
-    app.post('/logout', function(req, res) {
-      res.json({ message: 'logging out!'});
-    });
-  }
-};
