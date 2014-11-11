@@ -2,7 +2,6 @@
  *   These might be as simple as stubbing a little JSON to
  *   facilitate development of code that interacts with an HTTP service
  *   (presumably, mirroring one that will be reachable in a live environment).
- *
  * It's important to remember that any custom endpoints defined here
  *   will only be available in development, as lineman only builds
  *   static assets, it can't run server-side code.
