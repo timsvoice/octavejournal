@@ -3,7 +3,7 @@
   <div class="small-6 medium-4 columns left alpha">
       <h4 class="show-for-medium-up">about octave journal</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem iusto quo rem dolorum totam amet facilis nobis corrupti dolore est.</p>
-      <a href="mailto:timothyvoice@livingoctave.com,margiechiang@livingoctave.com">
+      <a href="mailto:timothyvoice@livingoctave.com;margiechiang@livingoctave.com">
         <h2>contact us</h2>
       </a>
   </div>
