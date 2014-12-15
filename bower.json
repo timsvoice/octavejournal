@@ -1,15 +1,13 @@
 {
-  "name": "beach or nah",
-  "version": "0.0.0",
-  "homepage": "https://github.com/timsvoice/beachornah",
+  "name": "octave journal",
+  "version": "0.3.0",
+  "homepage": "https://github.com/timsvoice/octavejournal",
   "authors": [
     "timsvoice <timsethvoice@gmail.com>"
   ],
-  "description": "Wep App for beach day decisions",
+  "description": "multi lingual lifestyle magazie",
   "keywords": [
-    "webapp",
-    "API",
-    "weather"
+    "magazine"
   ],
   "license": "MIT",
   "ignore": [
@@ -22,9 +20,12 @@
   ],
   "dependencies": {
     "foundation": "5.0.3",
-    "jquery.lazyload": "~1.9.3"
+    "jquery.lazyload": "~1.9.3",
+    "angular-sanitize": "~1.3.7",
+    "showdown": "~0.3.1",
+    "angular-markdown-directive": "~0.3.0"
   },
   "resolutions": {
-    "angular": "1.3.0"
+    "angular": "1.3.7-build.3695+sha.aac3c4a"
   }
 }
