@@ -4,4 +4,4 @@ On Saturday, September 20th, all OLR employees and their families attended the f
 
 Burkhard Wolter, general manager of OLR, oversaw the gathering. 
 
-“This family day event is to introduce the Octave Living Room venue to the families of our employees,” say Burkhard. It’s all about bonding and helping our people feel proud of their good work.” 
+“This family day event is to introduce the Octave Living Room venue to the families of our employees,” say Burkhard. It’s all about bonding and helping our people feel proud of their good work."
