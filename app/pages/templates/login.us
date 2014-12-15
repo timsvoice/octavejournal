@@ -4,7 +4,7 @@
       <fieldset class="radius">
           <div class="row logo">
             <div class="small-4 columns small-centered">
-              <img src="https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/branding.png">
+              <img src="/img/branding.png">
             </div>
           </div>
         <div class="row login-form">
