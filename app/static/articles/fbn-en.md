@@ -1,0 +1,9 @@
+“What a family business inherits is not only business and wealth, but also family culture and the responsibility to ensure business sustainability.” —Frederick Chavalit Tsao, President of Family Business Network Asia
+
+![Fred](/img/fbn-fred.png)
+
+Family Business Network (FBN) Asia is a regional chapter of FBN International, a non-profit organization representing family businesses in 56 countries across 5 continents. Current membership has reached more than 5,600 family business leaders. Founded in 1990 in Lausanne, Switzerland, FBN International has become the world’s leading network of business-owning families, promoting the success and sustainability of family business.  Based in Singapore, FBN Asia covers China, Hong Kong SAR, Indonesia, Malaysia, Philippines and Thailand.
+
+On the day of AITIA Family Institute’s opening, a workshop titled “Inheritance of Family Relationships” took place at OLR. During the half-day workshop, the legal expert, Wang Fang shared her expertise in helping family businesses to set up a risk control system when it comes to ‘marriage heritage.’ Apart from institutional protection, emotional support also plays an important role in family relationships. With that, Dr. Wu Xijuan, an expert in family and marriage therapy also presented on how to help successors define their role in the family.
+
+Within five years, most family businesses in China will face succession challenges. A successful transition will require smooth collaboration between the two systems of family and business. FBN will host a series of workshops addressing these topics. Stay tuned.

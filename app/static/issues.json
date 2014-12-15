@@ -11,11 +11,11 @@
     {"cn": "在全体音昱同仁长达一年的辛苦工作和努力下，令人激动地一刻以及来临，音昱品牌首秀——音昱听堂，已经完备！"}
     ],
   "issueintro": [
-    {"en": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/intro-en.md"},
-    {"cn": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/intro-cn.md"}
+    {"en": "/articles/intro-en.md"},
+    {"cn": "/articles/intro-cn.md"}
     ],
   "issuepdf": "/pdf/url",
-  "issueimage": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/octave-budding-article-feature.png",
+  "issueimage": "/img/octave-budding-article-feature.png",
   "issuearticles": [
     {
       "articletitle": "Aitia Opens",
@@ -25,11 +25,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-thumb.png"}
+        {"feature": "/img/aitia-open-at-olr-fred-feature.png"},
+        {"thumb": "/img/aitia-open-at-olr-fred-thumb.png"}
       ],
       "articlelanguage": "en",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/aitia-opens-at-olr-en.md"
+      "articlecontent": "/articles/aitia-opens-at-olr-en.md"
     },
     {
       "articletitle": "家之源于上海盛大开幕",
@@ -39,11 +39,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/aitia-open-at-olr-fred-thumb.png"}
+        {"feature": "/img/aitia-open-at-olr-fred-feature.png"},
+        {"thumb": "/img/aitia-open-at-olr-fred-thumb.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/aitia-opens-at-olr-cn.md"
+      "articlecontent": "/articles/aitia-opens-at-olr-cn.md"
     },
     {
       "articletitle": "Octave Family Day",
@@ -53,11 +53,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-thumb.png"}
+        {"feature": "/img/first-family-day-feature.png"},
+        {"thumb": "/img/first-family-day-thumb.png"}
       ],
       "articlelanguage": "en",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/first-family-day-en.md"
+      "articlecontent": "/articles/first-family-day-en.md"
     },
     {
       "articletitle": "音昱听堂首个员工家庭日！",
@@ -67,11 +67,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/first-family-day-thumb.png"}
+        {"feature": "/img/first-family-day-feature.png"},
+        {"thumb": "/img/first-family-day-thumb.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/first-family-day-cn.md"
+      "articlecontent": "/articles/first-family-day-cn.md"
     },
     {
       "articletitle": "Rooftop Yoga",
@@ -81,11 +81,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-thumb.png"}
+        {"feature": "/img/yoga-day-feature.png"},
+        {"thumb": "/img/yoga-day-thumb.png"}
       ],
       "articlelanguage": "en",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/rooftop-yoga-teachers-day-en.md"
+      "articlecontent": "/articles/rooftop-yoga-teachers-day-en.md"
     },
     {
       "articletitle": "教师节，上晒台去练瑜伽！",
@@ -95,11 +95,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
      "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/yoga-day-thumb.png"}
+        {"feature": "/img/yoga-day-feature.png"},
+        {"thumb": "/img/yoga-day-thumb.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/rooftop-yoga-teachers-day-cn.md"    
+      "articlecontent": "/articles/rooftop-yoga-teachers-day-cn.md"    
     },
     {
       "articletitle": "The Milestone",
@@ -109,11 +109,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-thumb.png"}
+        {"feature": "/img/new-office-feature.png"},
+        {"thumb": "/img/new-office-thumb.png"}
       ],
       "articlelanguage": "en",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/new-office-en.md"
+      "articlecontent": "/articles/new-office-en.md"
     },
     {
       "articletitle": "里程碑 - 搬家了！",
@@ -123,11 +123,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/new-office-thumb.png"}
+        {"feature": "/img/new-office-feature.png"},
+        {"thumb": "/img/new-office-thumb.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/new-office-cn.md"    
+      "articlecontent": "/articles/new-office-cn.md"    
     },
     {
       "articletitle": "Family Business Succession",
@@ -137,11 +137,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-thumb.png"}
+        {"feature": "/img/fbn-feature.png"},
+        {"thumb": "/img/fbn-thumb.png"}
       ],
       "articlelanguage": "en",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/fbn-en.md"
+      "articlecontent": "/articles/fbn-en.md"
     },
     {
       "articletitle": "“传承中的家族关系”-继承者的婚姻",
@@ -151,11 +151,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-feature.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/fbn-thumb.png"}
+        {"feature": "/img/fbn-feature.png"},
+        {"thumb": "/img/fbn-thumb.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/fbn-cn.md"    
+      "articlecontent": "/articles/fbn-cn.md"    
     },
     {
       "articletitle": "Take Care of Your Eyes",
@@ -165,11 +165,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"}
+        {"feature": "/img/eyes.png"},
+        {"thumb": "/img/eyes.png"}
       ],
       "articlelanguage": "en",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/en/take-care-of-your-eyes-en.md"
+      "articlecontent": "/articles/take-care-of-your-eyes-en.md"
     },
     {
       "articletitle": "保护你的双眼",
@@ -179,11 +179,11 @@
       "articletags": ["tag1", "tag2", "tag3"],
       "articleauthor": "",
       "articleimages": [
-        {"feature": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"},
-        {"thumb": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/images/eyes.png"}
+        {"feature": "/img/eyes.png"},
+        {"thumb": "/img/eyes.png"}
       ],
       "articlelanguage": "cn",
-      "articlecontent": "https://s3-ap-southeast-1.amazonaws.com/octavejournal/article-assets/articles/cn/take-care-of-your-eyes-cn.md"    
+      "articlecontent": "/articles/take-care-of-your-eyes-cn.md"    
     }
   ]
 }

@@ -44,7 +44,7 @@ module.exports = function(lineman) {
       //   enabled: true,
       //   host: 'localhost',
       //   port: 3000
-      // }
+      // // }
     }
 
     // Sass

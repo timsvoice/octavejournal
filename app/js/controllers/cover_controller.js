@@ -6,7 +6,6 @@ app.controller('CoverController', ['$scope', '$http', 'IssuesService',
   
   IssuesService.getIssues(function(data){
     $scope.issueList = data;
-    console.log($scope.issueList);
   });
 
   //splash 

@@ -18,7 +18,6 @@
       </div>
       <div class="issue-index" id="index">
         <div class="">
-          <div class="issue-index-intro"></div>
           <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
             <li class="issue-index-article" ng-repeat="article in issueList[0].issuearticles | filter:{'articlelanguage':lan}">
               <a href="{{article.articlelanguage}}/articles/{{article.articleslug}}">

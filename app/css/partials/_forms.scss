@@ -25,3 +25,71 @@
 fieldset.radius {
   border: none;
 }
+
+// New Article
+
+.post-image-input {
+  border: 3px $gray solid;
+  focus {
+    background: $gray;
+  }
+}
+
+.post-image-input {
+  background: url(/img/blank_2x.gif) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 571px;
+  @include breakpoint(small) {
+    min-height: 200px;
+    margin: 0rem 1rem;
+  }
+}
+
+// .post-meta {
+//   background: $gray;
+//   padding: 1rem;
+//   margin: 1rem 0rem;
+//   select {
+//     margin-right: 1rem;
+//     @include breakpoint(small) {
+//       margin-bottom: 1rem;
+//     }
+//   }
+// }
+
+textarea {
+  border: 2px $gray solid;
+  @include breakpoint(small) {
+    margin-top: 1rem;
+  }
+}
+
+textarea.post-title-input {
+  @extend .post-title;
+  height: 9rem;
+}
+
+textarea.post-teaser-input {
+  @extend .post-teaser;
+  min-height: 10rem;
+}
+
+textarea.post-content-input {
+  @extend .post-content;
+  min-height: 40rem;
+}
+
+.post-buttons {
+  margin: 1rem 0rem;
+  input {
+    float: right;
+    margin-left: 1rem;
+    background: $branding-color;
+  }
+}

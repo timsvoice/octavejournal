@@ -22,6 +22,11 @@ app.config(function($routeProvider, $locationProvider) {
     controller: 'ArticleController'
   });
 
+  $routeProvider.when('/:language/article-new', {
+    templateUrl: 'new-article.html',
+    controller: 'CmsController'
+  });
+
   $routeProvider.otherwise({ redirectTo: '/login' });
 
 });
