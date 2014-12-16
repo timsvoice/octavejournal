@@ -5,7 +5,6 @@ app.controller('LoginController', function($scope, $location, AuthenticationServ
     if ($cookieStore.get('isLogged') === 'true') {
       var lan = $cookieStore.get('lan');
       $location.path(lan);
-      console.log('success');
     }
   }
 
