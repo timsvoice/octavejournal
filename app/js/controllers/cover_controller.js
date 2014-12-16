@@ -1,8 +1,9 @@
-app.controller('CoverController', ['$scope', '$http', 'IssuesService',
-  function($scope, $http, IssuesService) {
+app.controller('CoverController', ['$scope', '$http', 'IssuesService','$cookieStore',
+  function($scope, $http, IssuesService, $cookieStore) {
   
   $scope.navigation = {name: 'navigation', url: 'navigation.html'};
   $scope.footer = {name: 'footer', url: 'footer.html'};
+  var cookie = $cookieStore.get('isLogged');
   
   IssuesService.getIssues(function(data){
     $scope.issueList = data;

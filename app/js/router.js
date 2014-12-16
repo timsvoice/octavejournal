@@ -9,7 +9,7 @@ app.config(function($routeProvider, $locationProvider) {
 
   $routeProvider.when('/:language', {
     templateUrl: 'cover.html',
-    controller: 'MainController'
+    controller: 'MainController',
   });
 
   $routeProvider.when('/:language/articles/:articletitle', {
