@@ -92,6 +92,13 @@ label {
 .navigation {
   .top-bar {
     background: none !important;
+    ul {
+      li.cn-language {
+          a {
+          font-family: $cn-font;
+          }
+      }
+    }
   }
   h1.branding-title {
     a {
