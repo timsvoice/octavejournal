@@ -3,7 +3,7 @@ app.controller('CoverController', ['$scope', '$http', 'IssuesService','$cookieSt
   
   $scope.navigation = {name: 'navigation', url: 'navigation.html'};
   $scope.footer = {name: 'footer', url: 'footer.html'};
-  var cookie = $cookieStore.get('isLogged');
+  
   
   IssuesService.getIssues(function(data){
     $scope.issueList = data;

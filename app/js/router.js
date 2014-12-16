@@ -15,17 +15,17 @@ app.config(function($routeProvider, $locationProvider) {
   $routeProvider.when('/:language/articles/:articletitle', {
     templateUrl: 'article.html',
     controller: 'ArticleController'
-  });
+  }).otherwise({ redirectTo: '/login' });
 
   $routeProvider.when('/:language/issue/:articletitle', {
     templateUrl: 'issue-intro.html',
     controller: 'ArticleController'
-  });
+  }).otherwise({ redirectTo: '/login' });
 
   $routeProvider.when('/:language/article-new', {
     templateUrl: 'new-article.html',
     controller: 'CmsController'
-  });
+  }).otherwise({ redirectTo: '/login' });
 
   $routeProvider.otherwise({ redirectTo: '/login' });
 
