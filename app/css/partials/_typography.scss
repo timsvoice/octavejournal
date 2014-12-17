@@ -30,7 +30,19 @@
 
 // base typography
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, a {
-  font-family: $body-font;
+  // font-family: $body-font;
+}
+
+.cn {
+  * {
+    font-family: $cn-font;
+  }
+}
+
+.en {
+  * {
+    font-family: $body-font;
+  }
 }
 
 i {
@@ -186,13 +198,11 @@ footer {
     &-title {
       font-size: 1.5rem;
       font-weight: $heavy-text;
-      font-family: $body-font;
     }
     &-teaser {
       color: $gray-dark;
       font-size: 1rem;
       line-height: 1.5rem;
-      font-family: $body-font;
       @include breakpoint(small) {
         font-size: 0.9rem;
       }
@@ -236,12 +246,6 @@ footer {
   }
 }
 
-
-.container.cn {
-  * {
-    font-family: $cn-font;
-  }
-}
 
 .post {
   &-title {

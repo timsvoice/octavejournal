@@ -1,4 +1,4 @@
-<div class="clearfix">       
+<div class="clearfix cn"> 
   <div class="large-12 columns alpha beta"> 
   <div ng-include="navigation.url"></div> 
     <div id="view" ng-controller="CoverController">
