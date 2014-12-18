@@ -5,6 +5,7 @@
 .navigation {
   height: 4rem;
   .top-bar {
+    background: none !important;
     height: 4rem;
     @include breakpoint(medium) {
       padding-left: 1rem;
@@ -47,6 +48,9 @@
       .has-dropdown > a:after {
         border-color: $black transparent transparent transparent;
         margin-top: 7px;
+      }
+      li:not(.has-form) a:not(.button) {
+        padding-top: 0.4375rem;
       }
     }
   }

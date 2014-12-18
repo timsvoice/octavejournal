@@ -12,7 +12,7 @@ app.controller('CoverController', ['$scope', '$http', 'IssuesService','$cookieSt
   //splash 
   function resizesplash(divId) {
     var heights = window.innerHeight;
-    document.getElementById("splash").style.height = heights -115 + "px";
+    document.getElementById("splash").style.height = heights -110 + "px";
     } resizesplash();
     window.onresize = function() {
       resizesplash(); };

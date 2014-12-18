@@ -33,6 +33,8 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
   // font-family: $body-font;
 }
 
+// language font selection
+
 .cn {
   * {
     font-family: $cn-font;
@@ -45,30 +47,16 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
   }
 }
 
+// icons
+
 i {
   font-family: $icon-font;
 }
 
-label {
-  float: left;
-  font-size: 1rem;
-  line-height: 2.25rem;
-  height: 36px;
-  margin-right: 1rem;
-}
-
-
-.dropcap {
-  color: $branding-color;
-  margin-right: 0.5rem;
-  font-weight: $heavy-text;
-  &.cn {
-    margin-right: 0.5rem;
-  }
-}
 // issue intro
 
 .issue-intro {
+  text-align: center;
   &-title {
     color: $white;
     font-size: 3rem;
@@ -102,16 +90,6 @@ label {
 // navigation
 
 .navigation {
-  .top-bar {
-    background: none !important;
-    ul {
-      li.cn-language {
-          a {
-          font-family: $cn-font;
-          }
-      }
-    }
-  }
   h1.branding-title {
     a {
       .bold {
@@ -142,7 +120,6 @@ label {
   // dropdown menu
   li:not(.has-form) a:not(.button) {
     line-height: 3rem; 
-    padding-top: 0.4375rem;
   }
 }
 
@@ -196,7 +173,7 @@ footer {
       }
     }
     &-title {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-weight: $heavy-text;
     }
     &-teaser {
@@ -246,7 +223,6 @@ footer {
   }
 }
 
-
 .post {
   &-title {
     font-size: 3rem;
@@ -284,16 +260,6 @@ footer {
     margin-left: 1rem;
   }
   &-body {
-    // p:first-child {
-    //   &::first-letter, &:first-letter {
-    //     font-size: 3rem;
-    //     font-weight: $heavy-text;
-    //     padding-right: 0.5rem;
-    //     text-transform: uppercase;
-    //     margin-right: 0.25rem;
-    //     color: $branding-color;
-    //   }
-    // }
     p {
       margin-top: 1rem;
       font-size: 1rem;
