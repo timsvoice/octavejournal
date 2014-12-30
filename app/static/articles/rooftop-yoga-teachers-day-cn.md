@@ -8,8 +8,6 @@
 
 ![Hair](/img/yoga-day-hair.png)
 
-晒台瑜伽晨练结束以后，音昱培训项目总监Dharma Bodhi就“瑜伽的神秘起源”进行了精彩演讲。
-
 ![Downward](/img/yoga-day-downward.png)
 
 源于印度的瑜伽，如今已经成为都市人践行身心平衡的最佳运动，音昱融会贯通东西健康理念与实践经验，致力于帮助个体实现身心平衡。

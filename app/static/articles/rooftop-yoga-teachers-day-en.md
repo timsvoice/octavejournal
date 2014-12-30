@@ -8,8 +8,6 @@ Thirty-nine certified yoga teachers from the popular yoga apparel company LuLu L
 
 ![Hair](/img/yoga-day-hair.png)
 
-Following the group yoga session, Octave’s program director Dharma Bodhi gave inspiring speech on “The Mystical Origins of Yoga.”
-
 ![Downward](/img/yoga-day-downward.png)
 
 Originated from India, Yoga is now a well-received way of practicing mind-body-self balance in cities like Shanghai where people live a fast-paced, modern lifestyle. Octave integrates the best of Eastern consciousness training with advanced Western anatomy and physiology science to work closely with individuals in achieving mind-body-spirit unity. 
