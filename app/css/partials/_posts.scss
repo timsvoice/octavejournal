@@ -52,7 +52,7 @@ li.issue-index {
 }
 
 .issue-index {
-  background: lighten($goose, 10%);
+  background: $light-warm-gray;
   &-intro {
     height: 1rem;
   }
