@@ -7,11 +7,9 @@
   </head>
   <body>
     
-    
     <!-- angular view -->
     <div ng-view ng-class="{cn: lan == 'cn', en: lan == 'en'}" autoscroll="true"></div>
     <!-- end angular view -->    
-  
     <script type="text/javascript" src="../js/app.js"></script>    
     <script>$(document).foundation();</script>
         <script>

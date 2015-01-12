@@ -15,6 +15,7 @@ module.exports = function(lineman) {
       ],
       
       vendor: [
+        "vendor/bower/please-wait/build/please-wait.js",
         "vendor/bower/jquery/dist/jquery.min.js",
         "vendor/bower/jquery.lazyload/jquery.lazyload.min.js",
         "vendor/js/angular.js",
@@ -33,7 +34,8 @@ module.exports = function(lineman) {
     sass: {
       main: [
       "app/css/app.{sass,scss}",
-      "vendor/bower/foundation/scss/**/*"
+      "vendor/bower/foundation/scss/**/*",
+      "vendor/bower/please-wait/src/please-wait.scss"
       ]
     }
   };

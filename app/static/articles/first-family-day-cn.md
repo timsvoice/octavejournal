@@ -2,4 +2,8 @@
 
 ![Paint](/img/first-family-day-paint.png)
 
-音昱听堂总经理Burkhard Wolter先生也参与了整个家庭日活动。“通过家庭日活动，把音昱听堂介绍给我们的员工以及他们的家属，让我们大家亲身体验我们的工作环境，我们的亲切的服务，让我们的员工为他们的工作感到自豪！”音昱听堂总经理，Burkhard Wolter介绍。
+“通过家庭日活动，把音昱听堂介绍给我们的员工以及他们的家属，让我们大家亲身体验我们的工作环境，我们的亲切的服务，让我们的员工为他们的工作感到自豪！”
+
+![Smiling Girl](/img/first-family-day-smiling-girl.png)
+
+![Family](/img/first-family-day-family.png)

@@ -1,6 +1,14 @@
 *, body {
 }
 
+body > .inner {
+  display: none;
+}
+
+body.pg-loader > .inner {
+  display: block;
+}
+
 hr {
 	margin: 0;
 }
