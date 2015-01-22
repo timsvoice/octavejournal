@@ -1,0 +1,34 @@
+<div class="clearfix cn"> 
+  <div class="large-12 columns alpha beta"> 
+      <div class="coverpage" id="splash">
+        <div class="horizon">
+        <% @issues.each do |issue| %>
+          <div class="issue-intro small-10 columns" ng-cloak>
+            <h2 class="issue-intro-title"><%= issue.title %></h2>
+            <p class="issue-intro-text"><%= issue.summary %></p>
+            <div class="">
+              <a href="/issues/" class="small button secondary">intro</a>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="issue-index" id="index">
+        <div class="">
+        <% @articles.each do |article| %>
+          <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
+            <li class="issue-index-article" ng-repeat="article in issueList[0].issuearticles | filter:{'articlelanguage':lan}">
+              <a href="{{article.articlelanguage}}/articles/{{article.articleslug}}">
+              <h3 class="issue-index-article-title"><%= article.title %></h3>
+              <%= image_tag article.article_feature_url.to_s%>
+              <div class="issue-index-article-body">
+                <p class="issue-index-article-teaser"><%= article.introduction %></p>
+              </div>
+              </a>
+            </li>
+          </ul>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>

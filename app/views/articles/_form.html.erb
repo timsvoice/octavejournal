@@ -20,12 +20,11 @@
     <%= f.text_field :introduction %>
   </div>
   <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
     <%= f.label :language %><br>
     <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.file_field :article_feature %>
   </div>
   <div class="actions">
     <%= f.submit %>

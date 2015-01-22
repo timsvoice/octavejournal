@@ -16,7 +16,7 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.introduction %></td>
-        <td><%= article.author %></td>
+        <td><%= image_tag article.article_feature_url.to_s%></td>
         <td><%= article.language %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>

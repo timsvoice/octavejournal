@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url('/fonts/fontawesome-webfont.ttf') format ('truetype');
+}
+
+@font-face {
+  font-family: "FZYXJW";
+  src: url('http://www.octavejournal.com/fonts/FZYXJW.TTF') format ('truetype');
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-weight: 200;
+  src: url('http://www.octavejournal.com/fonts/Graphik-Light.otf') format ('opentype');
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-weight: 400;
+  src: url('http://www.octavejournal.com/fonts/Graphik-Regular.otf') format ('opentype');
+}
+
+@font-face {
+  font-family: "Graphik";
+  font-weight: 900;
+  src: url('http://www.octavejournal.com/fonts/Graphik-Bold.otf') format ('opentype');
+}
+
+// base typography
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, a {
+  // font-family: $body-font;
+}
+
+// language font selection
+
+.cn {
+  * {
+    font-family: $cn-font;
+  }
+}
+
+.en {
+  * {
+    font-family: $body-font;
+  }
+}
+
+// icons
+
+i {
+  font-family: $icon-font;
+}
+
+// issue intro
+
+.issue-intro {
+  text-align: center;
+  &-title {
+    color: $white;
+    font-size: 3rem;
+    font-weight: $heavy-text;
+    @include breakpoint(small) {
+      font-size: 2rem;
+    }
+  }
+  &-text {
+    font-size: 1rem;
+    color: $white;
+    @include breakpoint(small) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.issue-index-intro {
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: $light-text;
+    vertical-align: middle;
+    text-transform: capitalize;
+    font-style: italic;
+    color: $light-warm-gray;
+  }
+}
+
+// navigation
+
+.navigation {
+  h1.branding-title {
+    a {
+      .bold {
+        font-weight: $medium-text;
+        font-size: 1.5rem;
+      }
+      color: $black;
+      font-size: 1.5rem;
+      font-weight: $light-text;
+      text-transform: capitalize;
+      @include breakpoint(small) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+//topbar styling
+
+.top-bar-section {
+  // dropdown lists
+  ul li, ul li>a {
+    color: $black !important;
+    font-size: 1rem;
+    &:hover {
+      color: $branding-color !important;
+    }
+  }
+  // dropdown menu
+  li:not(.has-form) a:not(.button) {
+    line-height: 3rem; 
+  }
+}
+
+//footer 
+
+footer {
+  h4 {
+    font-size: 1.25rem;
+    color: $gray-dark;
+    text-transform: uppercase;
+    font-weight: $heavy-text;
+    text-align: left;
+    @include breakpoint(medium) {
+      font-size: 1rem;
+    }
+  }
+  h5 {
+    font-size: 1.25rem;
+    font-weight: $heavy-text;
+    color: $gray-dark;
+    @include breakpoint(medium) {
+      font-size: 1rem;
+    }
+  }
+  a > h5 {
+    color: $gray-dark;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: $heavy-text;
+    &:hover {
+      color: $gray-dark;
+    }
+    @include breakpoint(medium) {
+      font-size: 0.85rem;
+    }
+  }
+  p {
+    color: $gray-dark;
+    font-size: .9rem;
+  }
+}
+
+// issue index
+
+.issue-index {
+  &-article {
+    text-align: left;
+    &.cn {
+      * {
+        font-family: $cn-font;
+      }
+    }
+    &-title {
+      font-size: 1.25rem;
+      font-weight: $heavy-text;
+    }
+    &-teaser {
+      color: $gray-dark;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      @include breakpoint(small) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+//post
+
+//post related 
+
+.post-related {
+  margin-top: 2rem;
+  h4 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    margin-top: 0;
+    color: $light-warm-gray;
+    font-weight: $heavy-text;
+    text-transform: capitalize;
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+    }   
+  }
+  &-list {
+    list-style: none;
+    margin-left: 0;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+  &-article {
+    &-title {
+      font-size: 1rem;
+      font-weight: $light-text;
+    }
+  }
+}
+
+.post {
+  &-title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: $heavy-text;    
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    color: $branding-color;
+  }
+  &-teaser {
+    font-size: 1rem;
+    color: $gray-dark;
+    line-height: 1.5rem;
+    margin-bottom: 0rem;
+    font-style: italic;
+  }
+  &-meta {
+    .button {
+      margin-top: 1rem;
+    }
+    margin-bottom: 1rem;
+  }
+  &-biline {
+    font-style: italic;
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+  }
+  &-image-caption {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: $black;
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  &-body {
+    p {
+      margin-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem; 
+    }
+    h2 {
+      font-weight: $heavy-text;
+      color: $branding-color;
+      font-size: 1.5rem;
+    }   
+  }
+}
+
+.post-content {
+  blockquote > p {
+    @include breakpoint(medium) {
+      float: left;
+      margin: 1rem 1.5rem 1rem -2.5rem;
+      width: 10rem;
+    }
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    border-top: 0.5rem solid $black;
+    padding: 1rem 0;
+    color: $branding-color;
+    font-weight: $heavy-text;
+    margin-bottom: 0;
+  }
+}
+
+.pull-image {
+  @include breakpoint(medium) {
+    float: right;
+    width: 25rem;  
+    margin-right: -12.5rem;
+    padding: 1rem;
+    background: $light-warm-gray;
+    margin-left: 0.5rem;
+  }
+  padding: 1rem 1rem 1rem 0rem;
+}
+
+.pull-item-left {
+  @include breakpoint(medium) {
+    float: left;
+    margin-left: -12.5rem;
+    width: 20rem;
+  }
+  padding: 1rem 1rem 1rem 0rem;
+}
+
+.pull-item-right {
+  @include breakpoint(medium) {
+    float: right;
+    width: 20rem;  
+    margin-right: -12.5rem;
+  }
+  padding: 1rem 1rem 1rem 0rem;
+
+}

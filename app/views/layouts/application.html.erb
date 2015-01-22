@@ -4,25 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Octave Journal" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
   
-  <div class="navigation" ng-controller="MainController">
     <div class="fixed navigation">
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
-            <a href="/{{lan}}">
-              <img src="/img/branding.png" alt="branding">
+            <a href="/">
+            <%= image_tag "branding.png" %>
             </a>
-            <h1 class="branding-title"><a href="/{{lan}}"><span class="bold">Octave</span> journal</a></h1>
+            <h1 class="branding-title"><a href="/"><span class="bold">Octave</span> journal</a></h1>
           </li>
         </ul>
         <section class="top-bar-section">
@@ -38,9 +35,12 @@
         </section>
       </nav>
     </div>
-  </div>
   
   <%= yield %>
 
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>    
+  <%= javascript_include_tag 'data-turbolinks-track' => true %>
   </body>
 </html>
+
