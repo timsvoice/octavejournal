@@ -1,0 +1,2958 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 18:10:04 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 32ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 13:07:44 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 32ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 13:14:07 -0500
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.7ms)
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateIssues (20150122181349)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "issues" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "feature_image" varchar(255), "language" varchar(255), "introduction" varchar(255), "summary" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122181349"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Migrating to CreateArticles (20150122182355)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "introduction" varchar(255), "author" varchar(255), "language" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122182355"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Migrating to CreateCategories (20150122182425)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122182425"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to CreateTags (20150122182437)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122182437"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+Migrating to CreateAuthors (20150122182521)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "username" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122182521"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAuthorsIssuesCategoriesTagsToArticle (20150122183620)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (3.6ms)[0m  [1mALTER TABLE "articles" ADD "issue_id" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "articles" ADD "author_id" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "articles" ADD "category_id" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "articles" ADD "tag_id" integer
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122183620"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to AddArticlesToAuthor (20150122184025)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "authors" ADD "article_id" integer
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150122184025"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddArticlesToCetegory (20150122184100)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "cetegories" ADD "article_id" integer
+SQLite3::SQLException: no such table: cetegories: ALTER TABLE "cetegories" ADD "article_id" integer
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddArticlesToCategory (20150122184100)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "categories" ADD "article_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150122184100"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddArticlesToIssue (20150122184117)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "issues" ADD "article_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150122184117"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddArticlesToTag (20150122184132)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "tags" ADD "article_id" integer[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150122184132"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/issues" for 127.0.0.1 at 2015-01-22 13:43:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IssuesController#index as HTML
+  [1m[35mIssue Load (0.4ms)[0m  SELECT "issues".* FROM "issues"
+  Rendered issues/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 2669ms (Views: 2635.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:02 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:03 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 13:44:03 -0500
+
+
+Started GET "/tags" for 127.0.0.1 at 2015-01-22 13:44:26 -0500
+
+AbstractController::ActionNotFound (The action 'index' could not be found for TagsController):
+  actionpack (4.1.6) lib/abstract_controller/base.rb:131:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2015-01-22 13:44:34 -0500
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 206ms (Views: 196.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:05:07 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 757ms (Views: 753.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:10 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:11 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:11 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 322ms (Views: 320.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:33 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-22 14:05:33 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:05:33 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:06:13 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 300ms (Views: 298.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:06:14 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (16.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:06:54 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 457ms (Views: 455.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:06:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:07:26 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 235ms (Views: 233.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:07:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 220ms (Views: 218.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:22 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/tags.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/issues.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:08:23 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (150.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:08:58 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 127ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /Users/timsvoice/code/octavejournal/app/assets/images
+  /Users/timsvoice/code/octavejournal/app/assets/javascripts
+  /Users/timsvoice/code/octavejournal/app/assets/stylesheets
+  /Users/timsvoice/code/octavejournal/vendor/assets/javascripts
+  /Users/timsvoice/code/octavejournal/vendor/assets/stylesheets
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:58)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1581623600262275140_70157252255420'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:09:59 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:09:59 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:10:01 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:10:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:10:34 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (50.4ms)
+Completed 500 Internal Server Error in 55ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /Users/timsvoice/code/octavejournal/app/assets/images
+  /Users/timsvoice/code/octavejournal/app/assets/javascripts
+  /Users/timsvoice/code/octavejournal/app/assets/stylesheets
+  /Users/timsvoice/code/octavejournal/vendor/assets/javascripts
+  /Users/timsvoice/code/octavejournal/vendor/assets/stylesheets
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:58)):
+    4: 
+    5:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    6: 
+    7:     <%= stylesheet_link_tag    "application" %>
+    8:     <%= javascript_include_tag "vendor/modernizr" %>
+    9:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+   10:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/views/home/index.html.erb:7:in `_app_views_home_index_html_erb__2615984448746541688_70157250861700'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:11:07 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (49.3ms)
+Completed 500 Internal Server Error in 53ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /Users/timsvoice/code/octavejournal/app/assets/images
+  /Users/timsvoice/code/octavejournal/app/assets/javascripts
+  /Users/timsvoice/code/octavejournal/app/assets/stylesheets
+  /Users/timsvoice/code/octavejournal/vendor/assets/javascripts
+  /Users/timsvoice/code/octavejournal/vendor/assets/stylesheets
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:58)):
+    4: 
+    5:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    6: 
+    7:     <%= stylesheet_link_tag    "application" %>
+    8:     <%= javascript_include_tag "vendor/modernizr" %>
+    9:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+   10:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/views/home/index.html.erb:7:in `_app_views_home_index_html_erb__2615984448746541688_70157250861700'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (60.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:13:23 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /Users/timsvoice/code/octavejournal/app/assets/images
+  /Users/timsvoice/code/octavejournal/app/assets/javascripts
+  /Users/timsvoice/code/octavejournal/app/assets/stylesheets
+  /Users/timsvoice/code/octavejournal/vendor/assets/javascripts
+  /Users/timsvoice/code/octavejournal/vendor/assets/stylesheets
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/application.scss:58)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/assets/stylesheets/application.scss:1
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1581623600262275140_70157253926740'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:13:53 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /Users/timsvoice/code/octavejournal/app/assets/images
+  /Users/timsvoice/code/octavejournal/app/assets/javascripts
+  /Users/timsvoice/code/octavejournal/app/assets/stylesheets
+  /Users/timsvoice/code/octavejournal/vendor/assets/javascripts
+  /Users/timsvoice/code/octavejournal/vendor/assets/stylesheets
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/application.scss:58)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/assets/stylesheets/application.scss:1
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1581623600262275140_70157253926740'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:13:56 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (File to import not found or unreadable: foundation/functions.
+Load paths:
+  /Users/timsvoice/code/octavejournal/app/assets/images
+  /Users/timsvoice/code/octavejournal/app/assets/javascripts
+  /Users/timsvoice/code/octavejournal/app/assets/stylesheets
+  /Users/timsvoice/code/octavejournal/vendor/assets/javascripts
+  /Users/timsvoice/code/octavejournal/vendor/assets/stylesheets
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/turbolinks-2.5.3/lib/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/jquery-rails-3.1.2/vendor/assets/javascripts
+  /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/application.scss:58)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/assets/stylesheets/application.scss:1
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___1581623600262275140_70157253926740'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:26:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 93ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:58
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___4261396315603967333_70093819430440'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:29:52 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 478ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___4261396315603967333_70093819430440'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:30:33 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 133ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <!-- <%= stylesheet_link_tag    "application" %> -->
+    10:     <!-- <%= javascript_include_tag "vendor/modernizr" %> -->
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___4261396315603967333_70093854227000'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (76.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:30:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:30:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (133.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:30:49 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+     6: 
+     7:     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+     8: 
+     9:     <%= stylesheet_link_tag    "application" %>
+    10:     <%= javascript_include_tag "vendor/modernizr" %>
+    11:     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    12:     <%= csrf_meta_tags %>
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___4261396315603967333_70093849645180'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:31:00 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:31:00 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (223.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:31:09 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (158.7ms)
+Completed 500 Internal Server Error in 163ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+    1: <head>
+    2:       <%= stylesheet_link_tag    "application" %>
+    3:     <%= javascript_include_tag "vendor/modernizr" %>
+    4: </head>
+    5: 
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__4511950395081841668_70093850337620'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:33:11 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (129.6ms)
+Completed 500 Internal Server Error in 141ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+    1: <head>
+    2:       <%= stylesheet_link_tag    "application" %>
+    3:     <%= javascript_include_tag "vendor/modernizr" %>
+    4: </head>
+    5: 
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__4511950395081841668_70093850337620'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:33:26 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (186.4ms)
+Completed 500 Internal Server Error in 193ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+    1: <head>
+    2:       <%= stylesheet_link_tag    "application" %>
+    3:     <%= javascript_include_tag "vendor/modernizr" %>
+    4: </head>
+    5: 
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__4511950395081841668_70093850337620'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:33:54 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (100.5ms)
+Completed 500 Internal Server Error in 106ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+    1: <head>
+    2:       <%= stylesheet_link_tag    "application" %>
+    3:     <%= javascript_include_tag "vendor/modernizr" %>
+    4: </head>
+    5: 
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__4511950395081841668_70093850337620'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:34:08 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (202.8ms)
+Completed 500 Internal Server Error in 207ms
+
+ActionView::Template::Error (Invalid CSS after "...ules: $modules ": expected "}", was "!global;"
+  (in /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss:13)):
+    1: <head>
+    2:       <%= stylesheet_link_tag    "application" %>
+    3:     <%= javascript_include_tag "vendor/modernizr" %>
+    4: </head>
+    5: 
+  app/assets/stylesheets/foundation_and_overrides.scss:1447
+  app/views/home/index.html.erb:2:in `_app_views_home_index_html_erb__4511950395081841668_70093850337620'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:35:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+DEPRECATION WARNING on line 275 of /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/foundation-rails-5.5.0.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$default-float" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$default-float: left !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+
+DEPRECATION WARNING on line 276 of /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/foundation-rails-5.5.0.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$opposite-direction" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$opposite-direction: right !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+
+DEPRECATION WARNING: The return value of index() will change from "false" to
+"null" in future versions of Sass. For compatibility, avoid using "== false" on
+the return value. For example, instead of "@if index(...) == false", just write
+"@if not index(...)".
+        on line 16 of /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/foundation-rails-5.5.0.0/vendor/assets/stylesheets/foundation/_functions.scss, in `exports'
+        from line 341 of /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/foundation-rails-5.5.0.0/vendor/assets/stylesheets/foundation/components/_global.scss
+        from line 5 of /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/foundation-rails-5.5.0.0/vendor/assets/stylesheets/foundation/components/_grid.scss
+        from line 9 of /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/foundation-rails-5.5.0.0/vendor/assets/stylesheets/foundation.scss
+        from line 1447 of /Users/timsvoice/code/octavejournal/app/assets/stylesheets/foundation_and_overrides.scss
+
+  Rendered home/index.html.erb within layouts/application (12140.3ms)
+Completed 200 OK in 12173ms (Views: 12154.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:35:15 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (46.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (198.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:35:56 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:35:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:35:58 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:35:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (13.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:36:15 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (110.1ms)
+Completed 200 OK in 117ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:36:16 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:36:17 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (249.9ms)
+Completed 200 OK in 255ms (Views: 253.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:36:18 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:36:30 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 101ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:36:30 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:36:35 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (97.9ms)
+Completed 200 OK in 103ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:36:35 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (256.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:36:39 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (100.7ms)
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:36:40 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (125.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:37:03 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:37:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:37:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (245.2ms)
+Completed 200 OK in 277ms (Views: 258.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:37:22 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (83.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (365.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:37:35 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (103.7ms)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:37:36 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:37:38 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (162.4ms)
+Completed 200 OK in 168ms (Views: 166.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:37:38 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (92.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (21.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (170.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:37:47 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (95.7ms)
+Completed 200 OK in 258ms (Views: 257.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:37:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:38:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (152.2ms)
+Completed 200 OK in 344ms (Views: 342.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.3ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:38:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:38:20 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (158.7ms)
+Completed 200 OK in 346ms (Views: 345.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (155.1ms)
+Completed 200 OK in 330ms (Views: 329.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:38:44 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:38:47 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (377.5ms)
+Completed 200 OK in 725ms (Views: 724.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:48 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:48 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:48 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:48 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:48 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:49 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:49 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:38:49 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:38:49 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.0ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:38:49 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (166.7ms)
+Completed 200 OK in 274ms (Views: 272.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:39:18 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (83.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (30.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (177.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:39:53 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (122.0ms)
+Completed 500 Internal Server Error in 318ms
+
+ActionView::Template::Error (undefined local variable or method `yeild' for #<#<Class:0x007fa9dd9b2a88>:0x007fa9dde09370>):
+    14: 
+    15:   <body>
+    16: 
+    17:   <%= yeild %>
+    18: 
+    19:   </body>
+    20: </html>
+  app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__317480684292689723_70183774313660'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (263.3ms)
+Completed 200 OK in 387ms (Views: 378.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:02 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:40:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.6ms)
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:03 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:40:03 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:40:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:40:09 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (216.2ms)
+Completed 200 OK in 336ms (Views: 329.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.6ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:10 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:40:12 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (113.3ms)
+Completed 200 OK in 282ms (Views: 281.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:40:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.3ms)
+
+
+Started GET "/cn" for 127.0.0.1 at 2015-01-22 14:40:22 -0500
+
+ActionController::RoutingError (No route matches [GET] "/cn"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (124.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:42:47 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (117.7ms)
+Completed 200 OK in 388ms (Views: 385.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:42:48 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:43:01 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 177ms (Views: 175.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:02 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 233ms (Views: 231.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:43:07 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:43:08 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.6ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.9ms)
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:08 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:43:38 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 180ms (Views: 178.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:38 -0500
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:38 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:38 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:43:39 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.4ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (94.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-22 14:43:41 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.7ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/assets/issues.css?body=1" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+
+Started GET "/img/branding.png" for 127.0.0.1 at 2015-01-22 14:43:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/img/branding.png"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/timsvoice/.rvm/rubies/ruby-2.0.0-p576/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.9ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/timsvoice/.rvm/gems/ruby-2.0.0-p576/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (170.9ms)
