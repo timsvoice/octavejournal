@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150122231634) do
+ActiveRecord::Schema.define(version: 20150123195640) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150122231634) do
     t.integer  "category_id"
     t.integer  "tag_id"
     t.string   "article_feature"
+    t.text     "body",            limit: 255
   end
 
   create_table "authors", force: true do |t|
@@ -41,6 +42,22 @@ ActiveRecord::Schema.define(version: 20150122231634) do
     t.datetime "updated_at"
     t.integer  "article_id"
   end
+
+  create_table "ckeditor_assets", force: true do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
 
   create_table "issues", force: true do |t|
     t.string   "title"
