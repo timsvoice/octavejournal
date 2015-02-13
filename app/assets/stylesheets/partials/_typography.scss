@@ -111,12 +111,15 @@ i {
 
 .top-bar-section {
   // dropdown lists
-  ul li, ul li>a {
-    color: $black !important;
+  ul li > a, ul li:hover:not(.has-form) > a {
+    color: $black;
     font-size: 1rem;
     &:hover {
-      color: $branding-color !important;
+      color: $branding-color;
     }
+  }
+  a.navigation-user, a.navigation-logout {
+      color: lighten($black, 80%);
   }
   // dropdown menu
   li:not(.has-form) a:not(.button) {

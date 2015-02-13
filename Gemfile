@@ -31,6 +31,14 @@ gem 'mini_magick'
 gem 'ckeditor'
 gem 'jquery-fileupload-rails'
 
+# Authentication
+gem 'devise'
+gem 'cancan'
+
+group :development do
+  gem 'guard-livereload', '~> 2.4', require: false
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -12,7 +12,7 @@
 
   <body>
   
-    <div class="fixed navigation">
+    <div class="navigation">
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
@@ -25,6 +25,10 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
+            <% if user_signed_in? %>
+              <li><%= link_to current_user.email, edit_user_registration_path, :class => 'navigation-user' %></li>.
+              <li><%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navigation-logout'%></li>
+            <% end %>
             <li class="cn-language">
               <a href="/cn">&#20013;&#25991;</a>
             </li>
@@ -35,7 +39,9 @@
         </section>
       </nav>
     </div>
-  
+    <% if flash[:error] %>
+      <p class="alert alert-danger"><%= flash[:error] %></p>
+    <% end %>
   <%= yield %>
 
   <%= javascript_include_tag "application" %>
