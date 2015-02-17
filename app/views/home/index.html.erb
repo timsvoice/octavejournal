@@ -7,7 +7,7 @@
               <h2 class="issue-intro-title"><%= issue.title %></h2>
               <p class="issue-intro-text"><%= issue.summary %></p>
               <div class="">
-                <a href="/issues/" class="small button secondary">intro</a>
+                <%= link_to "Intro", issue, :class => 'small button secondary'  %>
               </div>
             </div>
           <% end %>

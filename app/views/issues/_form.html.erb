@@ -1,7 +1,8 @@
-<%= form_for(@issue) do |f| %>
+<div class="clearfix"> 
+  
   <% if @issue.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@issue.errors.count, "error") %> prohibited this issue from being saved:</h2>
+      <h2><%= pluralize(@issue.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
       <% @issue.errors.full_messages.each do |message| %>
@@ -9,29 +10,81 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %>  
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="large-12 columns alpha beta"> 
+
+    <div class="container">
+    
+    <%= form_for(@issue) do |f| %>
+
+      <% if @issue.issue_feature_url.to_s.length > 0 %>
+      
+        <div class="post-intro  clearfix">       
+          <div class="post row">    
+            <div class="post-image small-12 columns alpha beta">
+            <%= image_tag @issue.issue_feature_url.to_s, class: "lazy post-image", id: "article_article_feature" %>
+            </div>
+          </div>
+        </div>        
+        
+        <div class="post row"> 
+          <h4 class="post-image-upload">Upload New Feature Image</h4>
+          <%= f.file_field :issue_feature %>
+        </div>
+
+      <% end %>
+
+
+        <% if @issue.issue_feature_url.to_s.length == 0 %>
+                  
+          <div class="post row"> 
+            <h4 class="post-image-upload">Upload Feature Image</h4>
+            <%= f.file_field :issue_feature %>
+          </div>
+
+        <% end %>
+
+        <div class="row post-content">
+        <div class="post-body small-12 medium-7 large-6 medium-offset-1 large-offset-0 columns alpha beta right">
+          
+          <div class="show-for-small-only">
+            <%= f.text_field :title, class: "post-title-input", placeholder: "Article Title" %>
+            <%= f.text_field :summary, class: "post-teaser-input", placeholder: "Article Teaser" %>
+            <div class="post-meta small-12 columns">
+              <h4>Article Meta Data</h4>
+              <select name="Issue" id="issue-select" class="small-12 medium-3 columns left">
+                <option value="" default selected>Issue</option>
+              </select>
+              <select name="Category" id="category-select" class="small-12 medium-3 columns left">
+                <option value="" default selected>Category</option>
+              </select>
+              <div class="small-12 medium-4 left">          
+                <input type="text" placeholder="tag1, tag2, tag3" ng-model="newArticle.tags" name="tags" class="post-tags-input">
+              </div>
+            </div>
+          </div>
+          
+          <%= f.cktext_area :introduction, rows: 60, class: "post-content-input", placeholder: "Article content" %>
+
+          <div class="post-buttons small-12 columns beta">
+            <%= f.submit 'save', class: 'button small' %>
+          </div>        
+
+        </div>
+        <div class="post-related medium-4 left beta alpha">
+          <div class="show-for-medium-up" id="addarticle">
+            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: "Article Title" %>
+            <%= f.text_area :summary, rows: 8, class: "post-teaser-input", placeholder: "Article Teaser" %>
+            <%= f.text_field :language %>
+          </div>
+        </div>
+        </div>
+
+     <% end %>
+    
+    </div> 
+
   </div>
-  <div class="field">
-    <%= f.label :feature_image %><br>
-    <%= f.text_field :feature_image %>
-  </div>
-  <div class="field">
-    <%= f.label :language %><br>
-    <%= f.text_field :language %>
-  </div>
-  <div class="field">
-    <%= f.label :introduction %><br>
-    <%= f.text_field :introduction %>
-  </div>
-  <div class="field">
-    <%= f.label :summary %><br>
-    <%= f.text_field :summary %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
+</div>

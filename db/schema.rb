@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150213215726) do
+ActiveRecord::Schema.define(version: 20150217221338) do
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20150213215726) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "article_id"
+    t.string   "issue_feature"
   end
 
   create_table "roles", force: true do |t|
