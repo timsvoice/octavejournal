@@ -22,6 +22,12 @@
               <%= image_tag article.article_feature_url.to_s, class: "lazy issue-index-article-thumbnail" %>
               <div class="issue-index-article-body">
                 <p class="issue-index-article-teaser"><%= article.introduction %></p>
+                <% if current_user.role_id >= 2 %>
+                  <%= link_to 'Edit', edit_article_path(article), :class => 'small button edit' %>
+                <% end %>
+                <% if current_user.role_id >= 3 %>
+                  <%= link_to 'X', article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
+                <% end %>
               </div>
               </a>
             </li>          

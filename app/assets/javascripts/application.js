@@ -13,9 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require jquery.autosize
 //= require turbolinks
 //= require ckeditor/init
-////= require jquery-fileupload/basic
+////= require jquery-fileupload
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function(){
+    $('textarea').autosize();    
+});

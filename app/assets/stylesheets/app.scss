@@ -1,12 +1,6 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
-//vendor
-
-@import "foundation.min.css";
-@import "normalize.css";
-// @import "../../vendor/bower/font-awesome/scss/font-awesome";
-
 //modules
 
 @import "modules/variables";
@@ -24,6 +18,12 @@
 @import "partials/media";
 @import "partials/posts";
  
+//vendor
+
+@import "foundation.min.css";
+@import "normalize.css";
+// @import "../../vendor/bower/font-awesome/scss/font-awesome";
+@import "vendors/settings";
 
 // Or selectively include components
 // @import

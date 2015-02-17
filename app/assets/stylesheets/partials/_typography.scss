@@ -113,13 +113,14 @@ i {
   // dropdown lists
   ul li > a, ul li:hover:not(.has-form) > a {
     color: $black;
-    font-size: 1rem;
+    font-size: 0.875rem;
+    margin-top: 0.125rem;
     &:hover {
       color: $branding-color;
     }
   }
   a.navigation-user, a.navigation-logout {
-      color: lighten($black, 80%);
+      color: lighten($black, 40%);
   }
   // dropdown menu
   li:not(.has-form) a:not(.button) {
@@ -265,9 +266,10 @@ footer {
   }
   &-body {
     p {
+      color: $black;
       margin-top: 1rem;
-      font-size: 1rem;
-      line-height: 1.5rem; 
+      font-size: 1.125rem;
+      line-height: 1.75rem; 
     }
     h2 {
       font-weight: $heavy-text;

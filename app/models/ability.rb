@@ -9,11 +9,7 @@ include CanCan::Ability
     else
       # Editor
       if user.role_id == 3
-        can :read, :all 
-        can :create, Article 
-        can :create, Issue
-        can :update, Article
-        can :update, Issue
+        can :manage, :all 
     else
       # Contributor
       if user.role_id == 2

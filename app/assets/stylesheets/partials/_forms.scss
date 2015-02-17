@@ -68,7 +68,7 @@ textarea {
 
 textarea.post-title-input {
   @extend .post-title;
-  height: 9rem;
+  height: 11rem;
 }
 
 textarea.post-teaser-input {
@@ -88,4 +88,10 @@ textarea.post-content-input {
     margin-left: 1rem;
     background: $branding-color;
   }
+}
+
+.bar {
+  height: 1rem;
+  background-color: green;
+  width: 1px;
 }

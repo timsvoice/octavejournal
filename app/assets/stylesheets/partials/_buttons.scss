@@ -20,4 +20,35 @@
     font-size: 1rem;
     padding: 0.65rem 1.5rem ;
   }
+  &.edit {
+    background-color: lighten($branding-color, 20%);
+    &:hover {
+      background-color: $branding-color;
+    }
+  }
+  &.alert {
+    background-color: lighten($alert-color, 20%);
+    &:hover {
+      background-color: $alert-color;
+    }
+  }
+}
+
+.post-actions {
+  margin-top: 1rem;
+}
+
+.navigation {
+  .has-form {
+    background-color: inherit;
+  }
+  .top-bar-section .right {
+    .button {
+      line-height: 1.25rem;
+      height: 2rem;
+      margin-top: 0.5rem;
+      background-color: lighten($branding-color, 10%);
+      color: $white;
+    }    
+  }
 }

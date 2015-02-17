@@ -33,7 +33,10 @@ gem 'jquery-fileupload-rails'
 
 # Authentication
 gem 'devise'
-gem 'cancan'
+gem 'cancancan'
+
+#UI jQuery
+gem 'autosize-rails'
 
 group :development do
   gem 'guard-livereload', '~> 2.4', require: false

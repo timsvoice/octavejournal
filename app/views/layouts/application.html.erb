@@ -25,24 +25,27 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
+            <% if current_user.role_id >= 2 %>
+              <li class="has-form"><%= link_to 'New Article', new_article_path, :class => 'button' %></li>
+            <% end %>
             <% if user_signed_in? %>
-              <li><%= link_to current_user.email, edit_user_registration_path, :class => 'navigation-user' %></li>.
               <li><%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navigation-logout'%></li>
             <% end %>
             <li class="cn-language">
               <a href="/cn">&#20013;&#25991;</a>
             </li>
-            <li class="divider"></li>
             <li><a href="/en">EN</a></li>
           </ul>
           <!-- Left Nav Section -->
         </section>
       </nav>
     </div>
+
     <% if flash[:error] %>
       <p class="alert alert-danger"><%= flash[:error] %></p>
     <% end %>
-  <%= yield %>
+  
+    <%= yield %>
 
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>    

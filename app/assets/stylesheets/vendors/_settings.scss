@@ -1009,14 +1009,14 @@
 // TOP BAR
 
 
-$include-html-top-bar-classes: $include-html-classes;
+// $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
 $topbar-bg-color: $white-trans;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg: $white-trans;
 
 // Height and margin
-$topbar-height: 4rem;
+$topbar-height: 2rem;
 $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
