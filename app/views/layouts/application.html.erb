@@ -25,8 +25,11 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-            <% if current_user.role_id >= 2 %>
-              <li class="has-form"><%= link_to 'New Article', new_article_path, :class => 'button' %></li>
+            <% if user_signed_in? %>
+              <% if current_user.role_id >= 2 %>
+                <li class="has-form"><%= link_to 'New Article', new_article_path, :class => 'button' %></li>
+                <li class="has-form"><%= link_to 'New Issue', new_issue_path, :class => 'button' %></li>
+              <% end %>
             <% end %>
             <% if user_signed_in? %>
               <li><%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navigation-logout'%></li>

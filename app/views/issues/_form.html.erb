@@ -23,7 +23,7 @@
         <div class="post-intro  clearfix">       
           <div class="post row">    
             <div class="post-image small-12 columns alpha beta">
-            <%= image_tag @issue.issue_feature_url.to_s, class: "lazy post-image", id: "article_article_feature" %>
+            <%= image_tag @issue.issue_feature_url.to_s, class: "lazy post-image", id: "issue_issue_feature" %>
             </div>
           </div>
         </div>        
@@ -49,8 +49,8 @@
         <div class="post-body small-12 medium-7 large-6 medium-offset-1 large-offset-0 columns alpha beta right">
           
           <div class="show-for-small-only">
-            <%= f.text_field :title, class: "post-title-input", placeholder: "Article Title" %>
-            <%= f.text_field :summary, class: "post-teaser-input", placeholder: "Article Teaser" %>
+            <%= f.text_field :title, class: "post-title-input", placeholder: "Issue Title" %>
+            <%= f.text_field :summary, class: "post-teaser-input", placeholder: "Issue Teaser" %>
             <div class="post-meta small-12 columns">
               <h4>Article Meta Data</h4>
               <select name="Issue" id="issue-select" class="small-12 medium-3 columns left">
@@ -60,12 +60,12 @@
                 <option value="" default selected>Category</option>
               </select>
               <div class="small-12 medium-4 left">          
-                <input type="text" placeholder="tag1, tag2, tag3" ng-model="newArticle.tags" name="tags" class="post-tags-input">
+                <input type="text" placeholder="tag1, tag2, tag3" ng-model="newIssue.tags" name="tags" class="post-tags-input">
               </div>
             </div>
           </div>
           
-          <%= f.cktext_area :introduction, rows: 60, class: "post-content-input", placeholder: "Article content" %>
+          <%= f.cktext_area :introduction, rows: 60, class: "post-content-input", placeholder: "Issue introduction" %>
 
           <div class="post-buttons small-12 columns beta">
             <%= f.submit 'save', class: 'button small' %>
@@ -74,8 +74,8 @@
         </div>
         <div class="post-related medium-4 left beta alpha">
           <div class="show-for-medium-up" id="addarticle">
-            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: "Article Title" %>
-            <%= f.text_area :summary, rows: 8, class: "post-teaser-input", placeholder: "Article Teaser" %>
+            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: "Issue Title" %>
+            <%= f.text_area :summary, rows: 8, class: "post-teaser-input", placeholder: "Issue Teaser" %>
             <%= f.text_field :language %>
           </div>
         </div>

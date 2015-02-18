@@ -2,15 +2,15 @@
   <div class="large-12 columns alpha beta"> 
       <div class="coverpage" id="splash">
         <div class="horizon">
-          <% @issues.last(1).each do |issue| %>
+ 
             <div class="issue-intro small-10 columns" ng-cloak>
-              <h2 class="issue-intro-title"><%= issue.title %></h2>
-              <p class="issue-intro-text"><%= issue.summary %></p>
+              <h2 class="issue-intro-title"><%= @issues.first.title %></h2>
+              <p class="issue-intro-text"><%= @issues.first.summary %></p>
               <div class="">
-                <%= link_to "Intro", issue, :class => 'small button secondary'  %>
+                <%= link_to "Intro", @issues.first, :class => 'small button secondary'  %>
               </div>
             </div>
-          <% end %>
+
         </div>
       </div>
       <div class="issue-index" id="index">
