@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217221338) do
+ActiveRecord::Schema.define(version: 20150219043551) do
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -24,12 +24,22 @@ ActiveRecord::Schema.define(version: 20150217221338) do
     t.string   "language"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "issue_id"
     t.integer  "author_id"
     t.integer  "category_id"
     t.integer  "tag_id"
     t.string   "article_feature"
     t.text     "body",            limit: 255
+    t.integer  "issue_id"
+  end
+
+  create_table "articles_issues", force: true do |t|
+    t.integer "article_id"
+    t.integer "issue_id"
+  end
+
+  create_table "articles_issues_tables", force: true do |t|
+    t.integer "article_id"
+    t.integer "issue_id"
   end
 
   create_table "authors", force: true do |t|
@@ -72,8 +82,8 @@ ActiveRecord::Schema.define(version: 20150217221338) do
     t.string   "summary"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "article_id"
     t.string   "issue_feature"
+    t.integer  "article_id"
   end
 
   create_table "roles", force: true do |t|

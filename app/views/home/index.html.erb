@@ -16,7 +16,7 @@
       <div class="issue-index" id="index">
         <div class="">
         <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
-          <% @articles.each do |article| %>          
+          <% @issues.first.articles.each do |article| %>          
             <li class="issue-index-article">
               <%=link_to article.title, article, class: "issue-index-article-title"%>
               <%= image_tag article.article_feature_url.to_s, class: "lazy issue-index-article-thumbnail" %>

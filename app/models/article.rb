@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  belongs_to :issue
+  has_and_belongs_to_many :issues
   belongs_to :author
   has_many :categories
   has_many :tags

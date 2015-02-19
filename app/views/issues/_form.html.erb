@@ -67,6 +67,8 @@
           
           <%= f.cktext_area :introduction, rows: 60, class: "post-content-input", placeholder: "Issue introduction" %>
 
+          <%= f.collection_select(:article_id, Article.all, :id, :title) %>
+
           <div class="post-buttons small-12 columns beta">
             <%= f.submit 'save', class: 'button small' %>
           </div>        

@@ -11,12 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require chosen-jquery
 //= require jquery_ujs
 //= require foundation
 //= require jquery.autosize
 //= require turbolinks
 //= require ckeditor/init
-////= require jquery-fileupload
+//= require jquery-fileupload
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
