@@ -22,10 +22,10 @@
           <p class="post-teaser"><%= @article.introduction %></p>
           <div class="post-actions">
             <% if current_user.role_id >= 2 %>
-              <%= link_to 'Edit', edit_article_path(@article), :class => 'small button edit' %>
+              <%= link_to (t('edit')), edit_article_path(@article), :class => 'small button edit' %>
             <% end %>
             <% if current_user.role_id >= 3 %>
-              <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
+              <%= link_to (t('delete')), @article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
             <% end %>
           </div>
         </div>

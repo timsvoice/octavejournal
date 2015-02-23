@@ -20,4 +20,30 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  new_article: "new article"
+  article_edit: "editing article"
+
+  new_issue: "new issue" 
+  issue_edit: "editing issue"   
+  intro: "intro"
+
+  title: "title"
+  summary: "summary"
+  edit: "edit"
+  delete: "delete"
+  upload_image: "upload image"
+  select_issue: "select issue"
+
+  save: "save"
+  contact_us: "contact us"
+  subscribe: "subscribe"
+  
+  first_name: "first name"
+  last_name: "last name"
+  email_address: "email address"
+
+  about: "About Octave Journal"  
+
+
+

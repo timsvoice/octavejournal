@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'pages/home'
+
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users  
   resources :authors
@@ -7,6 +9,14 @@ Rails.application.routes.draw do
   resources :categories
   resources :articles
   resources :issues
+
+
+  # scope "(:locale)", :locale => /en|zh-CN/ do
+  #   root :to => 'home#index'
+  #   get "home/index"
+  # end
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

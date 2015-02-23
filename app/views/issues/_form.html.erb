@@ -29,7 +29,7 @@
         </div>        
         
         <div class="post row"> 
-          <h4 class="post-image-upload">Upload New Feature Image</h4>
+          <h4 class="post-image-upload"><%= (t('upload_image')) %></h4>
           <%= f.file_field :issue_feature %>
         </div>
 
@@ -39,7 +39,7 @@
         <% if @issue.issue_feature_url.to_s.length == 0 %>
                   
           <div class="post row"> 
-            <h4 class="post-image-upload">Upload Feature Image</h4>
+            <h4 class="post-image-upload"><%= (t('upload_image')) %></h4>
             <%= f.file_field :issue_feature %>
           </div>
 
@@ -67,17 +67,15 @@
           
           <%= f.cktext_area :introduction, rows: 60, class: "post-content-input", placeholder: "Issue introduction" %>
 
-          <%= f.collection_select(:article_id, Article.all, :id, :title) %>
-
           <div class="post-buttons small-12 columns beta">
-            <%= f.submit 'save', class: 'button small' %>
+            <%= f.submit (t('save')), class: 'button small' %>
           </div>        
 
         </div>
         <div class="post-related medium-4 left beta alpha">
           <div class="show-for-medium-up" id="addarticle">
-            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: "Issue Title" %>
-            <%= f.text_area :summary, rows: 8, class: "post-teaser-input", placeholder: "Issue Teaser" %>
+            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: (t('title')) %>
+            <%= f.text_area :summary, rows: 8, class: "post-teaser-input", placeholder: (t('summary')) %>
           
           </div>
         </div>

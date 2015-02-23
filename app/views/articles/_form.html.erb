@@ -29,7 +29,7 @@
         </div>        
         
         <div class="post row"> 
-          <h4 class="post-image-upload">Upload New Feature Image</h4>
+          <h4 class="post-image-upload"><%= (t('upload_image')) %></h4>
           <%= f.file_field :article_feature %>
         </div>
 
@@ -39,7 +39,7 @@
         <% if @article.article_feature_url.to_s.length == 0 %>
                   
           <div class="post row"> 
-            <h4 class="post-image-upload">Upload Feature Image</h4>
+            <h4 class="post-image-upload"><%= (t('upload_image')) %></h4>
             <%= f.file_field :article_feature %>
           </div>
 
@@ -73,9 +73,12 @@
         <div class="post-related medium-4 left beta alpha">
           <div class="show-for-medium-up" id="addarticle">
             
-            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: "Article Title" %>
-            <%= f.text_area :introduction, rows: 8, class: "post-teaser-input", placeholder: "Article Teaser" %>
+            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: (t('title')) %>
+            <%= f.text_area :introduction, rows: 8, class: "post-teaser-input", placeholder: (t('summary')) %>
             
+            <h5 class="post-issue-select">
+              <%= (t('select_issue')) %>
+            </h5>
             <%= f.collection_select(:issue_id, Issue.all, :id, :title) %>
 
           </div>
@@ -83,7 +86,7 @@
         </div>
 
           <div class="post-buttons small-12 columns beta">
-            <%= f.submit 'save', class: 'button small' %>
+            <%= f.submit (t('save')), class: 'button small' %>
           </div> 
 
      <% end %>

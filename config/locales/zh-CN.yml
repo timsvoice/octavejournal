@@ -1,0 +1,27 @@
+  zh-CN:
+    
+    article_edit: "编辑文章"
+    new_article: "创建新文章"
+
+    issue_edit: "编辑一刊"
+    new_issue: "新一刊"    
+    intro: "绪论"
+
+    title: "标题"
+    summary: "简介"
+    edit: "编辑"
+    delete: "删除"
+    upload_image: "上载映像"
+    select_issue: "选择一刊"
+
+    save: "保存"
+    contact_us: "与我们联系"
+    subscribe: "订阅"
+    
+    first_name: "名"
+    last_name: "姓"
+    email_address: "电子邮件地址"  
+
+    about: "大约 Octave Journal"  
+
+

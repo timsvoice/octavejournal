@@ -1,11 +1,6 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "FontAwesome";
-  src: url('/fonts/fontawesome-webfont.ttf') format ('truetype');
-}
-
-@font-face {
   font-family: "FZYXJW";
   src: url('http://www.octavejournal.com/fonts/FZYXJW.TTF') format ('truetype');
 }
@@ -91,18 +86,17 @@ i {
 
 .navigation {
   h1.branding-title {
-    a {
-      .bold {
-        font-weight: $medium-text;
-        font-size: 1.5rem;
-      }
-      color: $black;
+    .bold {
+      font-weight: $medium-text;
       font-size: 1.5rem;
-      font-weight: $light-text;
-      text-transform: capitalize;
-      @include breakpoint(small) {
-        font-size: 1rem;
-      }
+    }
+    color: $black;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: $light-text;
+    text-transform: capitalize;
+    @include breakpoint(small) {
+      font-size: 1rem;
     }
   }
 }
@@ -178,8 +172,13 @@ footer {
       }
     }
     &-title {
+      color: $gray-dark;
       font-size: 1.25rem;
       font-weight: $heavy-text;
+      font-family: $body-font;
+      &:hover {
+        color: lighten($gray-dark, 10%);
+      }
     }
     &-teaser {
       color: $gray-dark;

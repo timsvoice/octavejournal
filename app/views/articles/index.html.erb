@@ -17,7 +17,6 @@
         <td><%= article.title %></td>
         <td><%= article.introduction %></td>
         <td><%= image_tag article.article_feature_url.to_s%></td>
-        <td><%= article.language %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'pg'
+  gem 'sqlite3'
 end
 
 group :production do
@@ -47,6 +47,10 @@ gem 'cancancan'
 #UI jQuery
 gem 'autosize-rails'
 gem 'chosen-rails'
+
+# internationalization
+gem 'i18n', github: 'svenfuchs/i18n'
+gem 'globalize', '~> 4.0.3'
 
 group :development do
   gem 'guard-livereload', '~> 2.4', require: false
