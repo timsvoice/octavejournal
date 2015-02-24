@@ -20,8 +20,8 @@
 //= require jquery-fileupload
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
-
 $(document).ready(function(){
-    $('textarea').autosize();    
+    $('textarea').autosize();
+    $(document).foundation('topbar', 'reflow');    
 });
+

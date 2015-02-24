@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220230922) do
+ActiveRecord::Schema.define(version: 20150224222652) do
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150220230922) do
     t.string   "title_cn"
     t.string   "introduction_cn"
     t.string   "body_cn"
+    t.boolean  "published",                   default: false
   end
 
   create_table "articles_issues", force: true do |t|

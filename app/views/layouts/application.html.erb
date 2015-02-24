@@ -12,37 +12,9 @@
 
   <body>
   
-    <div class="navigation">
-      <nav class="top-bar" data-topbar role="navigation">
-        <ul class="title-area">
-          <li class="name">
-            <a href="/">
-            <%= link_to root_path :locale do %>
-              <%= image_tag "branding.png" %>            
-              <h1 class="branding-title"><span class="bold">Octave</span> journal</h1>
-            <% end %>
-          </li>
-        </ul>
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <% if user_signed_in? %>
-              <% if current_user.role_id >= 2 %>
-                <li class="has-form"><%= link_to (t('new_article')), new_article_path, :class => 'button' %></li>
-                <li class="has-form"><%= link_to (t('new_issue')), new_issue_path, :class => 'button' %></li>
-              <% end %>
-            <% end %>
-            <% if I18n.locale != :en %>
-              <li><%= link_to "EN", locale: 'en' %></li>
-            <% end %>
-            <% if I18n.locale == :en %>
-              <li><%= link_to "中文", locale: 'zh-CN'  %></li>
-            <% end %>
-          </ul>
-          <!-- Left Nav Section -->
-        </section>
-      </nav>
-    </div>
+  <% if params[:action] != 'edit' && params[:action] != 'new' %>
+    <%= render 'layouts/navigation' %>    
+  <% end %>
 
     <% if flash[:error] %>
       <p class="alert alert-danger"><%= flash[:error] %></p>
@@ -89,7 +61,6 @@
     <!--End mc_embed_signup-->
   </div>
 </footer>
-
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>    
   <%= javascript_include_tag 'data-turbolinks-track' => true %>

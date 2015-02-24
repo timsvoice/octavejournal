@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @articles = Article.all
+    @articles = Article.all   
   end
 
   # GET /articles/new
@@ -74,6 +74,6 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:authenticity_token, :title, :introduction, :author, :language, :article_feature, :body, :issue_id, :Category, :tags, :commit)
+      params.require(:article).permit(:title, :introduction, :author, :language, :article_feature, :body, :issue_id, :Category, :tags, :commit, :published)
     end
 end
