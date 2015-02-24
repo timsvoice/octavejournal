@@ -34,11 +34,13 @@
 
         <% if user_signed_in? && params[:controller] == 'articles' %>
           <% if current_user.role_id >= 2 %>
+            <% if @article.title != nil %>
             <li class="editing-message"> 
               <p>
                 <%= (t('article_edit')) %>: <span class="editing-message-title"><%=@article.title%></span>
               </p>
             </li>
+            <% end %>
             <li class="publish-switch-label">
               <p>Published</p>
             </li>
