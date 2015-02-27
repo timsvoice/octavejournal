@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224222652) do
+ActiveRecord::Schema.define(version: 20150225155817) do
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 20150224222652) do
     t.string   "title_cn"
     t.string   "introduction_cn"
     t.string   "summary_cn"
+    t.boolean  "published",       default: false
   end
 
   create_table "roles", force: true do |t|

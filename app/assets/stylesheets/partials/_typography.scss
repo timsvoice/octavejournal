@@ -172,12 +172,12 @@ footer {
       }
     }
     &-title {
-      color: $gray-dark;
-      font-size: 1.25rem;
+      color: $branding-color;
+      font-size: 1.5rem;
       font-weight: $heavy-text;
       font-family: $body-font;
       &:hover {
-        color: lighten($gray-dark, 10%);
+        color: lighten($branding-color, 10%);
       }
     }
     &-teaser {
@@ -324,4 +324,28 @@ footer {
   }
   padding: 1rem 1rem 1rem 0rem;
 
+}
+
+.article-index {
+  &-status {
+    &-published {
+      display: inline-block;
+      padding-right: 0.15rem;
+      font-size: 1rem;
+      color: $branding-color;
+    }
+    &-unpublished {
+      display: inline-block;
+      padding-right: 0.15rem;
+      font-size: 1rem;
+      color: $light-warm-gray;
+    }
+    &-issue {
+      display: inline-block;
+      padding-right: 0.15rem;
+      font-size: 1rem;
+      color: $branding-color;
+      font-weight: $heavy-text;
+    }
+  }
 }

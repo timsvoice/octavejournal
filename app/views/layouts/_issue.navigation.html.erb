@@ -1,0 +1,76 @@
+<!-- Navigation Partial -->
+<div class="navigation">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <a href="/">
+        <%= link_to root_path :locale do %>
+          <%= image_tag "branding.png" %>            
+          <h1 class="branding-title"><span class="bold">Octave</span> journal</h1>
+        <% end %>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      
+      <!-- Right Nav Section -->
+      <ul class="right">
+        
+        <% if user_signed_in? && params[:controller] != 'issues' %>
+          <% if current_user.role_id >= 2 %>
+            <li class="has-form"><%= link_to (t('new_article')), new_article_path, :class => 'button' %> <%= params[:controller] %></li>
+          <% end %>
+          <% if current_user.role_id >= 4 %>
+            <li class="has-form"><%= link_to (t('new_issue')), new_issue_path, :class => 'button' %></li> 
+            <li class="has-dropdown not-click"> 
+              <a href="#">Issues</a>
+              <ul class="dropdown">
+                <% Issue.all.each do |issue| %>
+                  <li><%= link_to issue.title, issue %></li>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>             
+        <% end %>
+
+        <% if user_signed_in? && params[:controller] == 'issues'%>
+          <% if current_user.role_id >= 2 %>
+            <% if @issue.title != nil %>
+            <li class="editing-message"> 
+              <p>
+                <%= (t('edit')) %>: <span class="editing-message-title"><%=@issue.title%></span>
+              </p>
+            </li>
+            <% end %>
+            <li class="publish-switch-label">
+              <p>Published</p>
+            </li>
+            <li>              
+              <div class="publish switch small">              
+                <%= f.check_box :published, { id: 'publish-switch' }, "true", "false" %>
+                <label for="publish-switch">Publish</label>
+              </div> 
+            </li>
+            <li class="has-form">
+              <%=f.submit (t('save')), class: 'button' %>
+            </li>
+          <% end %>
+          <% if current_user.role_id >= 4 %>
+            <li class="has-form">
+              <%= link_to (t('new_issue')), new_issue_path, :class => 'button' %>
+            </li> 
+          <% end %>             
+        <% end %>
+
+
+        <% if I18n.locale != :en %>
+          <li><%= link_to "EN", locale: 'en' %></li>
+        <% end %>
+        <% if I18n.locale == :en %>
+          <li><%= link_to "中文", locale: 'zh-CN'  %></li>
+        <% end %>
+      </ul>
+
+      <!-- Left Nav Section -->
+    </section>
+  </nav>
+</div>

@@ -12,12 +12,12 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @articles = Article.all   
+    @articles = Article.all 
   end
 
   # GET /articles/new
   def new
-    @article = Article.new
+    @article = Article.new    
   end
 
   # GET /articles/1/edit

@@ -1,30 +1,34 @@
-<h1>Listing articles</h1>
+        <ul class="medium-block-grid-2 large-block-grid-3 issue-index-list">
+          <% @articles.each do |article| %>          
+            <li class="issue-index-article">
+              <%= image_tag article.article_feature_url.to_s, class: "lazy issue-index-article-thumbnail" %>
+              <div class="issue-index-article-body">
+                <%=link_to article.title, article, class: "issue-index-article-title"%>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Introduction</th>
-      <th>Author</th>
-      <th>Language</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                
+                <div class="article-index-status">
+                  <% if article.published == true %>
+                    <h5 class="article-index-status-published">
+                      <%= (t('published_in'))%>
+                    </h5>
+                    <h5 class="article-index-status-issue"><%= Article.find(article.id).issues.find(article.issue_id).title %></h5>
+                    <% else %>
+                    <h5 class="article-index-status-unpublished">
+                      Unpublished
+                    </h5>
+                  <% end %>                  
+                </div>
 
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.introduction %></td>
-        <td><%= image_tag article.article_feature_url.to_s%></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+                <p class="issue-index-article-teaser"><%= article.introduction %></p>
+                <% if current_user.role_id >= 2 %>
+                  <%= link_to (t('edit')), edit_article_path(article), :class => 'small button edit' %>
+                <% end %>
+                <% if current_user.role_id >= 3 %>
+                  <%= link_to (t('delete')), article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
+                <% end %>            
 
-<br>
-
-<%= link_to 'New Article', new_article_path %>
+              </div>
+              </a>
+            </li>          
+            <% end %>
+          </ul>

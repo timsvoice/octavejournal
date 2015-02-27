@@ -1,3 +1,7 @@
+<%= form_for(@issue) do |f| %>
+
+<%= render :partial => 'layouts/issue.navigation', :locals => { :f => f} %>
+
 <div class="clearfix"> 
   
   <% if @issue.errors.any? %>
@@ -16,7 +20,7 @@
 
     <div class="container">
     
-    <%= form_for(@issue) do |f| %>
+    
 
       <% if @issue.issue_feature_url.to_s.length > 0 %>
       
