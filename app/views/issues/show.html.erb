@@ -26,6 +26,19 @@
               <%= link_to (t('delete')), @issue, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
             <% end %>
           </div>
+          <ul class="post-related-list small-12 medium-8 columns alpha">
+            <% Issue.find(params[:id]).articles.each do |article| %>
+            <%= link_to(article) do %>
+            <li class="post-related-list-item">
+              <%= image_tag article.article_feature_url.to_s %> 
+              <h4 class="post-related-list-item-title">
+                <%= article.title%>             
+              </h4>
+            </li>
+            <% end %>
+            </a>
+            <% end %>
+          </ul>
         </div>
       </div>
     </div>

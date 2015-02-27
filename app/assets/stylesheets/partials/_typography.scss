@@ -164,6 +164,16 @@ footer {
 // issue index
 
 .issue-index {
+  &-heading {
+    line-height: 2rem;
+    font-size: 2rem;
+    font-weight: $heavy-text;
+    color: transparentize($branding-color, 0.2);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 0.25rem;    
+    margin: 0;
+  }
   &-article {
     text-align: left;
     &.cn {
@@ -198,14 +208,14 @@ footer {
 .post-related {
   margin-top: 2rem;
   h4 {
-    font-size: 2rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     margin-top: 0;
-    color: $light-warm-gray;
+    color: transparentize($branding-color, 0.1);
     font-weight: $heavy-text;
     text-transform: capitalize;
     @include breakpoint(medium) {
-      font-size: 1.25rem;
+      // font-size: 1.25rem;
     }   
   }
   &-list {

@@ -13,6 +13,7 @@ class IssuesController < ApplicationController
   # GET /issues/1.json
   def show
     @issues = Issue.all
+    @articles = Issue.find(params[:id]).articles
   end
 
   # GET /issues/new
@@ -26,7 +27,8 @@ class IssuesController < ApplicationController
 
   # POST /issues
   # POST /issues.json
-  def create
+  def create    
+
     respond_to do |format|
       if @issue.save
         format.html { redirect_to @issue, notice: 'Issue was successfully created.' }

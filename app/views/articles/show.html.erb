@@ -31,13 +31,19 @@
         </div>
         <div class="post-meta small-12 columns alpha beta end">
           <div class="post-related-list">
-            <h4>in this issue</h4>
+            <h5>in this issue</h5>
             <ul class="post-related-articles medium-8 columns alpha">
               <% @articles.each do |article|%>
-              <li>
-                <h5><%= link_to article.title, article, class: "issue-index-article-title" %></h5>
+              <% if article.title != @article.title %>
+              <%= link_to(article) do %>
+              <li class="post-related-list-item">
                 <%= image_tag article.article_feature_url.to_s, class: "lazy issue-index-article-thumbnail" %>
+                <h4 class="post-related-list-item-title">
+                  <%= article.title%>             
+                </h4>
               </li>
+              <% end %>
+              <% end %>
               <% end %>
             </ul>
           </div>
@@ -47,5 +53,3 @@
   </div> 
   </div>
 </div>
-
-
