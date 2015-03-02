@@ -359,3 +359,15 @@ footer {
     }
   }
 }
+
+// login
+
+.login-form {
+  &-remember-label {
+    font-size: 1rem;
+    text-align: left;
+    color: $black;
+  }
+  &-signup-link {
+  }
+}

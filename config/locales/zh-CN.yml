@@ -1,4 +1,11 @@
   zh-CN:
+    login: "登录"
+    logout: "注销"
+    sign_up: "注册"
+    password: "密码"
+    confirm_password: "确认密码"
+    remember_me: "记得我"
+
     stories: "文章"
     edit: "编辑"
     new_article: "创建新文章"

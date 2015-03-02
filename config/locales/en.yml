@@ -20,6 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  login: "login"
+  logout: "logout"
+  sign_up: "sign up"
+  password: "password"
+  confirm_password: "confirm password"
+  remember_me: "remember me"
+  
   stories: "stories"
   new_article: "new article"
   article_edit: "editing article"

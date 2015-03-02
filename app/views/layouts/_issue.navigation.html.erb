@@ -13,9 +13,9 @@
     <section class="top-bar-section">
       
       <!-- Right Nav Section -->
-      <ul class="right">
-        
+      <ul class="right">         
         <% if user_signed_in? && params[:controller] != 'issues' %>
+
           <% if current_user.role_id >= 2 %>
             <li class="has-form"><%= link_to (t('new_article')), new_article_path, :class => 'button' %> <%= params[:controller] %></li>
           <% end %>

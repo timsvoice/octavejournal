@@ -12,10 +12,18 @@
       </li>
     </ul>
     <section class="top-bar-section">
-      
+
       <!-- Right Nav Section -->
       <ul class="right">
-        
+      <% if user_signed_in? %>
+        <li>
+        <%= link_to (t('logout')), destroy_user_session_path, :method => :delete %>        
+        </li>
+      <% else %>
+        <li>
+        <%= link_to (t('login')), new_user_session_path  %>  
+        </li>
+      <% end %>
         <% if user_signed_in? %>
           <% if current_user.role_id >= 2 %>
             <li class="has-form"><%= link_to (t('new_article')), new_article_path, :class => 'button' %></li>

@@ -1,3 +1,6 @@
+.field {
+}
+
 .row.logo {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -14,6 +17,26 @@
   @include breakpoint(small) {
     padding: 1rem 0rem;
   }
+  input[type="checkbox"] {
+    float: left;
+    margin-top: 0.875rem;
+  }
+  &-remember {
+    background-color: transparentize($branding-color, 0.8);
+    padding: 0rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .language-selection {
+    text-align: right; 
+    line-height: 2.25rem;   
+    a {
+      color: $black;
+    }
+  }
+}
+
+.signup-form {
+  @extend .login-form;
 }
 
 .password-label {

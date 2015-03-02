@@ -41,7 +41,45 @@ hr {
   margin: 0;
 }
 
-//splash
+// login form
+
+.login-form {
+  &-horizon {
+    @include horizon();
+  }
+  &-container {
+    @include dead-center(420px, 481px);
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: transparentize($branding-color, 0.85);
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+  }
+  &-signup-link {
+    @extend .alpha, .beta;
+  }
+}
+
+.signup-form {
+  &-horizon {
+    @include horizon();
+  }
+  &-container {
+    @include dead-center(420px, 520px);
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: transparentize($branding-color, 0.85);
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+  }
+  &-signup-link {
+    @extend .alpha, .beta;
+  }
+}
+
+// splash
 
 .horizon {
   position: relative;
