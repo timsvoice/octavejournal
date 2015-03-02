@@ -12,6 +12,11 @@
     width: 126px;
   }
 }
+
+.login-background {
+  background-image: url("images/landing-page.jpg") center no-repeat no-repeat;
+}
+
 .login-form {
   padding: 2rem 0rem;
   @include breakpoint(small) {
@@ -22,15 +27,15 @@
     margin-top: 0.875rem;
   }
   &-remember {
-    background-color: transparentize($branding-color, 0.8);
+    background-color: transparentize($branding-color, 0);
     padding: 0rem 1rem;
     margin-bottom: 1rem;
   }
   .language-selection {
     text-align: right; 
-    line-height: 2.25rem;   
+    line-height: 2.25rem;       
     a {
-      color: $black;
+      color: $white;
     }
   }
 }

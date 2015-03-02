@@ -1,6 +1,6 @@
 <!-- Navigation Partial -->
 
-<div class="navigation">
+<div class="navigation fixed">
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
@@ -8,6 +8,14 @@
         <%= link_to root_path :locale do %>
           <%= image_tag "branding.png" %>            
           <h1 class="branding-title"><span class="bold">Octave</span> journal</h1>
+        <% end %>        
+      </li>
+      <li class="language-selection show-for-small-only">
+        <% if I18n.locale != :en %>
+          <div><%= link_to "EN", locale: 'en' %></div>
+        <% end %>
+        <% if I18n.locale == :en %>
+          <div><%= link_to "中文", locale: 'zh-CN'  %></div>
         <% end %>
       </li>
     </ul>
