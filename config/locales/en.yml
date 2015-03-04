@@ -31,6 +31,7 @@ en:
   new_article: "new article"
   article_edit: "editing article"
   published_in: "published in"
+  published: "published"
 
   new_issue: "new issue" 
   issue_edit: "editing issue"   

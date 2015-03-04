@@ -1,5 +1,5 @@
 <!-- Navigation Partial -->
-<div class="navigation">
+<div class="navigation fixed">
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
@@ -42,12 +42,12 @@
             </li>
             <% end %>
             <li class="publish-switch-label">
-              <p>Published</p>
+              <p><%= (t('published'))%></p>
             </li>
             <li>              
               <div class="publish switch small">              
                 <%= f.check_box :published, { id: 'publish-switch' }, "true", "false" %>
-                <label for="publish-switch">Publish</label>
+                <label for="publish-switch"><%=(t('published'))%></label>
               </div> 
             </li>
             <li class="has-form">
