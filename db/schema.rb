@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225155817) do
+ActiveRecord::Schema.define(version: 20150304214523) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "abilities", force: true do |t|
     t.datetime "created_at"
@@ -23,29 +26,26 @@ ActiveRecord::Schema.define(version: 20150225155817) do
     t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
-    t.string   "introduction"
+    t.text     "title"
+    t.text     "introduction"
     t.text     "body"
   end
 
-  add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id"
-  add_index "article_translations", ["locale"], name: "index_article_translations_on_locale"
+  add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id", using: :btree
+  add_index "article_translations", ["locale"], name: "index_article_translations_on_locale", using: :btree
 
   create_table "articles", force: true do |t|
     t.string   "title"
-    t.string   "introduction"
+    t.text     "introduction"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "author_id"
     t.integer  "category_id"
     t.integer  "tag_id"
     t.string   "article_feature"
-    t.text     "body",            limit: 255
+    t.text     "body"
     t.integer  "issue_id"
-    t.string   "title_cn"
-    t.string   "introduction_cn"
-    t.string   "body_cn"
-    t.boolean  "published",                   default: false
+    t.boolean  "published",       default: false
   end
 
   create_table "articles_issues", force: true do |t|
@@ -87,35 +87,32 @@ ActiveRecord::Schema.define(version: 20150225155817) do
     t.datetime "updated_at"
   end
 
-  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
-  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "issue_translations", force: true do |t|
     t.integer  "issue_id",     null: false
     t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
-    t.string   "introduction"
+    t.text     "title"
+    t.text     "introduction"
     t.text     "summary"
   end
 
-  add_index "issue_translations", ["issue_id"], name: "index_issue_translations_on_issue_id"
-  add_index "issue_translations", ["locale"], name: "index_issue_translations_on_locale"
+  add_index "issue_translations", ["issue_id"], name: "index_issue_translations_on_issue_id", using: :btree
+  add_index "issue_translations", ["locale"], name: "index_issue_translations_on_locale", using: :btree
 
   create_table "issues", force: true do |t|
-    t.string   "title"
+    t.text     "title"
     t.string   "feature_image"
-    t.string   "introduction"
-    t.string   "summary"
+    t.text     "introduction"
+    t.text     "summary"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "issue_feature"
     t.integer  "article_id"
-    t.string   "title_cn"
-    t.string   "introduction_cn"
-    t.string   "summary_cn"
-    t.boolean  "published",       default: false
+    t.boolean  "published",     default: false
   end
 
   create_table "roles", force: true do |t|
@@ -153,7 +150,7 @@ ActiveRecord::Schema.define(version: 20150225155817) do
     t.integer  "role_id"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
