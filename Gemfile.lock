@@ -228,7 +228,7 @@ DEPENDENCIES
   cancancan
   carrierwave
   chosen-rails
-  ckeditor
+  ckeditor (~> 4.1.0)
   coffee-rails (~> 4.0.0)
   devise
   foundation-rails (= 5.5.0)
