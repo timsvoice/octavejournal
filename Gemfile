@@ -56,6 +56,9 @@ group :development do
   gem 'guard-livereload', '~> 2.4', require: false
 end
 
+# heroku
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
