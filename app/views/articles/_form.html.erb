@@ -52,23 +52,11 @@
         <% end %>
 
         <div class="row post-content">
-        <div class="post-body small-12 medium-7 large-6 medium-offset-1 large-offset-0 columns alpha beta right">
+        <div class="post-body small-12 medium-7 large-7 medium-offset-1 large-offset-0 columns alpha beta right">
           
           <div class="show-for-small-only">
-            <%= f.text_field :title, class: "post-title-input", placeholder: "Article Title" %>
-            <%= f.text_field :introduction, class: "post-teaser-input", placeholder: "Article Teaser" %>
-            <div class="post-meta small-12 columns">
-              <h4>Article Meta Data</h4>
-              <select name="Issue" id="issue-select" class="small-12 medium-3 columns left">
-                <option value="" default selected>Issue</option>
-              </select>
-              <select name="Category" id="category-select" class="small-12 medium-3 columns left">
-                <option value="" default selected>Category</option>
-              </select>
-              <div class="small-12 medium-4 left">          
-                <input type="text" placeholder="tag1, tag2, tag3" ng-model="newArticle.tags" name="tags" class="post-tags-input">
-              </div>
-            </div>
+            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: (t('title')) %>
+            <%= f.text_area :introduction, rows: 8, class: "post-teaser-input", placeholder: (t('summary')) %>
           </div>
           
           <%= f.cktext_area :body, rows: 100, class: "post-content-input", placeholder: "Article content" %>
@@ -89,11 +77,10 @@
 
           </div>
         </div>
-        </div>
-
           <div class="post-buttons small-12 columns beta">
             <%= f.submit (t('save')), class: 'button small' %>
           </div> 
+        </div>        
 
      <% end %>
 

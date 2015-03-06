@@ -5,8 +5,8 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   @include breakpoint(small) {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   img {
     width: 126px;

@@ -285,6 +285,13 @@ footer {
       font-size: 1.5rem;
     }   
   }
+  &-issue-select {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: $branding-color;
+    text-transform: capitalize;
+    font-weight: $heavy-text;
+  }
 }
 
 .post-content {
@@ -367,6 +374,8 @@ footer {
     text-align: left;
     color: $white;
   }
-  &-signup-link {
-  }
+}
+
+.signup, .login {
+  float: right;  
 }

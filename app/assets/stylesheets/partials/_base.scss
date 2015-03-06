@@ -50,6 +50,9 @@ hr {
   }
   &-container {
     @include dead-center(420px, 481px);
+    @include breakpoint(small) {
+      @include dead-center(325px, 481px);
+    }
     text-align: center;
     padding: 1rem 2rem;
     background-color: transparentize($gray, 0.05);
@@ -68,6 +71,9 @@ hr {
   }
   &-container {
     @include dead-center(420px, 520px);
+    @include breakpoint(small) {
+      @include dead-center(325px, 481px);
+    }
     text-align: center;
     padding: 1rem 2rem;
     background-color: transparentize($gray, 0.05);
