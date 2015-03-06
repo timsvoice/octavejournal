@@ -107,6 +107,7 @@ i {
   ul li > a, ul li:hover:not(.has-form) > a {
     color: $black;
     font-size: 0.875rem;
+    text-transform: capitalize;
     // margin-top: 0.125rem;
     &:hover {
       color: $branding-color;

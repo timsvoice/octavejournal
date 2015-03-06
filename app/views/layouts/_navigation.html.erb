@@ -40,7 +40,7 @@
             <li class="has-form"><%= link_to (t('new_issue')), new_issue_path, :class => 'button' %></li> 
             <% end %>
             <li class="has-dropdown not-click"> 
-              <a href="#">Issues</a>
+              <a href="#" class="issues-menu"><%= (t('issues')) %></a>
               <ul class="dropdown">
                 <% Issue.all.each do |issue| %>
                   <li><%= link_to issue.title, issue %></li>
