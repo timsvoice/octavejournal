@@ -12,10 +12,6 @@
             <%= f.password_field :password, autocomplete: "off", placeholder: (t('password')) %>
           </div>
 
-          <div class="actions clearfix">
-            <%= f.submit (t('login')), :class => 'button small-12 columns' %>
-          </div>
-
           <% if devise_mapping.rememberable? -%>
             <div class="login-form-remember field clearfix">            
               <%= f.label :remember_me, (t('remember_me')), class: 'login-form-remember-label' %>
@@ -30,6 +26,11 @@
             </div>
           </div>
           <% end -%>
+
+          <div class="actions clearfix">
+            <%= f.submit (t('login')), :class => 'button small-12 columns' %>
+          </div>
+
           <%= render 'devise/shared/links' %>
         <% end %>        
       </div>    

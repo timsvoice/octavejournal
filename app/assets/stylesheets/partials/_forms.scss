@@ -27,15 +27,15 @@
     margin-top: 0.875rem;
   }
   &-remember {
-    background-color: transparentize($branding-color, 0);
-    padding: 0rem 1rem;
+    // background-color: transparentize($branding-color, 0);
+    padding: 0rem 0rem;
     margin-bottom: 1rem;
   }
   .language-selection {
     text-align: right; 
     line-height: 2.25rem;       
     a {
-      color: $white;
+      color: $black;
     }
   }
 }
