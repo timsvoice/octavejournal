@@ -1,10 +1,11 @@
   zh-CN:
+    octave_journal: "《音昱见闻》"
     login: "登录"
     logout: "注销"
     sign_up: "注册"
     password: "密码"
     confirm_password: "确认密码"
-    remember_me: "记得我"
+    remember_me: "自动登录"
 
     stories: "文章"
     edit: "编辑"
@@ -14,23 +15,25 @@
 
     issues: "期刊"
     new_issue: "新一刊"    
-    intro: "绪论"
+    intro: "简介"
 
     title: "标题"
     summary: "简介"
     edit: "编辑"
     delete: "删除"
-    upload_image: "上载映像"
-    select_issue: "选择一刊"
+    upload_image: "上传图片"
+    select_issue: "选择刊物"
 
     save: "保存"
     contact_us: "与我们联系"
     subscribe: "订阅"
     
+    not_signed_up: "还未注册？"
     first_name: "名"
     last_name: "姓"
     email_address: "电子邮件地址"  
 
-    about: "大约 Octave Journal"  
+    about: "关于"
+    about_text: "《音昱见闻》是一本在线杂志，在这里你可以发现有关音昱的精彩活动，有益学习生活的丰富内容，更好地享受人生旅程"  
 
 

@@ -1,13 +1,13 @@
 <footer class="clearfix">
   <div class="small-12 medium-4 columns left alpha">
-      <h4 class=""><%= (t('about')) %></h4>
-      <p>The Octave Journal is an online magazine, publishing Octave's organizational activities and content aimed at informing and supporting life learners on their personal journey.</p>
+      <h4 class=""><%= (t('about')) + ' ' + (t('octave_journal')) %></h4>
+      <p><%= (t('about_text')) %></p>
       <a href="mailto:timothyvoice@livingoctave.com,margiechiang@livingoctave.com">
         <div class="mc button"><%= t('contact_us') %></div>
       </a>
   </div>
   <div class="small-12 medium-4 columns right alpha beta">
-    <h5>Not Signed up for the Journal yet?</h5>
+    <h5><%= (t('not_signed_up')) %></h5>
     <!-- Begin MailChimp Signup Form -->
     <div id="mc_embed_signup">
       <form action="//livingoctaveresearch.us7.list-manage.com/subscribe/post?u=55187aa9967bed3b4c9e7654a&amp;id=11bd36460d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

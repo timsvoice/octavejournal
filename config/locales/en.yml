@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  octave_journal: "Octave Journal"
   login: "login"
   logout: "logout"
   sign_up: "sign up"
@@ -49,11 +50,13 @@ en:
   contact_us: "contact us"
   subscribe: "subscribe"
   
+  not_signed_up: "Not signed up yet?"
   first_name: "first name"
   last_name: "last name"
   email_address: "email address"
 
-  about: "About Octave Journal"  
+  about: "About" 
+  about_text: "《音昱见闻》是一本在线杂志，在这里你可以发现有关音昱的精彩活动，有益学习生活的丰富内容，更好地享受人生旅程" 
 
 
 
