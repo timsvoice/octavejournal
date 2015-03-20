@@ -54,6 +54,8 @@ gem 'globalize', '~> 4.0.3'
 
 group :development do
   gem 'guard-livereload', '~> 2.4', require: false
+  gem 'capistrano',  '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
 end
 
 # heroku
@@ -70,4 +72,3 @@ gem 'rails_12factor', group: :production
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
