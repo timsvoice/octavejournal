@@ -67,18 +67,9 @@
         <div class="post-related medium-4 left beta alpha">
           <div class="show-for-medium-up" id="addarticle">
             
-            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: (t('title')) %>
-            <%= f.text_area :introduction, rows: 8, class: "post-teaser-input", placeholder: (t('summary')) %>
-            
-            <h5 class="post-issue-select">
-              <%= (t('select_issue')) %>
-            </h5>
-            <%= f.collection_select(:issue_id, Issue.all, :id, :title) %>
-
             <h5 class="post-issue-select">
               <%= (t('select_language')) %>
             </h5>
-          
             <div class="post-language-select">
               <% if I18n.locale != :en %>
                <%= link_to "中文", {locale: 'zh-CN'}, :class => 'selected_lan' %>
@@ -89,6 +80,16 @@
                <%= link_to "EN", {locale: 'en'}, :class => 'selected_lan' %>             
               <% end %>
             </div>
+
+            <%= f.text_area :title, rows: 20, class: "post-title-input", placeholder: (t('title')) %>
+            <%= f.text_area :introduction, rows: 8, class: "post-teaser-input", placeholder: (t('summary')) %>
+            
+            <h5 class="post-issue-select">
+              <%= (t('select_issue')) %>
+            </h5>
+            <%= f.collection_select(:issue_id, Issue.all, :id, :title) %>
+          
+
           </div>
         </div>
           <div class="post-buttons small-12 columns beta">
