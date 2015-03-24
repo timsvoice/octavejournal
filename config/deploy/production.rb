@@ -42,7 +42,7 @@ role :db,  %w{deployer@128.199.206.98}
 # Global options
 # --------------
 set :ssh_options, {
-    forward_agent: false,
+    # forward_agent: false,
     auth_methods: %w(password),
     password: 'Middleway,8888',
     user: 'deployer',
