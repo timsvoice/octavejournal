@@ -75,6 +75,20 @@
             </h5>
             <%= f.collection_select(:issue_id, Issue.all, :id, :title) %>
 
+            <h5 class="post-issue-select">
+              <%= (t('select_language')) %>
+            </h5>
+          
+            <div class="post-language-select">
+              <% if I18n.locale != :en %>
+               <%= link_to "中文", {locale: 'zh-CN'}, :class => 'selected_lan' %>
+               <%= link_to "EN", {locale: 'en'}, :class => 'unselected_lan' %>
+              <% end %>
+              <% if I18n.locale == :en %>
+               <%= link_to "中文", {locale: 'zh-CN'}, :class => 'unselected_lan' %>
+               <%= link_to "EN", {locale: 'en'}, :class => 'selected_lan' %>             
+              <% end %>
+            </div>
           </div>
         </div>
           <div class="post-buttons small-12 columns beta">

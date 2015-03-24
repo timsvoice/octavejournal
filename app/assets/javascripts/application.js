@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require rem.min
 //= require chosen-jquery
 //= require jquery_ujs
 //= require foundation

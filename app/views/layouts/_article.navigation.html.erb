@@ -60,14 +60,8 @@
             </li> 
           <% end %>             
         <% end %>
+      
 
-
-        <% if I18n.locale != :en %>
-          <li><%= link_to "EN", locale: 'en' %></li>
-        <% end %>
-        <% if I18n.locale == :en %>
-          <li><%= link_to "中文", locale: 'zh-CN'  %></li>
-        <% end %>
       </ul>
 
       <!-- Left Nav Section -->

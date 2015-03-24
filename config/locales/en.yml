@@ -45,6 +45,7 @@ en:
   delete: "delete"
   upload_image: "upload image"
   select_issue: "select issue"
+  select_language: "select language"
 
   save: "save"
   contact_us: "contact us"

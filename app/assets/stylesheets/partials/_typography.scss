@@ -295,6 +295,26 @@ footer {
   }
 }
 
+.post-language-select {
+  background-color: lighten($gray, 0.5);
+  padding: 0.5rem;
+  padding-bottom: 0.75rem;
+  .selected_lan {
+    font-weight: $heavy-text;
+    color: $branding-color;
+    margin-right: 1rem;
+    padding-bottom: 0.125rem;
+    border-bottom: 0.125rem solid $branding-color;
+  }
+  .unselected_lan {
+    font-weight: $light-text;
+    color: lighten($black, 40%);     
+    margin-right: 1rem;
+  }  
+}
+
+
+
 .post-content {
   blockquote > p {
     @include breakpoint(medium) {

@@ -23,6 +23,7 @@
     delete: "删除"
     upload_image: "上传图片"
     select_issue: "选择刊物"
+    select_language: "选择语言"
 
     save: "保存"
     contact_us: "与我们联系"
