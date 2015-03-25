@@ -13,9 +13,7 @@ include CanCan::Ability
     else
       # Contributor
       if user.role_id == 2
-        can :read, :all 
-        can :create, Article
-        can :update, Article
+        can :manage, :all 
     else
       # Subscriber (default)
       if user.role_id == 1
