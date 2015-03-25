@@ -24,7 +24,7 @@
                 <% if current_user.role_id >= 2 %>
                   <%= link_to (t('edit')), edit_article_path(article), :class => 'small button edit' %>
                 <% end %>
-                <% if current_user.role_id >= 3 %>
+                <% if current_user.role_id >= 2 %>
                   <%= link_to (t('delete')), article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
                 <% end %>
               </div>

@@ -88,7 +88,9 @@
               <%= (t('select_issue')) %>
             </h5>
             <%= f.collection_select(:issue_id, Issue.all, :id, :title) %>
-          
+            <% if current_user.role_id >= 2 %>
+              <%= link_to (t('delete')), @article, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small button alert' %>
+            <% end %>          
 
           </div>
         </div>
