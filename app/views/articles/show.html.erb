@@ -32,7 +32,7 @@
         <div class="post-meta small-12 columns alpha beta end">
           <div class="post-related-list">
             <ul class="post-related-articles medium-8 columns alpha">
-              <% @articles.each do |article|%>
+              <% @articles.with_translations(I18n.locale).each do |article|%>
               <% if article.title != @article.title %>
               <%= link_to(article) do %>
               <li class="post-related-list-item">
