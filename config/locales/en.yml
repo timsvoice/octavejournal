@@ -30,6 +30,7 @@ en:
   
   stories: "stories"
   new_article: "new article"
+  articles: "articles"
   article_edit: "editing article"
   published_in: "published in"
   published: "published"

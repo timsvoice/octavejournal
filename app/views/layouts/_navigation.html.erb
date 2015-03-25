@@ -35,6 +35,7 @@
         <% if user_signed_in? %>
           <% if current_user.role_id >= 2 %>
             <li class="has-form"><%= link_to (t('new_article')), new_article_path, :class => 'button' %></li>
+            <li class="has-form"><%= link_to (t('articles')), articles_path, :class =>'button' %></li>
           <% end %>
           <% if current_user.role_id >= 4 %>
             <li class="has-form"><%= link_to (t('new_issue')), new_issue_path, :class => 'button' %></li> 
