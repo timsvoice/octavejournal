@@ -27,7 +27,7 @@
             <% end %>
           </div>
           <ul class="post-related-list small-12 medium-8 columns alpha">
-            <% Issue.find(params[:id]).articles.each do |article| %>
+            <% @articles.with_translations(I18n.locale).each do |article| %>
             <%= link_to(article) do %>
             <li class="post-related-list-item">
               <%= image_tag article.article_feature_url.to_s %> 
