@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require rem.min
-//= require chosen-jquery
 //= require jquery_ujs
 //= require foundation
 //= require jquery.autosize
