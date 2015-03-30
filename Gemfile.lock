@@ -144,6 +144,8 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-slick-rails (1.5.0.1)
+      railties (>= 3.1)
     json (1.8.2)
     kgio (2.9.3)
     listen (2.10.0)
@@ -268,6 +270,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-fileupload-rails
   jquery-rails
+  jquery-slick-rails
   mini_magick
   pg
   rails (= 4.1.6)

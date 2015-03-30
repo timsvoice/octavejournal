@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'ckeditor', '~> 4.1.0' 
+gem 'jquery-slick-rails'
 gem 'jquery-fileupload-rails'
 
 # Authentication

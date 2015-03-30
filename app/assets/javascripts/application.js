@@ -18,10 +18,11 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require jquery-fileupload
+//= require jquery.slick
+//= require fashion.page
 //= require_tree .
 
 $(document).ready(function(){
     $('textarea').autosize();
     $(document).foundation('topbar', 'reflow');    
 });
-
