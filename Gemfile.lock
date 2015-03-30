@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/capistrano/rvm.git
-  revision: 9cfef39cf0022839dca6b5b330dfefeb5fc363e7
-  specs:
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
-
-GIT
   remote: git://github.com/svenfuchs/i18n.git
   revision: f19893d84262261d9c8abe303f465ea28ba057e4
   specs:
@@ -254,7 +246,6 @@ DEPENDENCIES
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
   capistrano-rails (~> 1.1.1)
-  capistrano-rvm!
   carrierwave
   chosen-rails
   ckeditor (~> 4.1.0)
