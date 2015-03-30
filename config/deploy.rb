@@ -10,7 +10,7 @@ set :ssh_options, { :forward_agent => true }
 # Allow for password requests to surface in local terminal
 
 # Credentials
-set :user, "root"
+set :user, "root  "
 
 set :deploy_to, "/home/rails/octavejournal"
 set :use_sudo, false
