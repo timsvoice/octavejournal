@@ -1,0 +1,1151 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: abilities; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE abilities (
+    id integer NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE abilities OWNER TO timothyvoice;
+
+--
+-- Name: abilities_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE abilities_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE abilities_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: abilities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE abilities_id_seq OWNED BY abilities.id;
+
+
+--
+-- Name: article_translations; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE article_translations (
+    id integer NOT NULL,
+    article_id integer NOT NULL,
+    locale character varying(255) NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    title text,
+    introduction text,
+    body text
+);
+
+
+ALTER TABLE article_translations OWNER TO timothyvoice;
+
+--
+-- Name: article_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE article_translations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE article_translations_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: article_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE article_translations_id_seq OWNED BY article_translations.id;
+
+
+--
+-- Name: articles; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE articles (
+    id integer NOT NULL,
+    title character varying(255),
+    introduction text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    author_id integer,
+    category_id integer,
+    tag_id integer,
+    article_feature character varying(255),
+    body text,
+    issue_id integer,
+    published boolean DEFAULT false,
+    article_lan character varying(255)
+);
+
+
+ALTER TABLE articles OWNER TO timothyvoice;
+
+--
+-- Name: articles_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE articles_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE articles_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: articles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE articles_id_seq OWNED BY articles.id;
+
+
+--
+-- Name: articles_issues; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE articles_issues (
+    id integer NOT NULL,
+    article_id integer,
+    issue_id integer
+);
+
+
+ALTER TABLE articles_issues OWNER TO timothyvoice;
+
+--
+-- Name: articles_issues_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE articles_issues_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE articles_issues_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: articles_issues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE articles_issues_id_seq OWNED BY articles_issues.id;
+
+
+--
+-- Name: articles_issues_tables; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE articles_issues_tables (
+    id integer NOT NULL,
+    article_id integer,
+    issue_id integer
+);
+
+
+ALTER TABLE articles_issues_tables OWNER TO timothyvoice;
+
+--
+-- Name: articles_issues_tables_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE articles_issues_tables_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE articles_issues_tables_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: articles_issues_tables_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE articles_issues_tables_id_seq OWNED BY articles_issues_tables.id;
+
+
+--
+-- Name: authors; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE authors (
+    id integer NOT NULL,
+    name character varying(255),
+    email character varying(255),
+    username character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    article_id integer
+);
+
+
+ALTER TABLE authors OWNER TO timothyvoice;
+
+--
+-- Name: authors_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE authors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE authors_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: authors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE authors_id_seq OWNED BY authors.id;
+
+
+--
+-- Name: categories; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE categories (
+    id integer NOT NULL,
+    name character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    article_id integer
+);
+
+
+ALTER TABLE categories OWNER TO timothyvoice;
+
+--
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE categories_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE categories_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE categories_id_seq OWNED BY categories.id;
+
+
+--
+-- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE ckeditor_assets (
+    id integer NOT NULL,
+    data_file_name character varying(255) NOT NULL,
+    data_content_type character varying(255),
+    data_file_size integer,
+    assetable_id integer,
+    assetable_type character varying(30),
+    type character varying(30),
+    width integer,
+    height integer,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE ckeditor_assets OWNER TO timothyvoice;
+
+--
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE ckeditor_assets_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE ckeditor_assets_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE ckeditor_assets_id_seq OWNED BY ckeditor_assets.id;
+
+
+--
+-- Name: issue_translations; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE issue_translations (
+    id integer NOT NULL,
+    issue_id integer NOT NULL,
+    locale character varying(255) NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    title text,
+    introduction text,
+    summary text
+);
+
+
+ALTER TABLE issue_translations OWNER TO timothyvoice;
+
+--
+-- Name: issue_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE issue_translations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE issue_translations_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: issue_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE issue_translations_id_seq OWNED BY issue_translations.id;
+
+
+--
+-- Name: issues; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE issues (
+    id integer NOT NULL,
+    title text,
+    feature_image character varying(255),
+    introduction text,
+    summary text,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    issue_feature character varying(255),
+    article_id integer,
+    published boolean DEFAULT false
+);
+
+
+ALTER TABLE issues OWNER TO timothyvoice;
+
+--
+-- Name: issues_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE issues_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE issues_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: issues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE issues_id_seq OWNED BY issues.id;
+
+
+--
+-- Name: roles; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE roles (
+    id integer NOT NULL,
+    name character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE roles OWNER TO timothyvoice;
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE roles_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE roles_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying(255) NOT NULL
+);
+
+
+ALTER TABLE schema_migrations OWNER TO timothyvoice;
+
+--
+-- Name: subscribers; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE subscribers (
+    id integer NOT NULL,
+    name character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE subscribers OWNER TO timothyvoice;
+
+--
+-- Name: subscribers_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE subscribers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE subscribers_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: subscribers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE subscribers_id_seq OWNED BY subscribers.id;
+
+
+--
+-- Name: tags; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE tags (
+    id integer NOT NULL,
+    name character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    article_id integer
+);
+
+
+ALTER TABLE tags OWNER TO timothyvoice;
+
+--
+-- Name: tags_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE tags_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE tags_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: tags_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE tags_id_seq OWNED BY tags.id;
+
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE TABLE users (
+    id integer NOT NULL,
+    email character varying(255) DEFAULT ''::character varying NOT NULL,
+    encrypted_password character varying(255) DEFAULT ''::character varying NOT NULL,
+    reset_password_token character varying(255),
+    reset_password_sent_at timestamp without time zone,
+    remember_created_at timestamp without time zone,
+    sign_in_count integer DEFAULT 0 NOT NULL,
+    current_sign_in_at timestamp without time zone,
+    last_sign_in_at timestamp without time zone,
+    current_sign_in_ip character varying(255),
+    last_sign_in_ip character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    role_id integer
+);
+
+
+ALTER TABLE users OWNER TO timothyvoice;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+--
+
+CREATE SEQUENCE users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE users_id_seq OWNER TO timothyvoice;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+--
+
+ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY abilities ALTER COLUMN id SET DEFAULT nextval('abilities_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY article_translations ALTER COLUMN id SET DEFAULT nextval('article_translations_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY articles ALTER COLUMN id SET DEFAULT nextval('articles_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY articles_issues ALTER COLUMN id SET DEFAULT nextval('articles_issues_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY articles_issues_tables ALTER COLUMN id SET DEFAULT nextval('articles_issues_tables_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY authors ALTER COLUMN id SET DEFAULT nextval('authors_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY categories ALTER COLUMN id SET DEFAULT nextval('categories_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY ckeditor_assets ALTER COLUMN id SET DEFAULT nextval('ckeditor_assets_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY issue_translations ALTER COLUMN id SET DEFAULT nextval('issue_translations_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY issues ALTER COLUMN id SET DEFAULT nextval('issues_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY subscribers ALTER COLUMN id SET DEFAULT nextval('subscribers_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY tags ALTER COLUMN id SET DEFAULT nextval('tags_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- Data for Name: abilities; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY abilities (id, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: abilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('abilities_id_seq', 1, false);
+
+
+--
+-- Data for Name: article_translations; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY article_translations (id, article_id, locale, created_at, updated_at, title, introduction, body) FROM stdin;
+1	8	en	2015-03-04 22:05:04.986278	2015-03-24 20:32:09.701974	Aitia opens [en]	Article Summary [EN]	<p>This is a body text [en]</p>\r\n
+3	8	zh-CN	2015-03-04 22:22:01.40658	2015-03-24 20:32:37.536178	[ZN]	ZH Article Summary	<p>This is a body text [ZN]</p>\r\n
+4	10	en	2015-03-24 20:33:40.955579	2015-03-24 20:33:40.955579	[en]2	[en]2	<p>[en]2</p>\r\n
+5	10	zh-CN	2015-03-24 20:34:01.18157	2015-03-24 20:34:01.18157	[zn]2	[zn]2	<p>[zn]2</p>\r\n
+6	11	en	2015-03-24 22:03:25.052013	2015-03-24 22:03:25.052013	test2	test2	<p>test2</p>\r\n
+7	11	zh-CN	2015-03-24 22:03:44.931563	2015-03-24 22:03:44.931563	test2CN	test2CN	<p>test2CN</p>\r\n
+\.
+
+
+--
+-- Name: article_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('article_translations_id_seq', 7, true);
+
+
+--
+-- Data for Name: articles; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY articles (id, title, introduction, created_at, updated_at, author_id, category_id, tag_id, article_feature, body, issue_id, published, article_lan) FROM stdin;
+10	[zn]2	[zn]2	2015-03-24 20:33:40.935995	2015-03-24 20:34:01.186192	\N	\N	\N	IMG_4378.jpg	<p>[zn]2</p>\r\n	8	f	\N
+11	test2CN	test2CN	2015-03-24 22:03:25.039946	2015-03-24 22:03:44.933535	\N	\N	\N	\N	<p>test2CN</p>\r\n	8	t	\N
+8	[ZN]	Article Summary [EN]	2015-03-04 22:05:04.97787	2015-03-25 01:40:00.10267	\N	\N	\N	aitia-open-at-olr-fred-feature.png	<p>This is a body text [ZN]</p>\r\n	8	t	zh-CN
+\.
+
+
+--
+-- Name: articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('articles_id_seq', 11, true);
+
+
+--
+-- Data for Name: articles_issues; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY articles_issues (id, article_id, issue_id) FROM stdin;
+7	8	8
+9	10	8
+10	11	8
+\.
+
+
+--
+-- Name: articles_issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('articles_issues_id_seq', 10, true);
+
+
+--
+-- Data for Name: articles_issues_tables; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY articles_issues_tables (id, article_id, issue_id) FROM stdin;
+\.
+
+
+--
+-- Name: articles_issues_tables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('articles_issues_tables_id_seq', 1, false);
+
+
+--
+-- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY authors (id, name, email, username, created_at, updated_at, article_id) FROM stdin;
+\.
+
+
+--
+-- Name: authors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('authors_id_seq', 1, false);
+
+
+--
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY categories (id, name, created_at, updated_at, article_id) FROM stdin;
+\.
+
+
+--
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('categories_id_seq', 1, false);
+
+
+--
+-- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY ckeditor_assets (id, data_file_name, data_content_type, data_file_size, assetable_id, assetable_type, type, width, height, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('ckeditor_assets_id_seq', 1, false);
+
+
+--
+-- Data for Name: issue_translations; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY issue_translations (id, issue_id, locale, created_at, updated_at, title, introduction, summary) FROM stdin;
+1	8	en	2015-03-04 22:04:35.724097	2015-03-04 22:04:35.724097	Octave Budding	<p>Issue introduction</p>\r\n	Summary Test
+2	8	zh-CN	2015-03-04 22:07:28.458941	2015-03-04 22:07:28.458941	音昱启程	<h2 style="box-sizing: border-box; margin: 0.2rem 0px 0.5rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-weight: 900; color: rgb(95, 130, 171); text-rendering: optimizelegibility; line-height: 1.4; font-size: 1.5rem;">音昱启程</h2>\r\n\r\n<p style="box-sizing: border-box; margin: 1rem 0px 1.25rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-size: 16px; line-height: 1.5rem; text-rendering: optimizelegibility; color: rgb(34, 34, 34);">在经过数年的精心规划和筹备，音昱倾情推出首个试点项目：音昱听堂。</p>\r\n\r\n<p style="box-sizing: border-box; margin: 1rem 0px 1.25rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-size: 16px; line-height: 1.5rem; text-rendering: optimizelegibility; color: rgb(34, 34, 34);">主席感言 &quot;生命充满变数，学习弥足珍贵。通过学习生活，成就卓越人生。&quot; -曹慰德</p>\r\n\r\n<p style="box-sizing: border-box; margin: 1rem 0px 1.25rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-size: 16px; line-height: 1.5rem; text-rendering: optimizelegibility; color: rgb(34, 34, 34);">音昱是什么？ 音昱致力于提供丰富多元的学习平台，帮助人们全面持续地提升自我，通过打造有益于个人成长的项目来引导个人和家庭充分发掘自我潜能，享受充实愉悦的人生</p>\r\n	在经过数年的精心规划和筹备，音昱倾情推出首个试点项目：音昱听堂。
+\.
+
+
+--
+-- Name: issue_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('issue_translations_id_seq', 2, true);
+
+
+--
+-- Data for Name: issues; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY issues (id, title, feature_image, introduction, summary, created_at, updated_at, issue_feature, article_id, published) FROM stdin;
+8	音昱启程	\N	<h2 style="box-sizing: border-box; margin: 0.2rem 0px 0.5rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-weight: 900; color: rgb(95, 130, 171); text-rendering: optimizelegibility; line-height: 1.4; font-size: 1.5rem;">音昱启程</h2>\r\n\r\n<p style="box-sizing: border-box; margin: 1rem 0px 1.25rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-size: 16px; line-height: 1.5rem; text-rendering: optimizelegibility; color: rgb(34, 34, 34);">在经过数年的精心规划和筹备，音昱倾情推出首个试点项目：音昱听堂。</p>\r\n\r\n<p style="box-sizing: border-box; margin: 1rem 0px 1.25rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-size: 16px; line-height: 1.5rem; text-rendering: optimizelegibility; color: rgb(34, 34, 34);">主席感言 &quot;生命充满变数，学习弥足珍贵。通过学习生活，成就卓越人生。&quot; -曹慰德</p>\r\n\r\n<p style="box-sizing: border-box; margin: 1rem 0px 1.25rem; padding: 0px; font-family: FZYXJW, 'Microsoft Yahei', STXihei, sans-serif; font-size: 16px; line-height: 1.5rem; text-rendering: optimizelegibility; color: rgb(34, 34, 34);">音昱是什么？ 音昱致力于提供丰富多元的学习平台，帮助人们全面持续地提升自我，通过打造有益于个人成长的项目来引导个人和家庭充分发掘自我潜能，享受充实愉悦的人生</p>\r\n	在经过数年的精心规划和筹备，音昱倾情推出首个试点项目：音昱听堂。	2015-03-04 22:04:35.717517	2015-03-04 22:07:28.461607	aitia-open-at-olr-fred-feature.png	\N	f
+\.
+
+
+--
+-- Name: issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('issues_id_seq', 8, true);
+
+
+--
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY roles (id, name, created_at, updated_at) FROM stdin;
+1	subscriber	2015-03-04 22:55:25.481962	2015-03-04 22:55:25.481962
+2	contributor	2015-03-04 22:55:25.488509	2015-03-04 22:55:25.488509
+3	editor	2015-03-04 22:55:25.49056	2015-03-04 22:55:25.49056
+4	admin	2015-03-04 22:55:25.492451	2015-03-04 22:55:25.492451
+\.
+
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('roles_id_seq', 4, true);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY schema_migrations (version) FROM stdin;
+20150122181349
+20150122182355
+20150122182425
+20150122182437
+20150122182521
+20150122183620
+20150122184025
+20150122184100
+20150122184117
+20150122184132
+20150122225614
+20150122231634
+20150123141820
+20150123162332
+20150123195438
+20150123195640
+20150213200515
+20150213211139
+20150213211323
+20150213212254
+20150213215726
+20150217221338
+20150219033758
+20150219034347
+20150219035056
+20150219040153
+20150219040224
+20150219041848
+20150219043120
+20150219043551
+20150220212953
+20150220212954
+20150220213147
+20150220220150
+20150220230922
+20150224222652
+20150225155817
+20150304175525
+20150304175814
+20150220225242
+20150304195113
+20150304195154
+20150304195331
+20150304195356
+20150304211536
+20150304213152
+20150304214003
+20150304214515
+20150304214523
+20150324164638
+\.
+
+
+--
+-- Data for Name: subscribers; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY subscribers (id, name, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: subscribers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('subscribers_id_seq', 1, false);
+
+
+--
+-- Data for Name: tags; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY tags (id, name, created_at, updated_at, article_id) FROM stdin;
+\.
+
+
+--
+-- Name: tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('tags_id_seq', 1, false);
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+--
+
+COPY users (id, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, created_at, updated_at, role_id) FROM stdin;
+3	margiechiang@livingoctave.com	$2a$10$BZp8sZQcPP.Sw7.q3s2aAugV4wtlrQ3cuqX4QtlPqChze5qiUXtKq	\N	\N	\N	2	2015-03-05 19:17:48.057077	2015-03-04 23:12:42.284388	127.0.0.1	127.0.0.1	2015-03-04 23:12:42.253823	2015-03-05 19:17:48.057795	2
+4	alicezhou@livingoctave.com	$2a$10$ZmvmMQu5SkLF0syIl2NYcOV67T9a46jXEMBj/UKrQb6pWC6vcI9te	\N	\N	\N	3	2015-03-25 01:38:07.763207	2015-03-24 21:37:39.517512	127.0.0.1	127.0.0.1	2015-03-04 23:15:30.201144	2015-03-25 01:38:07.763859	2
+1	timothyvoice@livingoctave.com	$2a$10$a15ZROVXeMy2O8sW7Riw/uyb9RQO1b7QKnsHHgDaTgYSKUEDcxeJC	\N	\N	\N	24	2015-03-30 01:25:32.940083	2015-03-25 15:27:43.064954	127.0.0.1	127.0.0.1	2015-03-02 21:56:46.611647	2015-03-30 01:25:32.947163	4
+\.
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+--
+
+SELECT pg_catalog.setval('users_id_seq', 4, true);
+
+
+--
+-- Name: abilities_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY abilities
+    ADD CONSTRAINT abilities_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: article_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY article_translations
+    ADD CONSTRAINT article_translations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_issues_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_issues
+    ADD CONSTRAINT articles_issues_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_issues_tables_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY articles_issues_tables
+    ADD CONSTRAINT articles_issues_tables_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: articles_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY articles
+    ADD CONSTRAINT articles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY authors
+    ADD CONSTRAINT authors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY categories
+    ADD CONSTRAINT categories_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY ckeditor_assets
+    ADD CONSTRAINT ckeditor_assets_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: issue_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY issue_translations
+    ADD CONSTRAINT issue_translations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: issues_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY issues
+    ADD CONSTRAINT issues_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY roles
+    ADD CONSTRAINT roles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: subscribers_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY subscribers
+    ADD CONSTRAINT subscribers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: tags_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY tags
+    ADD CONSTRAINT tags_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: idx_ckeditor_assetable; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE INDEX idx_ckeditor_assetable ON ckeditor_assets USING btree (assetable_type, assetable_id);
+
+
+--
+-- Name: idx_ckeditor_assetable_type; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE INDEX idx_ckeditor_assetable_type ON ckeditor_assets USING btree (assetable_type, type, assetable_id);
+
+
+--
+-- Name: index_article_translations_on_article_id; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE INDEX index_article_translations_on_article_id ON article_translations USING btree (article_id);
+
+
+--
+-- Name: index_article_translations_on_locale; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE INDEX index_article_translations_on_locale ON article_translations USING btree (locale);
+
+
+--
+-- Name: index_issue_translations_on_issue_id; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE INDEX index_issue_translations_on_issue_id ON issue_translations USING btree (issue_id);
+
+
+--
+-- Name: index_issue_translations_on_locale; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE INDEX index_issue_translations_on_locale ON issue_translations USING btree (locale);
+
+
+--
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
+
+
+--
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (reset_password_token);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: timothyvoice
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM timothyvoice;
+GRANT ALL ON SCHEMA public TO timothyvoice;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
