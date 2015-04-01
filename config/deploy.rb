@@ -10,7 +10,7 @@ set :ssh_options, { :forward_agent => true }
 # Allow for password requests to surface in local terminal
 
 # Credentials
-set :user, "root  "
+set :user, "root"
 
 set :deploy_to, "/home/rails/octavejournal"
 set :use_sudo, false
@@ -21,6 +21,8 @@ set :deploy_via, :copy
 
 # Versions to keep on server
 set :keep_releases, 5
+# Don't delete all the upload files
+set :linked_dirs, fetch(:linked_dirs) + %w{public/system public/uploads}
 
 
 # Default value for :scm is :git
