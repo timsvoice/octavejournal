@@ -1,39 +1,25 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
-
 set :application, 'octave_journal'
+set :deploy_to, "/home/deployer/octave_journal"
+
+set :scm, :git
 set :repo_url, 'https://github.com/timsvoice/octavejournal'
-set :ssh_options, { :forward_agent => true }
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-# Allow for password requests to surface in local terminal
+set :branch, "master"
 
-# Credentials
-set :user, "root"
-
-set :deploy_to, "/home/rails/octavejournal"
 set :use_sudo, false
-set :stage, :production
 
 # Deployment method
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
+set :pty, true
 
-# Versions to keep on server
-set :keep_releases, 5
+set :rbenv_ruby, '2.2.1'
+
 # Don't delete all the upload files
 set :linked_dirs, fetch(:linked_dirs) + %w{public/system public/uploads}
 
-
-# Default value for :scm is :git
-set :scm, :git
-set :branch, "master"
-
-# Default value for :format is :pretty
-set :format, :pretty
-
-# Default value for :pty is false
-set :pty, true
+after "deploy", "deploy:cleanup"
 
 namespace :deploy do
 

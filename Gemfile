@@ -55,7 +55,7 @@ group :development do
   gem 'capistrano',  '~> 3.1'
   gem 'capistrano-rails', '~> 1.1.1'
   gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rvm'
+  gem 'capistrano-rbenv'
 end
 
 # heroku
@@ -65,7 +65,7 @@ gem 'rails_12factor', group: :production
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
