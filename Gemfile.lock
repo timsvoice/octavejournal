@@ -163,6 +163,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
+    newrelic_rpm (3.11.1.284)
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -266,6 +267,7 @@ DEPENDENCIES
   jquery-rails
   jquery-slick-rails
   mini_magick
+  newrelic_rpm
   pg
   rails (= 4.1.6)
   rails_12factor
