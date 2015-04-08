@@ -30,7 +30,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: abilities; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: abilities; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE abilities (
@@ -40,10 +40,10 @@ CREATE TABLE abilities (
 );
 
 
-ALTER TABLE abilities OWNER TO timothyvoice;
+ALTER TABLE abilities OWNER TO deployer;
 
 --
--- Name: abilities_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: abilities_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE abilities_id_seq
@@ -54,17 +54,17 @@ CREATE SEQUENCE abilities_id_seq
     CACHE 1;
 
 
-ALTER TABLE abilities_id_seq OWNER TO timothyvoice;
+ALTER TABLE abilities_id_seq OWNER TO deployer;
 
 --
--- Name: abilities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: abilities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE abilities_id_seq OWNED BY abilities.id;
 
 
 --
--- Name: article_translations; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: article_translations; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE article_translations (
@@ -79,10 +79,10 @@ CREATE TABLE article_translations (
 );
 
 
-ALTER TABLE article_translations OWNER TO timothyvoice;
+ALTER TABLE article_translations OWNER TO deployer;
 
 --
--- Name: article_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: article_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE article_translations_id_seq
@@ -93,17 +93,17 @@ CREATE SEQUENCE article_translations_id_seq
     CACHE 1;
 
 
-ALTER TABLE article_translations_id_seq OWNER TO timothyvoice;
+ALTER TABLE article_translations_id_seq OWNER TO deployer;
 
 --
--- Name: article_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: article_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE article_translations_id_seq OWNED BY article_translations.id;
 
 
 --
--- Name: articles; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: articles; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE articles (
@@ -123,10 +123,10 @@ CREATE TABLE articles (
 );
 
 
-ALTER TABLE articles OWNER TO timothyvoice;
+ALTER TABLE articles OWNER TO deployer;
 
 --
--- Name: articles_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: articles_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE articles_id_seq
@@ -137,17 +137,17 @@ CREATE SEQUENCE articles_id_seq
     CACHE 1;
 
 
-ALTER TABLE articles_id_seq OWNER TO timothyvoice;
+ALTER TABLE articles_id_seq OWNER TO deployer;
 
 --
--- Name: articles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: articles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE articles_id_seq OWNED BY articles.id;
 
 
 --
--- Name: articles_issues; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: articles_issues; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE articles_issues (
@@ -157,10 +157,10 @@ CREATE TABLE articles_issues (
 );
 
 
-ALTER TABLE articles_issues OWNER TO timothyvoice;
+ALTER TABLE articles_issues OWNER TO deployer;
 
 --
--- Name: articles_issues_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: articles_issues_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE articles_issues_id_seq
@@ -171,17 +171,17 @@ CREATE SEQUENCE articles_issues_id_seq
     CACHE 1;
 
 
-ALTER TABLE articles_issues_id_seq OWNER TO timothyvoice;
+ALTER TABLE articles_issues_id_seq OWNER TO deployer;
 
 --
--- Name: articles_issues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: articles_issues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE articles_issues_id_seq OWNED BY articles_issues.id;
 
 
 --
--- Name: articles_issues_tables; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: articles_issues_tables; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE articles_issues_tables (
@@ -191,10 +191,10 @@ CREATE TABLE articles_issues_tables (
 );
 
 
-ALTER TABLE articles_issues_tables OWNER TO timothyvoice;
+ALTER TABLE articles_issues_tables OWNER TO deployer;
 
 --
--- Name: articles_issues_tables_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: articles_issues_tables_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE articles_issues_tables_id_seq
@@ -205,17 +205,17 @@ CREATE SEQUENCE articles_issues_tables_id_seq
     CACHE 1;
 
 
-ALTER TABLE articles_issues_tables_id_seq OWNER TO timothyvoice;
+ALTER TABLE articles_issues_tables_id_seq OWNER TO deployer;
 
 --
--- Name: articles_issues_tables_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: articles_issues_tables_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE articles_issues_tables_id_seq OWNED BY articles_issues_tables.id;
 
 
 --
--- Name: authors; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: authors; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE authors (
@@ -229,10 +229,10 @@ CREATE TABLE authors (
 );
 
 
-ALTER TABLE authors OWNER TO timothyvoice;
+ALTER TABLE authors OWNER TO deployer;
 
 --
--- Name: authors_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: authors_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE authors_id_seq
@@ -243,17 +243,17 @@ CREATE SEQUENCE authors_id_seq
     CACHE 1;
 
 
-ALTER TABLE authors_id_seq OWNER TO timothyvoice;
+ALTER TABLE authors_id_seq OWNER TO deployer;
 
 --
--- Name: authors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: authors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE authors_id_seq OWNED BY authors.id;
 
 
 --
--- Name: categories; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: categories; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE categories (
@@ -265,10 +265,10 @@ CREATE TABLE categories (
 );
 
 
-ALTER TABLE categories OWNER TO timothyvoice;
+ALTER TABLE categories OWNER TO deployer;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: categories_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE categories_id_seq
@@ -279,17 +279,17 @@ CREATE SEQUENCE categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE categories_id_seq OWNER TO timothyvoice;
+ALTER TABLE categories_id_seq OWNER TO deployer;
 
 --
--- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE categories_id_seq OWNED BY categories.id;
 
 
 --
--- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: ckeditor_assets; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE ckeditor_assets (
@@ -307,10 +307,10 @@ CREATE TABLE ckeditor_assets (
 );
 
 
-ALTER TABLE ckeditor_assets OWNER TO timothyvoice;
+ALTER TABLE ckeditor_assets OWNER TO deployer;
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE ckeditor_assets_id_seq
@@ -321,17 +321,17 @@ CREATE SEQUENCE ckeditor_assets_id_seq
     CACHE 1;
 
 
-ALTER TABLE ckeditor_assets_id_seq OWNER TO timothyvoice;
+ALTER TABLE ckeditor_assets_id_seq OWNER TO deployer;
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE ckeditor_assets_id_seq OWNED BY ckeditor_assets.id;
 
 
 --
--- Name: issue_translations; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: issue_translations; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE issue_translations (
@@ -346,10 +346,10 @@ CREATE TABLE issue_translations (
 );
 
 
-ALTER TABLE issue_translations OWNER TO timothyvoice;
+ALTER TABLE issue_translations OWNER TO deployer;
 
 --
--- Name: issue_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: issue_translations_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE issue_translations_id_seq
@@ -360,17 +360,17 @@ CREATE SEQUENCE issue_translations_id_seq
     CACHE 1;
 
 
-ALTER TABLE issue_translations_id_seq OWNER TO timothyvoice;
+ALTER TABLE issue_translations_id_seq OWNER TO deployer;
 
 --
--- Name: issue_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: issue_translations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE issue_translations_id_seq OWNED BY issue_translations.id;
 
 
 --
--- Name: issues; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: issues; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE issues (
@@ -387,10 +387,10 @@ CREATE TABLE issues (
 );
 
 
-ALTER TABLE issues OWNER TO timothyvoice;
+ALTER TABLE issues OWNER TO deployer;
 
 --
--- Name: issues_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: issues_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE issues_id_seq
@@ -401,17 +401,17 @@ CREATE SEQUENCE issues_id_seq
     CACHE 1;
 
 
-ALTER TABLE issues_id_seq OWNER TO timothyvoice;
+ALTER TABLE issues_id_seq OWNER TO deployer;
 
 --
--- Name: issues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: issues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE issues_id_seq OWNED BY issues.id;
 
 
 --
--- Name: roles; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: roles; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE roles (
@@ -422,10 +422,10 @@ CREATE TABLE roles (
 );
 
 
-ALTER TABLE roles OWNER TO timothyvoice;
+ALTER TABLE roles OWNER TO deployer;
 
 --
--- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE roles_id_seq
@@ -436,17 +436,17 @@ CREATE SEQUENCE roles_id_seq
     CACHE 1;
 
 
-ALTER TABLE roles_id_seq OWNER TO timothyvoice;
+ALTER TABLE roles_id_seq OWNER TO deployer;
 
 --
--- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
 
 
 --
--- Name: schema_migrations; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE schema_migrations (
@@ -454,10 +454,10 @@ CREATE TABLE schema_migrations (
 );
 
 
-ALTER TABLE schema_migrations OWNER TO timothyvoice;
+ALTER TABLE schema_migrations OWNER TO deployer;
 
 --
--- Name: subscribers; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: subscribers; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE subscribers (
@@ -468,10 +468,10 @@ CREATE TABLE subscribers (
 );
 
 
-ALTER TABLE subscribers OWNER TO timothyvoice;
+ALTER TABLE subscribers OWNER TO deployer;
 
 --
--- Name: subscribers_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: subscribers_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE subscribers_id_seq
@@ -482,17 +482,17 @@ CREATE SEQUENCE subscribers_id_seq
     CACHE 1;
 
 
-ALTER TABLE subscribers_id_seq OWNER TO timothyvoice;
+ALTER TABLE subscribers_id_seq OWNER TO deployer;
 
 --
--- Name: subscribers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: subscribers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE subscribers_id_seq OWNED BY subscribers.id;
 
 
 --
--- Name: tags; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: tags; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE tags (
@@ -504,10 +504,10 @@ CREATE TABLE tags (
 );
 
 
-ALTER TABLE tags OWNER TO timothyvoice;
+ALTER TABLE tags OWNER TO deployer;
 
 --
--- Name: tags_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: tags_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE tags_id_seq
@@ -518,17 +518,17 @@ CREATE SEQUENCE tags_id_seq
     CACHE 1;
 
 
-ALTER TABLE tags_id_seq OWNER TO timothyvoice;
+ALTER TABLE tags_id_seq OWNER TO deployer;
 
 --
--- Name: tags_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: tags_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE tags_id_seq OWNED BY tags.id;
 
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: users; Type: TABLE; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE TABLE users (
@@ -549,10 +549,10 @@ CREATE TABLE users (
 );
 
 
-ALTER TABLE users OWNER TO timothyvoice;
+ALTER TABLE users OWNER TO deployer;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: timothyvoice
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: deployer
 --
 
 CREATE SEQUENCE users_id_seq
@@ -563,115 +563,115 @@ CREATE SEQUENCE users_id_seq
     CACHE 1;
 
 
-ALTER TABLE users_id_seq OWNER TO timothyvoice;
+ALTER TABLE users_id_seq OWNER TO deployer;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: timothyvoice
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: deployer
 --
 
 ALTER SEQUENCE users_id_seq OWNED BY users.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY abilities ALTER COLUMN id SET DEFAULT nextval('abilities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY article_translations ALTER COLUMN id SET DEFAULT nextval('article_translations_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY articles ALTER COLUMN id SET DEFAULT nextval('articles_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY articles_issues ALTER COLUMN id SET DEFAULT nextval('articles_issues_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY articles_issues_tables ALTER COLUMN id SET DEFAULT nextval('articles_issues_tables_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY authors ALTER COLUMN id SET DEFAULT nextval('authors_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY categories ALTER COLUMN id SET DEFAULT nextval('categories_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY ckeditor_assets ALTER COLUMN id SET DEFAULT nextval('ckeditor_assets_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY issue_translations ALTER COLUMN id SET DEFAULT nextval('issue_translations_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY issues ALTER COLUMN id SET DEFAULT nextval('issues_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY roles ALTER COLUMN id SET DEFAULT nextval('roles_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY subscribers ALTER COLUMN id SET DEFAULT nextval('subscribers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY tags ALTER COLUMN id SET DEFAULT nextval('tags_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: timothyvoice
+-- Name: id; Type: DEFAULT; Schema: public; Owner: deployer
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
 
 
 --
--- Data for Name: abilities; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: abilities; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY abilities (id, created_at, updated_at) FROM stdin;
@@ -679,14 +679,14 @@ COPY abilities (id, created_at, updated_at) FROM stdin;
 
 
 --
--- Name: abilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: abilities_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('abilities_id_seq', 1, false);
 
 
 --
--- Data for Name: article_translations; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: article_translations; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY article_translations (id, article_id, locale, created_at, updated_at, title, introduction, body) FROM stdin;
@@ -700,14 +700,14 @@ COPY article_translations (id, article_id, locale, created_at, updated_at, title
 
 
 --
--- Name: article_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: article_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('article_translations_id_seq', 7, true);
 
 
 --
--- Data for Name: articles; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: articles; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY articles (id, title, introduction, created_at, updated_at, author_id, category_id, tag_id, article_feature, body, issue_id, published, article_lan) FROM stdin;
@@ -718,14 +718,14 @@ COPY articles (id, title, introduction, created_at, updated_at, author_id, categ
 
 
 --
--- Name: articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: articles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('articles_id_seq', 11, true);
 
 
 --
--- Data for Name: articles_issues; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: articles_issues; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY articles_issues (id, article_id, issue_id) FROM stdin;
@@ -736,14 +736,14 @@ COPY articles_issues (id, article_id, issue_id) FROM stdin;
 
 
 --
--- Name: articles_issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: articles_issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('articles_issues_id_seq', 10, true);
 
 
 --
--- Data for Name: articles_issues_tables; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: articles_issues_tables; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY articles_issues_tables (id, article_id, issue_id) FROM stdin;
@@ -751,14 +751,14 @@ COPY articles_issues_tables (id, article_id, issue_id) FROM stdin;
 
 
 --
--- Name: articles_issues_tables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: articles_issues_tables_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('articles_issues_tables_id_seq', 1, false);
 
 
 --
--- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY authors (id, name, email, username, created_at, updated_at, article_id) FROM stdin;
@@ -766,14 +766,14 @@ COPY authors (id, name, email, username, created_at, updated_at, article_id) FRO
 
 
 --
--- Name: authors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: authors_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('authors_id_seq', 1, false);
 
 
 --
--- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY categories (id, name, created_at, updated_at, article_id) FROM stdin;
@@ -781,14 +781,14 @@ COPY categories (id, name, created_at, updated_at, article_id) FROM stdin;
 
 
 --
--- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('categories_id_seq', 1, false);
 
 
 --
--- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: ckeditor_assets; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY ckeditor_assets (id, data_file_name, data_content_type, data_file_size, assetable_id, assetable_type, type, width, height, created_at, updated_at) FROM stdin;
@@ -796,14 +796,14 @@ COPY ckeditor_assets (id, data_file_name, data_content_type, data_file_size, ass
 
 
 --
--- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: ckeditor_assets_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('ckeditor_assets_id_seq', 1, false);
 
 
 --
--- Data for Name: issue_translations; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: issue_translations; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY issue_translations (id, issue_id, locale, created_at, updated_at, title, introduction, summary) FROM stdin;
@@ -813,14 +813,14 @@ COPY issue_translations (id, issue_id, locale, created_at, updated_at, title, in
 
 
 --
--- Name: issue_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: issue_translations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('issue_translations_id_seq', 2, true);
 
 
 --
--- Data for Name: issues; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: issues; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY issues (id, title, feature_image, introduction, summary, created_at, updated_at, issue_feature, article_id, published) FROM stdin;
@@ -829,14 +829,14 @@ COPY issues (id, title, feature_image, introduction, summary, created_at, update
 
 
 --
--- Name: issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: issues_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('issues_id_seq', 8, true);
 
 
 --
--- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: roles; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY roles (id, name, created_at, updated_at) FROM stdin;
@@ -848,14 +848,14 @@ COPY roles (id, name, created_at, updated_at) FROM stdin;
 
 
 --
--- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: roles_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('roles_id_seq', 4, true);
 
 
 --
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY schema_migrations (version) FROM stdin;
@@ -913,7 +913,7 @@ COPY schema_migrations (version) FROM stdin;
 
 
 --
--- Data for Name: subscribers; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: subscribers; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY subscribers (id, name, created_at, updated_at) FROM stdin;
@@ -921,14 +921,14 @@ COPY subscribers (id, name, created_at, updated_at) FROM stdin;
 
 
 --
--- Name: subscribers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: subscribers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('subscribers_id_seq', 1, false);
 
 
 --
--- Data for Name: tags; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: tags; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY tags (id, name, created_at, updated_at, article_id) FROM stdin;
@@ -936,32 +936,32 @@ COPY tags (id, name, created_at, updated_at, article_id) FROM stdin;
 
 
 --
--- Name: tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: tags_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('tags_id_seq', 1, false);
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: timothyvoice
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: deployer
 --
 
 COPY users (id, email, encrypted_password, reset_password_token, reset_password_sent_at, remember_created_at, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, created_at, updated_at, role_id) FROM stdin;
 3	margiechiang@livingoctave.com	$2a$10$BZp8sZQcPP.Sw7.q3s2aAugV4wtlrQ3cuqX4QtlPqChze5qiUXtKq	\N	\N	\N	2	2015-03-05 19:17:48.057077	2015-03-04 23:12:42.284388	127.0.0.1	127.0.0.1	2015-03-04 23:12:42.253823	2015-03-05 19:17:48.057795	2
 4	alicezhou@livingoctave.com	$2a$10$ZmvmMQu5SkLF0syIl2NYcOV67T9a46jXEMBj/UKrQb6pWC6vcI9te	\N	\N	\N	3	2015-03-25 01:38:07.763207	2015-03-24 21:37:39.517512	127.0.0.1	127.0.0.1	2015-03-04 23:15:30.201144	2015-03-25 01:38:07.763859	2
-1	timothyvoice@livingoctave.com	$2a$10$a15ZROVXeMy2O8sW7Riw/uyb9RQO1b7QKnsHHgDaTgYSKUEDcxeJC	\N	\N	\N	24	2015-03-30 01:25:32.940083	2015-03-25 15:27:43.064954	127.0.0.1	127.0.0.1	2015-03-02 21:56:46.611647	2015-03-30 01:25:32.947163	4
+1	deployer@livingoctave.com	$2a$10$a15ZROVXeMy2O8sW7Riw/uyb9RQO1b7QKnsHHgDaTgYSKUEDcxeJC	\N	\N	\N	24	2015-03-30 01:25:32.940083	2015-03-25 15:27:43.064954	127.0.0.1	127.0.0.1	2015-03-02 21:56:46.611647	2015-03-30 01:25:32.947163	4
 \.
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: timothyvoice
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: deployer
 --
 
 SELECT pg_catalog.setval('users_id_seq', 4, true);
 
 
 --
--- Name: abilities_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: abilities_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY abilities
@@ -969,7 +969,7 @@ ALTER TABLE ONLY abilities
 
 
 --
--- Name: article_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: article_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY article_translations
@@ -977,7 +977,7 @@ ALTER TABLE ONLY article_translations
 
 
 --
--- Name: articles_issues_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: articles_issues_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY articles_issues
@@ -985,7 +985,7 @@ ALTER TABLE ONLY articles_issues
 
 
 --
--- Name: articles_issues_tables_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: articles_issues_tables_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY articles_issues_tables
@@ -993,7 +993,7 @@ ALTER TABLE ONLY articles_issues_tables
 
 
 --
--- Name: articles_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: articles_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY articles
@@ -1001,7 +1001,7 @@ ALTER TABLE ONLY articles
 
 
 --
--- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY authors
@@ -1009,7 +1009,7 @@ ALTER TABLE ONLY authors
 
 
 --
--- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY categories
@@ -1017,7 +1017,7 @@ ALTER TABLE ONLY categories
 
 
 --
--- Name: ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: ckeditor_assets_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY ckeditor_assets
@@ -1025,7 +1025,7 @@ ALTER TABLE ONLY ckeditor_assets
 
 
 --
--- Name: issue_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: issue_translations_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY issue_translations
@@ -1033,7 +1033,7 @@ ALTER TABLE ONLY issue_translations
 
 
 --
--- Name: issues_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: issues_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY issues
@@ -1041,7 +1041,7 @@ ALTER TABLE ONLY issues
 
 
 --
--- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: roles_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY roles
@@ -1049,7 +1049,7 @@ ALTER TABLE ONLY roles
 
 
 --
--- Name: subscribers_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: subscribers_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY subscribers
@@ -1057,7 +1057,7 @@ ALTER TABLE ONLY subscribers
 
 
 --
--- Name: tags_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: tags_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY tags
@@ -1065,7 +1065,7 @@ ALTER TABLE ONLY tags
 
 
 --
--- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: deployer; Tablespace: 
 --
 
 ALTER TABLE ONLY users
@@ -1073,75 +1073,75 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: idx_ckeditor_assetable; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: idx_ckeditor_assetable; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE INDEX idx_ckeditor_assetable ON ckeditor_assets USING btree (assetable_type, assetable_id);
 
 
 --
--- Name: idx_ckeditor_assetable_type; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: idx_ckeditor_assetable_type; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE INDEX idx_ckeditor_assetable_type ON ckeditor_assets USING btree (assetable_type, type, assetable_id);
 
 
 --
--- Name: index_article_translations_on_article_id; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: index_article_translations_on_article_id; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE INDEX index_article_translations_on_article_id ON article_translations USING btree (article_id);
 
 
 --
--- Name: index_article_translations_on_locale; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: index_article_translations_on_locale; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE INDEX index_article_translations_on_locale ON article_translations USING btree (locale);
 
 
 --
--- Name: index_issue_translations_on_issue_id; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: index_issue_translations_on_issue_id; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE INDEX index_issue_translations_on_issue_id ON issue_translations USING btree (issue_id);
 
 
 --
--- Name: index_issue_translations_on_locale; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: index_issue_translations_on_locale; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE INDEX index_issue_translations_on_locale ON issue_translations USING btree (locale);
 
 
 --
--- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
 
 
 --
--- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: index_users_on_reset_password_token; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE UNIQUE INDEX index_users_on_reset_password_token ON users USING btree (reset_password_token);
 
 
 --
--- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: timothyvoice; Tablespace: 
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: deployer; Tablespace: 
 --
 
 CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: timothyvoice
+-- Name: public; Type: ACL; Schema: -; Owner: deployer
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM timothyvoice;
-GRANT ALL ON SCHEMA public TO timothyvoice;
+REVOKE ALL ON SCHEMA public FROM deployer;
+GRANT ALL ON SCHEMA public TO deployer;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
