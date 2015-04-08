@@ -6,7 +6,7 @@ set :deploy_to, "/home/deployer/octave_journal"
 
 set :scm, :git
 set :repo_url, 'https://github.com/timsvoice/octavejournal'
-set :branch, "master"
+set :branch, "rails-deploy"
 
 set :use_sudo, false
 
